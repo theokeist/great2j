@@ -16,6 +16,7 @@ import Image from "next/image";
 
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
+import header from "../public/event_partner_c.jpg";
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
 
@@ -43,9 +44,10 @@ export default function EventPartners() {
       >
         <Image
           alt="great by 2j"
-          src="/event_partner_c.jpg"
+          src={header}
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
         />
       </div>
       <NavigationMenu />

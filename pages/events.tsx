@@ -16,7 +16,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Image from "next/image";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
-
+import header from "../public/event3_c.jpg";
 const cards = [1, 2, 3, 4, 5, 6, 7];
 
 const theme = createTheme({
@@ -43,10 +43,11 @@ export default function Events() {
       >
         <Image
           alt="great by 2j"
-          src="/event3_c.jpg"
+          src={header}
           layout="fill"
           objectFit="cover"
           objectPosition="0 30%"
+          placeholder="blur"
         />
       </div>
       <NavigationMenu />

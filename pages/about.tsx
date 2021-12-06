@@ -17,6 +17,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Image from "next/image";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
+import header from "../public/onas3.jpg";
+import { HeadsetRounded } from "@mui/icons-material";
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
 
@@ -44,10 +46,11 @@ export default function About() {
       >
         <Image
           alt="great by 2j"
-          src="/onas3.jpg"
+          src={header}
           layout="fill"
           objectFit="cover"
           objectPosition="0% 0%"
+          placeholder="blur"
         />
       </div>
       <NavigationMenu />

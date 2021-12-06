@@ -102,9 +102,10 @@ export default function Album() {
       >
         <Image
           alt="great by 2j"
-          src="/header.jpg"
+          src={header}
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
         />
       </div>
       <NavigationMenu />

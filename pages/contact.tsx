@@ -16,6 +16,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Image from "next/image";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
+import header from "../public/about.webp";
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
 
@@ -43,10 +44,11 @@ export default function Contact() {
       >
         <Image
           alt="great by 2j"
-          src="/about.webp"
+          src={header}
           layout="fill"
           objectFit="cover"
           objectPosition="0 5%"
+          placeholder="blur"
         />
       </div>
       <NavigationMenu />
