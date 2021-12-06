@@ -13,36 +13,10 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// responsive
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Avatar from "@mui/material/Avatar";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
 
 import Image from "next/image";
-import header from "../public/header.jpg";
-import logo from "../public/logo.jpg";
-
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright © "}
-      <Link
-        color="inherit"
-        href="https://www.instagram.com/martin0rszulik/?hl=cs"
-      >
-        martin0rszulik
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
 
@@ -60,39 +34,7 @@ const theme = createTheme({
   },
 });
 
-const pages = [
-  { name: "Eventy", link: "/events" },
-  { name: "Bojovníci", link: "/fighters" },
-  { name: "O nás", link: "/about" },
-  { name: "E-shop", link: "/eshop" },
-  { name: "Kontakt", link: "/contact" },
-  { name: "Sponzoři", link: "/event-partners" },
-];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
-export default function Album() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
+export default function About() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -100,7 +42,12 @@ export default function Album() {
         className="pt-2"
         style={{ position: "relative", width: "100%", height: "40.66vw" }}
       >
-        <Image src="/header.jpg" layout="fill" objectFit="cover" />
+        <Image
+          src="/onas3.jpg"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="0% 0%"
+        />
       </div>
       <NavigationMenu />
       <main>
@@ -117,12 +64,17 @@ export default function Album() {
               component="h1"
               variant="h2"
               align="center"
-              color="primary"
+              color="text.primary"
               gutterBottom
             >
               Album layout
             </Typography>
-            <Typography variant="h5" align="center" color="primary" paragraph>
+            <Typography
+              variant="h5"
+              align="center"
+              color="text.secondary"
+              paragraph
+            >
               Something short and leading about the collection below—its
               contents, the creator, etc. Make it short and sweet, but not too
               short so folks don&apos;t simply skip over it entirely.
@@ -133,10 +85,10 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained" color="primary" size="large">
+              <Button variant="contained" size="large">
                 Main call to action
               </Button>
-              <Button variant="outlined" color="secondary" size="large">
+              <Button variant="outlined" size="large">
                 Secondary action
               </Button>
             </Stack>
