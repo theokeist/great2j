@@ -149,7 +149,7 @@ export const NavigationMenu = () => {
           </IconButton>
 
           {pages.map((page, index) => (
-            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box key={index} sx={{ display: { xs: "none", md: "flex" } }}>
               <Link key={index} href={page?.link}>
                 <Button
                   key={index}
