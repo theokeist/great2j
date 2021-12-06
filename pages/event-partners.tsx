@@ -41,7 +41,12 @@ export default function EventPartners() {
         className="pt-2"
         style={{ position: "relative", width: "100%", height: "40.66vw" }}
       >
-        <Image src="/event_partner_c.jpg" layout="fill" objectFit="cover" />
+        <Image
+          alt="great by 2j"
+          src="/event_partner_c.jpg"
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
       <NavigationMenu />
       <main>

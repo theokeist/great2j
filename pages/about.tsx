@@ -43,6 +43,7 @@ export default function About() {
         style={{ position: "relative", width: "100%", height: "40.66vw" }}
       >
         <Image
+          alt="great by 2j"
           src="/onas3.jpg"
           layout="fill"
           objectFit="cover"

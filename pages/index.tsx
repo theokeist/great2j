@@ -100,7 +100,12 @@ export default function Album() {
         className="pt-2"
         style={{ position: "relative", width: "100%", height: "40.66vw" }}
       >
-        <Image src="/header.jpg" layout="fill" objectFit="cover" />
+        <Image
+          alt="great by 2j"
+          src="/header.jpg"
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
       <NavigationMenu />
       <main>

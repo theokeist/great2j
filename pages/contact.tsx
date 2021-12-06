@@ -42,6 +42,7 @@ export default function Contact() {
         style={{ position: "relative", width: "100%", height: "40.66vw" }}
       >
         <Image
+          alt="great by 2j"
           src="/about.webp"
           layout="fill"
           objectFit="cover"

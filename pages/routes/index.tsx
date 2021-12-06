@@ -58,7 +58,6 @@ export const NavigationMenu = () => {
   };
 
   const isActive = (page: any) => {
-    console.log(router, page);
     if (router?.pathname == page?.link) {
       return (
         <Typography textAlign="center" color="primary">
@@ -128,7 +127,7 @@ export const NavigationMenu = () => {
               }}
             >
               {pages.map((page, index) => (
-                <Link href={page.link}>
+                <Link key={index} href={page.link}>
                   <MenuItem key={index} onClick={handleCloseNavMenu}>
                     {isActive(page)}
                   </MenuItem>
@@ -151,7 +150,7 @@ export const NavigationMenu = () => {
 
           {pages.map((page, index) => (
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <Link href={page?.link}>
+              <Link key={index} href={page?.link}>
                 <Button
                   key={index}
                   onClick={handleCloseNavMenu}
