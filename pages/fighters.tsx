@@ -211,9 +211,10 @@ export default function Fighters() {
           short and sweet, but not too short so folks don&apos;t simply skip
           over it entirely.
         </Typography>
-        {fotky?.map((foto) => {
+        {fotky?.map((foto, index) => {
           return (
             <Fighter
+              key={index}
               avatar={foto?.path}
               avatarAlt={foto?.name}
               fighter={foto?.fighter}
