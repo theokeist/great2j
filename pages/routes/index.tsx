@@ -15,7 +15,10 @@ import Button from "@mui/material/Button";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ShareIcon from "@mui/icons-material/Share";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import { useRouter } from "next/router";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemIcon from "@mui/material/ListItemIcon";
 
 export const pages = [
   { name: "Eventy", link: "/events" },
@@ -26,10 +29,32 @@ export const pages = [
   { name: "Sponzoři & Spolupráce", link: "/event-partners" },
 ];
 
+export const mobilePages = [
+  { name: "Domů", link: "/" },
+  { name: "Eventy", link: "/events" },
+  { name: "Bojovníci", link: "/fighters" },
+  { name: "O nás", link: "/about" },
+  { name: "E-shop", link: "/eshop" },
+  { name: "Kontakt", link: "/contact" },
+  { name: "Sponzoři & Spolupráce", link: "/event-partners" },
+];
+
 const settings = [
-  { name: "Instagram", icon: <InstagramIcon color="primary" /> },
-  { name: "Facebook", icon: <FacebookIcon color="primary" /> },
-  { name: "Logout", icon: <InstagramIcon color="primary" /> },
+  {
+    name: "Instagram",
+    icon: <InstagramIcon color="primary" />,
+    link: "https://www.instagram.com/great_2j/?hl=cs",
+  },
+  {
+    name: "Facebook",
+    icon: <FacebookIcon color="primary" />,
+    link: "https://www.instagram.com/great_2j/?hl=cs",
+  },
+  {
+    name: "YouTube",
+    icon: <YouTubeIcon color="primary" />,
+    link: "https://www.instagram.com/great_2j/?hl=cs",
+  },
 ];
 
 export const NavigationMenu = () => {
@@ -60,13 +85,13 @@ export const NavigationMenu = () => {
   const isActive = (page: any) => {
     if (router?.pathname == page?.link) {
       return (
-        <Typography textAlign="center" color="primary">
+        <Typography textAlign="center" color="primary" sx={{ fontWeight: 900 }}>
           {page?.name}
         </Typography>
       );
     } else {
       return (
-        <Typography textAlign="center" color="secondary">
+        <Typography textAlign="center" color="primary">
           {page?.name}
         </Typography>
       );
@@ -100,7 +125,6 @@ export const NavigationMenu = () => {
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -126,7 +150,7 @@ export const NavigationMenu = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page, index) => (
+              {mobilePages.map((page, index) => (
                 <Link key={index} href={page.link}>
                   <MenuItem key={index} onClick={handleCloseNavMenu}>
                     {isActive(page)}
@@ -139,7 +163,7 @@ export const NavigationMenu = () => {
           <IconButton sx={{ px: 8, py: 5, display: { md: "none" } }}>
             <Link href="/">
               <Image
-                alt="Mountains"
+                alt="great by 2j"
                 src={logo}
                 layout="fill"
                 width={"100"}
@@ -189,16 +213,16 @@ export const NavigationMenu = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting, index) => (
-                <MenuItem
-                  key={index}
-                  onClick={handleCloseNavMenu}
-                  color="primary"
-                >
-                  {setting.icon}
-                  <Typography textAlign="center" color="primary">
-                    {setting.name}
-                  </Typography>
-                </MenuItem>
+                <Link key={index} href={setting.link}>
+                  <MenuItem
+                    key={index}
+                    onClick={handleCloseNavMenu}
+                    color="primary"
+                  >
+                    <ListItemIcon>{setting.icon}</ListItemIcon>
+                    <ListItemText>{setting.name}</ListItemText>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

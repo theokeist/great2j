@@ -25,26 +25,24 @@ const theme = createTheme({
 export default function CopyrightFooter() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: "#fff", p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
+      <Box sx={{ bgcolor: "primary.main", p: 3 }} component="footer">
         <Typography
           variant="subtitle1"
           align="center"
-          color="secondary"
+          color="info"
           component="p"
         >
-          Something here to give the footer a purpose!
+          Help others to create better yourself :)
         </Typography>
         <Typography variant="body2" color="text.secondary" align="center">
-          {"Copyright © "}
+          {"Copyright © Great by 2j, designed by "}
           <Link
             color="inherit"
             href="https://www.instagram.com/martin0rszulik/?hl=cs"
           >
             martin0rszulik
-          </Link>{" "}
+          </Link>
+          {", "}
           {new Date().getFullYear()}
           {"."}
         </Typography>

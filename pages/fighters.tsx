@@ -1,26 +1,169 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import Image from "next/image";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
-import header from "../public/fighters.jpg";
+import Main from "./components/main";
+import Fighter from "./components/fighter";
 
-const cards = [1, 2, 3, 4, 5, 6, 7];
+import header from "../public/fighters.webp";
 
-const theme = createTheme({
+const fotky = [
+  {
+    path: "/fighters/davidStec",
+    name: "David Štec",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "71kg",
+      kategorie: "box",
+      rest: "12-6",
+    },
+  },
+  {
+    path: "/fighters/denisDerkac",
+    name: "Denis Derkáč",
+    facebook: "",
+    instagram: "",
+  },
+  {
+    path: "/fighters/honzaStrakos",
+    name: "Honza Strakoš",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "76kg",
+      kategorie: "K1",
+      rest: "3-1",
+    },
+  },
+  {
+    path: "/fighters/jiriJuricka",
+    name: "Jiří Juřička",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "K1",
+      rest: "K1 2-1, MMA 3-2, BOX 1-1",
+    },
+  },
+  {
+    path: "/fighters/kristianPeczka",
+    name: "Kristián Péczka",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "box",
+      rest: "16*19",
+    },
+  },
+  {
+    path: "/fighters/lizBezdekova",
+    name: "Elizabeth Bezděková",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "54kg",
+      kategorie: "Muay Thai",
+      rest: "12-7-1",
+    },
+  },
+  {
+    path: "/fighters/marekBiela",
+    name: "Marek Biela",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "box",
+      rest: "6-2",
+    },
+  },
+  {
+    path: "/fighters/marekVanecek",
+    name: "Marek Vaněček",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "box",
+      rest: "70-30",
+    },
+  },
+  {
+    path: "/fighters/martinPrazdny",
+    name: "Martin Prázdný",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "82kg",
+      kategorie: "box",
+      rest: "50-30",
+    },
+  },
+  {
+    path: "/fighters/patrikStefan",
+    name: "Patrik Štefan",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "63,5kg",
+      kategorie: "box",
+      rest: "19-6",
+    },
+  },
+  {
+    path: "/fighters/petrValicek",
+    name: "Petr Valíček",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "60kg",
+      kategorie: "box",
+      rest: "3-5",
+    },
+  },
+  {
+    path: "/fighters/robertPrazdny",
+    name: "Robert Prázdný",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "box",
+      rest: "K1 0-1, MMA 0-2",
+    },
+  },
+  {
+    path: "/fighters/vojtaBachorik",
+    name: "Vojtěch Bachořík",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "66kg",
+      kategorie: "K1",
+      rest: "1-2",
+    },
+  },
+  {
+    path: "/fighters/wernerHartmann",
+    name: "Werner Hartmann",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "box",
+      rest: "12-7-1",
+    },
+  },
+];
+
+const themes = createTheme({
   palette: {
     background: {
       default: "#252525",
@@ -36,7 +179,7 @@ const theme = createTheme({
 
 export default function Fighters() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themes}>
       <CssBaseline />
       <div
         className="pt-2"
@@ -51,94 +194,35 @@ export default function Fighters() {
         />
       </div>
       <NavigationMenu />
-      <main>
-        {/* Hero unit */}
-        <Box
-          sx={{
-            bgcolor: "background.paper",
-            pt: 8,
-            pb: 6,
-          }}
-        >
-          <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              Album layout
-            </Typography>
-            <Typography
-              variant="h5"
-              align="center"
-              color="text.secondary"
-              paragraph
-            >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
-            </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained" size="large">
-                Main call to action
-              </Button>
-              <Button variant="outlined" size="large">
-                Secondary action
-              </Button>
-            </Stack>
-          </Container>
-        </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
-          {/* End hero unit */}
-          <Grid
-            sx={{ display: { overflowX: "scroll", flexWrap: "nowrap" } }}
-            container
-            spacing={4}
-          >
-            {cards.map((card) => (
-              <Grid item key={card} xs={3} sm={4} md={3}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      // 16:9
-                      pt: "56.25%",
-                    }}
-                    image="https://source.unsplash.com/random"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </main>
+      <Main title="Bojovníci">
+        <Typography variant="body1" color="primary" paragraph>
+          Something short and leading about the collection below—its contents,
+          the creator, etc. Make it short and sweet, but not too short so folks
+          don&apos;t simply skip over it entirely. Something short and leading
+          about the collection below—its contents, the creator, etc. Make it
+          short and sweet, but not too short so folks don&apos;t simply skip
+          over it entirely. Something short and leading about the collection
+          below—its contents, the creator, etc. Make it short and sweet, but not
+          too short so folks don&apos;t simply skip over it entirely. Something
+          short and leading about the collection below—its contents, the
+          creator, etc. Make it short and sweet, but not too short so folks
+          don&apos;t simply skip over it entirely. Something short and leading
+          about the collection below—its contents, the creator, etc. Make it
+          short and sweet, but not too short so folks don&apos;t simply skip
+          over it entirely.
+        </Typography>
+        {fotky?.map((foto) => {
+          return (
+            <Fighter
+              avatar={foto?.path}
+              avatarAlt={foto?.name}
+              fighter={foto?.fighter}
+              facebookLink={foto?.facebook}
+              instagramLink={foto?.instagram}
+            />
+          );
+        })}
+      </Main>
       <CopyrightFooter />
     </ThemeProvider>
   );
