@@ -98,6 +98,20 @@ export const NavigationMenu = () => {
     }
   };
 
+  const logoImage = () => {
+    return (
+      <Link href="/">
+        <Image
+          alt="great by 2j"
+          src={logo}
+          layout="fill"
+          width={"100"}
+          height={"40"}
+          priority
+        />
+      </Link>
+    );
+  };
   return (
     <AppBar position="static" sx={{ bgcolor: "black", py: 2 }}>
       <Container maxWidth="xl">
@@ -111,15 +125,7 @@ export const NavigationMenu = () => {
           <IconButton
             sx={{ px: 13, py: 9, display: { xs: "none", md: "flex" } }}
           >
-            <Link href="/">
-              <Image
-                alt="great by 2j"
-                src={logo}
-                layout="fill"
-                width={"100"}
-                height={"40"}
-              />
-            </Link>
+            {logoImage()}
           </IconButton>
 
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -161,15 +167,7 @@ export const NavigationMenu = () => {
           </Box>
 
           <IconButton sx={{ px: 8, py: 5, display: { md: "none" } }}>
-            <Link href="/">
-              <Image
-                alt="great by 2j"
-                src={logo}
-                layout="fill"
-                width={"100"}
-                height={"40"}
-              />
-            </Link>
+            {logoImage()}
           </IconButton>
 
           {pages.map((page, index) => (
