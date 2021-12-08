@@ -8,7 +8,7 @@ import Container from "@mui/material/Container";
 
 export default function Main({ title, children }: any) {
   return (
-    <Container sx={{ px: 3, py: 10 }}>
+    <Container sx={{ px: 3, pb: 18, pt: 7 }}>
       <Typography
         component="h1"
         variant="h3"

@@ -13,25 +13,21 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// responsive
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Avatar from "@mui/material/Avatar";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
 
-import Image from "next/image";
 import header from "../public/header.jpg";
 import logo from "../public/logo.jpg";
 
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
+import Banner from "./components/banner";
 import Main from "./components/main";
+
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
 
-const theme = createTheme({
+const themes = createTheme({
   palette: {
     background: {
       default: "#252525",
@@ -45,33 +41,13 @@ const theme = createTheme({
   },
 });
 
-const pages = [
-  { name: "Eventy", link: "/events" },
-  { name: "Bojovníci", link: "/fighters" },
-  { name: "O nás", link: "/about" },
-  { name: "E-shop", link: "/eshop" },
-  { name: "Kontakt", link: "/contact" },
-  { name: "Sponzoři", link: "/event-partners" },
-];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
 export default function Album() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themes}>
       <CssBaseline />
-      <div
-        className="pt-2"
-        style={{ position: "relative", width: "100%", height: "38.66vw" }}
-      >
-        <Image
-          alt="great by 2j"
-          src={header}
-          layout="fill"
-          objectFit="cover"
-          placeholder="blur"
-          priority
-        />
-      </div>
+      <Banner header={header} />
       <NavigationMenu />
       <Main>
         <Box

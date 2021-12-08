@@ -18,6 +18,7 @@ import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import Main from "./components/main";
 import header from "../public/event_partner.webp";
+import Banner from "./components/banner";
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
 
@@ -39,20 +40,8 @@ export default function EventPartners() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div
-        className="pt-2"
-        style={{ position: "relative", width: "100%", height: "38.66vw" }}
-      >
-        <Image
-          alt="great by 2j"
-          src={header}
-          layout="fill"
-          objectFit="cover"
-          placeholder="blur"
-          objectPosition="0 25%"
-          priority
-        />
-      </div>
+      <Banner header={header} objectPosition="0 25%" />
+
       <NavigationMenu />
       <Main title="Sponzoři a partneři">
         <Typography variant="body1" color="primary" paragraph>

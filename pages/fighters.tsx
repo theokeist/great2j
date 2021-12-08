@@ -8,6 +8,7 @@ import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import Main from "./components/main";
 import Fighter from "./components/fighter";
+import Banner from "./components/banner";
 
 import header from "../public/fighters.webp";
 
@@ -181,19 +182,8 @@ export default function Fighters() {
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
-      <div
-        className="pt-2"
-        style={{ position: "relative", width: "100%", height: "38.66vw" }}
-      >
-        <Image
-          alt="great by 2j"
-          src={header}
-          layout="fill"
-          objectFit="cover"
-          placeholder="blur"
-          priority
-        />
-      </div>
+      <Banner header={header} />
+
       <NavigationMenu />
       <Main title="Bojovníci">
         <Typography variant="body1" color="primary" paragraph>
