@@ -10,6 +10,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Image from "next/image";
 
 export default function Fighter({
   avatar,
@@ -33,12 +34,18 @@ export default function Fighter({
       onMouseOver={() => setHover((old) => !old)}
       onMouseOut={() => setHover(false)}
     >
-      <Avatar
-        src={!hover && avatar ? avatar + "/normal.jpg" : avatar + "/hover.jpg"}
-        alt={avatarAlt}
-        sx={{ width: 172, height: 172 }}
-        imgProps={{ style: { objectPosition: "center 5%" } }}
-      />
+      <Avatar alt={avatarAlt} sx={{ width: 172, height: 172 }}>
+        <Image
+          alt={avatarAlt}
+          src={
+            !hover && avatar ? avatar + "/normal.jpg" : avatar + "/hover.jpg"
+          }
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center 5%"
+          priority
+        />
+      </Avatar>
       <Stack
         direction={matches ? "column" : "row"}
         spacing={4}

@@ -101,14 +101,7 @@ export const NavigationMenu = () => {
   const logoImage = () => {
     return (
       <Link href="/">
-        <Image
-          alt="great by 2j"
-          src={logo}
-          layout="fill"
-          width={"100"}
-          height={"40"}
-          priority
-        />
+        <Image alt="great by 2j" src={logo} layout="fill" priority />
       </Link>
     );
   };
