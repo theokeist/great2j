@@ -27,22 +27,7 @@ import logo from "../public/logo.jpg";
 
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright © "}
-      <Link
-        color="inherit"
-        href="https://www.instagram.com/martin0rszulik/?hl=cs"
-      >
-        martin0rszulik
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import Main from "./components/main";
 
 const cards = [1, 2, 3, 4, 5, 6, 7];
 
@@ -71,34 +56,12 @@ const pages = [
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function Album() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div
         className="pt-2"
-        style={{ position: "relative", width: "100%", height: "40.66vw" }}
+        style={{ position: "relative", width: "100%", height: "38.66vw" }}
       >
         <Image
           alt="great by 2j"
@@ -110,8 +73,7 @@ export default function Album() {
         />
       </div>
       <NavigationMenu />
-      <main>
-        {/* Hero unit */}
+      <Main>
         <Box
           sx={{
             bgcolor: "background.paper",
@@ -150,7 +112,6 @@ export default function Album() {
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
-          {/* End hero unit */}
           <Grid
             sx={{ display: { overflowX: "scroll", flexWrap: "nowrap" } }}
             container
@@ -192,7 +153,7 @@ export default function Album() {
             ))}
           </Grid>
         </Container>
-      </main>
+      </Main>
       <CopyrightFooter />
     </ThemeProvider>
   );

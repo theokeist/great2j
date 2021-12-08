@@ -183,7 +183,7 @@ export default function Fighters() {
       <CssBaseline />
       <div
         className="pt-2"
-        style={{ position: "relative", width: "100%", height: "40.66vw" }}
+        style={{ position: "relative", width: "100%", height: "38.66vw" }}
       >
         <Image
           alt="great by 2j"
