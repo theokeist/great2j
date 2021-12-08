@@ -50,6 +50,7 @@ export default function Contact() {
           objectFit="cover"
           objectPosition="0 5%"
           placeholder="blur"
+          priority
         />
       </div>
       <NavigationMenu />

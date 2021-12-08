@@ -50,6 +50,7 @@ export default function Events() {
           objectFit="cover"
           objectPosition="0 30%"
           placeholder="blur"
+          priority
         />
       </div>
       <NavigationMenu />

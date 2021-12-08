@@ -50,6 +50,7 @@ export default function EventPartners() {
           objectFit="cover"
           placeholder="blur"
           objectPosition="0 25%"
+          priority
         />
       </div>
       <NavigationMenu />

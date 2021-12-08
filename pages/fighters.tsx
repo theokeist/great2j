@@ -191,6 +191,7 @@ export default function Fighters() {
           layout="fill"
           objectFit="cover"
           placeholder="blur"
+          priority
         />
       </div>
       <NavigationMenu />

@@ -106,6 +106,7 @@ export default function Album() {
           layout="fill"
           objectFit="cover"
           placeholder="blur"
+          priority
         />
       </div>
       <NavigationMenu />

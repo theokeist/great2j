@@ -51,6 +51,7 @@ export default function About() {
           objectFit="cover"
           objectPosition="0% 0%"
           placeholder="blur"
+          priority
         />
       </div>
       <NavigationMenu />
