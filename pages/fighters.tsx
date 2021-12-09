@@ -356,7 +356,7 @@ export default function Fighters() {
         <Grid container spacing={2}>
           {fotky?.map((foto, index) => {
             return (
-              <Grid item xs={12} md={6}>
+              <Grid key={index} item xs={12} md={6}>
                 <Fighter
                   key={index}
                   avatar={foto?.path}

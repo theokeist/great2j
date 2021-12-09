@@ -94,7 +94,7 @@ export default function EventPartners() {
         <Grid container spacing={4}>
           {fotky?.map((foto, index) => {
             return (
-              <Grid item xs={6} md={3}>
+              <Grid key={index} item xs={6} md={3}>
                 <Link href={foto.link}>
                   <Image
                     alt={foto.name}
