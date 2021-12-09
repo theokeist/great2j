@@ -3,9 +3,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
-
-import Image from "next/image";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import Main from "./components/main";
@@ -336,7 +333,7 @@ export default function Fighters() {
       <Banner header={header} />
 
       <NavigationMenu />
-      <Main title="Zápasníci">
+      <Main title="Zápasníci" gutterBottom>
         <Typography variant="body1" color="primary" paragraph>
           Something short and leading about the collection below—its contents,
           the creator, etc. Make it short and sweet, but not too short so folks

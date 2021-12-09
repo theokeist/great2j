@@ -11,6 +11,7 @@ export default function Main({
   subtitle,
   align = "start",
   children,
+  gutterBottom = false,
 }: any) {
   return (
     <Container sx={{ px: 3, pb: 18, pt: 8 }}>
@@ -18,6 +19,7 @@ export default function Main({
         component="h1"
         variant="h3"
         color="primary"
+        gutterBottom={gutterBottom}
         textAlign={align}
         sx={{
           fontWeight: 900,

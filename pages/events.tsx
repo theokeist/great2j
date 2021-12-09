@@ -1,26 +1,14 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-import Image from "next/image";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import header from "../public/event3.webp";
 import Main from "./components/main";
 import Banner from "./components/banner";
-
-const cards = [1, 2, 3, 4, 5, 6, 7];
+import EvnetTimeline from "./components/timeline";
 
 const themes = createTheme({
   palette: {
@@ -48,9 +36,22 @@ export default function Events() {
 
       <NavigationMenu />
       <Main align="center" title="GREAT FIGHT NIGHT" subtitle="pro Františka">
-        <Typography variant="h6" color="primary" paragraph>
+        <hr></hr>
+        <Typography variant="h5" align="center" color="primary">
           Datum konání
         </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="primary"
+          paragraph
+        >
+          26.2.2022
+        </Typography>
+        <Typography variant="h5" align="center" color="primary" paragraph>
+          Průběh události
+        </Typography>
+        <EvnetTimeline />
         <Stack
           sx={{ pt: 4 }}
           direction={matches ? "row" : "column"}

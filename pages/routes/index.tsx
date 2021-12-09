@@ -24,9 +24,9 @@ export const pages = [
   { name: "Eventy", link: "/events" },
   { name: "Zápasníci", link: "/fighters" },
   { name: "O nás", link: "/about" },
+  { name: "Sponzoři & Spolupráce", link: "/event-partners" },
   { name: "E-shop", link: "/eshop" },
   { name: "Kontakt", link: "/contact" },
-  { name: "Sponzoři & Spolupráce", link: "/event-partners" },
 ];
 
 export const mobilePages = [
@@ -34,9 +34,9 @@ export const mobilePages = [
   { name: "Eventy", link: "/events" },
   { name: "Zápasníci", link: "/fighters" },
   { name: "O nás", link: "/about" },
+  { name: "Sponzoři & Spolupráce", link: "/event-partners" },
   { name: "E-shop", link: "/eshop" },
   { name: "Kontakt", link: "/contact" },
-  { name: "Sponzoři & Spolupráce", link: "/event-partners" },
 ];
 
 const settings = [
