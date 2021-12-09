@@ -22,7 +22,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 
 export const pages = [
   { name: "Eventy", link: "/events" },
-  { name: "Bojovníci", link: "/fighters" },
+  { name: "Zápasníci", link: "/fighters" },
   { name: "O nás", link: "/about" },
   { name: "E-shop", link: "/eshop" },
   { name: "Kontakt", link: "/contact" },
@@ -32,7 +32,7 @@ export const pages = [
 export const mobilePages = [
   { name: "Domů", link: "/" },
   { name: "Eventy", link: "/events" },
-  { name: "Bojovníci", link: "/fighters" },
+  { name: "Zápasníci", link: "/fighters" },
   { name: "O nás", link: "/about" },
   { name: "E-shop", link: "/eshop" },
   { name: "Kontakt", link: "/contact" },

@@ -20,7 +20,34 @@ import Main from "./components/main";
 import header from "../public/event_partner.webp";
 import Banner from "./components/banner";
 
-const cards = [1, 2, 3, 4, 5, 6, 7];
+import boxing from "../public/partners/boxingostrava.jpg";
+import jemasport from "../public/partners/jemasport.png";
+import moodnite from "../public/partners/moodnite.jpg";
+import skrcto from "../public/partners/skrcto.jpg";
+import sss from "../public/partners/sss.jpg";
+
+const fotky = [
+  {
+    path: boxing,
+    name: "BOXING CLUB OSTRAVA",
+    link: "https://boxingclubostrava.cz/",
+  },
+  {
+    path: jemasport,
+    name: "JEMASPORT",
+    link: "https://www.jemasport.cz/",
+  },
+  {
+    path: moodnite,
+    name: "Moodnite",
+    link: "https://www.moodnite.cz/",
+  },
+  {
+    path: skrcto,
+    name: "Skrč to!",
+    link: "http://www.skrctostudio.cz/",
+  },
+];
 
 const theme = createTheme({
   palette: {
@@ -33,9 +60,13 @@ const theme = createTheme({
       dark: "#000",
       light: "#ff0000",
     },
+    secondary: {
+      main: "rgba(0,0,0,0.65)",
+      dark: "rgba(0,0,0,0.99)",
+      light: "rgba(0,0,0,0.45)",
+    },
   },
 });
-
 export default function EventPartners() {
   return (
     <ThemeProvider theme={theme}>
@@ -60,8 +91,32 @@ export default function EventPartners() {
           short and sweet, but not too short so folks don&apos;t simply skip
           over it entirely.
         </Typography>
+        <Grid container spacing={4}>
+          {fotky?.map((foto, index) => {
+            return (
+              <Grid item xs={6} md={3}>
+                <Link href={foto.link}>
+                  <Image
+                    alt={foto.name}
+                    src={foto.path}
+                    height={256}
+                    width={256}
+                    layout="responsive"
+                    priority
+                  />
+                </Link>
+              </Grid>
+            );
+          })}
+        </Grid>
         <Stack
-          sx={{ pt: 4 }}
+          sx={{
+            py: 30,
+            px: 5,
+            mt: 14,
+            backgroundImage: `url(${sss?.src})`,
+            backgroundSize: "cover",
+          }}
           direction="row"
           spacing={2}
           justifyContent="center"
@@ -69,7 +124,7 @@ export default function EventPartners() {
           <Button variant="contained" color="secondary" size="large" fullWidth>
             zobrazit
           </Button>
-          <Button variant="outlined" color="primary" size="large" fullWidth>
+          <Button variant="contained" color="secondary" size="large" fullWidth>
             více
           </Button>
         </Stack>

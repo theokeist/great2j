@@ -2,6 +2,8 @@ import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
 
 import Image from "next/image";
 import NavigationMenu from "./routes";
@@ -14,53 +16,47 @@ import header from "../public/fighters.webp";
 
 const fotky = [
   {
-    path: "/fighters/davidStec",
-    name: "David Štec",
+    path: "/fighters/marekVanecek",
+    name: "Marek Vaněček",
     facebook: "",
     instagram: "",
     fighter: {
-      vaha: "71kg",
-      kategorie: "box",
-      rest: "12-6",
+      vaha: "86kg",
+      kategorie: "Box",
+      rest: "70-30",
     },
   },
   {
-    path: "/fighters/denisDerkac",
-    name: "Denis Derkáč",
-    facebook: "",
-    instagram: "",
-  },
-  {
-    path: "/fighters/honzaStrakos",
-    name: "Honza Strakoš",
+    path: "/fighters/martinPrazdny",
+    name: "Martin Prázdný",
     facebook: "",
     instagram: "",
     fighter: {
-      vaha: "76kg",
-      kategorie: "K1",
-      rest: "3-1",
+      vaha: "82kg",
+      kategorie: "Box",
+      rest: "50-30",
     },
   },
   {
-    path: "/fighters/jiriJuricka",
-    name: "Jiří Juřička",
+    path: "/fighters/wernerHartmann",
+    name: "Werner Hartmann",
     facebook: "",
     instagram: "",
     fighter: {
       vaha: "92kg",
-      kategorie: "K1",
-      rest: "K1 2-1, MMA 3-2, BOX 1-1",
+      kategorie: "Box",
+      rest: "12-7-1",
     },
   },
   {
-    path: "/fighters/kristianPeczka",
-    name: "Kristián Péczka",
+    path: "/fighters/",
+    name: "Denis Gámez",
     facebook: "",
     instagram: "",
     fighter: {
       vaha: "92kg",
-      kategorie: "box",
-      rest: "16*19",
+      kategorie: "Box",
+      rest: "65-25",
     },
   },
   {
@@ -75,36 +71,58 @@ const fotky = [
     },
   },
   {
-    path: "/fighters/marekBiela",
-    name: "Marek Biela",
+    path: "/fighters/jiriJuricka",
+    name: "Jiří Juřička",
     facebook: "",
     instagram: "",
     fighter: {
-      vaha: "86kg",
-      kategorie: "box",
-      rest: "6-2",
+      vaha: "92kg",
+      kategorie: "K1",
+      rest: "K1 2-1, MMA 3-2, Box 1-1",
     },
   },
   {
-    path: "/fighters/marekVanecek",
-    name: "Marek Vaněček",
+    path: "/fighters/",
+    name: "Dominik Gloser",
     facebook: "",
     instagram: "",
     fighter: {
-      vaha: "86kg",
-      kategorie: "box",
-      rest: "70-30",
+      vaha: "75kg",
+      kategorie: "Box",
+      rest: "122-20",
     },
   },
   {
-    path: "/fighters/martinPrazdny",
-    name: "Martin Prázdný",
+    path: "/fighters/honzaStrakos",
+    name: "Jan Strakoš",
     facebook: "",
     instagram: "",
     fighter: {
-      vaha: "82kg",
-      kategorie: "box",
-      rest: "50-30",
+      vaha: "76kg",
+      kategorie: "K1",
+      rest: "3-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Daniel Obracaj",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "76kg",
+      kategorie: "",
+      rest: "MMA 4-4, Box 5-5, K1 0-1",
+    },
+  },
+  {
+    path: "/fighters/kristianPeczka",
+    name: "Kristián Péczka",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "16-19",
     },
   },
   {
@@ -114,10 +132,99 @@ const fotky = [
     instagram: "",
     fighter: {
       vaha: "63,5kg",
-      kategorie: "box",
+      kategorie: "Box",
       rest: "19-6",
     },
   },
+  {
+    path: "/fighters/marekBiela",
+    name: "Marek Biela",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "Box",
+      rest: "6-2",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Tomáš Novotný",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "5-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Kim Amoussa",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "67kg",
+      kategorie: "Box",
+      rest: "5-0-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Josef Pekárek",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "100-50",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Jaroslav Kubíček",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "Olympijský Box 30-20, Profi Box 1-2",
+    },
+  },
+  {
+    path: "/fighters/marekBiela",
+    name: "Marek Biela",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "Box",
+      rest: "6-2",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Jiří Mravec",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "MMA",
+      rest: "0-1",
+    },
+  },
+  {
+    path: "/fighters/davidStec",
+    name: "David Štec",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "71kg",
+      kategorie: "Box",
+      rest: "12-6",
+    },
+  },
+
   {
     path: "/fighters/petrValicek",
     name: "Petr Valíček",
@@ -125,8 +232,19 @@ const fotky = [
     instagram: "",
     fighter: {
       vaha: "60kg",
-      kategorie: "box",
+      kategorie: "Box",
       rest: "3-5",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Petr Navrátil",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "60kg",
+      kategorie: "Box",
+      rest: "7-8",
     },
   },
   {
@@ -136,8 +254,19 @@ const fotky = [
     instagram: "",
     fighter: {
       vaha: "92kg",
-      kategorie: "box",
+      kategorie: "Box",
       rest: "K1 0-1, MMA 0-2",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Daniel Bernold",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "69kg",
+      kategorie: "K1",
+      rest: "1-0",
     },
   },
   {
@@ -152,14 +281,36 @@ const fotky = [
     },
   },
   {
-    path: "/fighters/wernerHartmann",
-    name: "Werner Hartmann",
+    path: "/fighters/denisDerkac",
+    name: "Denis Derkáč",
     facebook: "",
     instagram: "",
     fighter: {
-      vaha: "92kg",
-      kategorie: "box",
-      rest: "12-7-1",
+      vaha: "82kg",
+      kategorie: "Box",
+      rest: "0-0",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Filip Palyza",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "82kg",
+      kategorie: "Box",
+      rest: "0-0",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Pavel Šigut",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "75kg",
+      kategorie: "Box",
+      rest: "0-0",
     },
   },
 ];
@@ -185,7 +336,7 @@ export default function Fighters() {
       <Banner header={header} />
 
       <NavigationMenu />
-      <Main title="Bojovníci">
+      <Main title="Zápasníci">
         <Typography variant="body1" color="primary" paragraph>
           Something short and leading about the collection below—its contents,
           the creator, etc. Make it short and sweet, but not too short so folks
@@ -202,18 +353,22 @@ export default function Fighters() {
           short and sweet, but not too short so folks don&apos;t simply skip
           over it entirely.
         </Typography>
-        {fotky?.map((foto, index) => {
-          return (
-            <Fighter
-              key={index}
-              avatar={foto?.path}
-              avatarAlt={foto?.name}
-              fighter={foto?.fighter}
-              facebookLink={foto?.facebook}
-              instagramLink={foto?.instagram}
-            />
-          );
-        })}
+        <Grid container spacing={2}>
+          {fotky?.map((foto, index) => {
+            return (
+              <Grid item xs={12} md={6}>
+                <Fighter
+                  key={index}
+                  avatar={foto?.path}
+                  avatarAlt={foto?.name}
+                  fighter={foto?.fighter}
+                  facebookLink={foto?.facebook}
+                  instagramLink={foto?.instagram}
+                />
+              </Grid>
+            );
+          })}
+        </Grid>
       </Main>
       <CopyrightFooter />
     </ThemeProvider>
