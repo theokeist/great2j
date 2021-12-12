@@ -14,7 +14,7 @@ export default function Main({
   gutterBottom = false,
 }: any) {
   return (
-    <Container sx={{ px: 3, pb: 18, pt: 8 }}>
+    <Container sx={{ pb: 18, pt: 8 }}>
       <Typography
         component="h1"
         variant="h3"

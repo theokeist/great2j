@@ -1,31 +1,44 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import {
+  Button,
+  Grid,
+  Box,
+  Stack,
+  Typography,
+  Container,
+  CssBaseline,
+} from "@mui/material";
 import Link from "@mui/material/Link";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, useTheme, ThemeProvider } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import header from "../public/header.jpg";
-import logo from "../public/logo.jpg";
 
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import Banner from "./components/banner";
 import Main from "./components/main";
 
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import LinearProgress, {
+  LinearProgressProps,
+} from "@mui/material/LinearProgress";
 
-const cards = [1, 2, 3, 4, 5, 6, 7];
+function LinearProgressWithLabel(
+  props: LinearProgressProps & { value: number }
+) {
+  return (
+    <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ width: "100%", mr: 1 }}>
+        <LinearProgress variant="determinate" {...props} />
+      </Box>
+      <Box sx={{ minWidth: 35 }}>
+        <Typography variant="body2" color="secondary">{`${Math.round(
+          props.value
+        )}%`}</Typography>
+      </Box>
+    </Box>
+  );
+}
 
 const themes = createTheme({
   palette: {
@@ -38,12 +51,29 @@ const themes = createTheme({
       dark: "#000",
       light: "#ff0000",
     },
+    secondary: {
+      main: "#ff0000",
+    },
   },
 });
 
 export default function Album() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
+  const [progress, setProgress] = React.useState(10);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 10 : prevProgress + 10
+      );
+    }, 1400);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
@@ -52,83 +82,103 @@ export default function Album() {
       <Main>
         <Box
           sx={{
-            bgcolor: "background.paper",
-            pt: 8,
+            bgcolor: "primary",
+            pt: 2,
             pb: 6,
           }}
         >
-          <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="primary"
-              gutterBottom
-            >
-              Album layout
-            </Typography>
-            <Typography variant="h5" align="center" color="primary" paragraph>
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
-            </Typography>
+          <Container maxWidth="lg">
             <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
+              direction={matches ? "row" : "column-reverse"}
+              spacing={8}
               justifyContent="center"
             >
-              <Button variant="contained" color="primary" size="large">
-                Main call to action
-              </Button>
-              <Button variant="outlined" color="secondary" size="large">
-                Secondary action
-              </Button>
+              <Grid item md={6}>
+                <iframe
+                  width="100%"
+                  height="300px"
+                  src="https://www.youtube.com/embed/9RxK4UUM9sU"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                <Typography variant="body1" color="primary" paragraph>
+                  GREAT je ostravská organizace pořádající galavečery ringových
+                  sportů pro dobročinné účely. Koupí oblečení GREAT přispíváte
+                  na podporu malého Františka, který se narodil v šestém měsíci
+                  těhotenství, trpí dětskou mozkovou obrnou a je odkázán na
+                  invalidní vozík, a pro kterého GREAT organizují galavečer v
+                  Ostravě dne 2.4.2022. Všechny produkty značky GREAT jsou
+                  zárukou kvality a jsou vyráběny v České Republice.
+                </Typography>
+              </Grid>
+              <Grid item md={6}>
+                <Box
+                  sx={{
+                    minHeight: 600,
+                    borderRadius: 0,
+                    px: 5,
+                    py: 7,
+                    backgroundColor: "primary.dark",
+                  }}
+                >
+                  <Typography
+                    variant="h3"
+                    align="center"
+                    color="primary"
+                    paragraph
+                  >
+                    Vybráno
+                  </Typography>
+                  <Typography
+                    variant="h3"
+                    align="center"
+                    sx={{ fontWeight: 900 }}
+                    color="primary"
+                    paragraph
+                  >
+                    38 269,- Kč
+                  </Typography>
+                  <Typography
+                    variant="h4"
+                    align="center"
+                    color="primary"
+                    paragraph
+                  >
+                    z
+                  </Typography>
+                  <Typography
+                    variant="h3"
+                    align="center"
+                    color="primary"
+                    paragraph
+                  >
+                    250 000,- Kč
+                  </Typography>
+                  <LinearProgressWithLabel color="secondary" value={progress} />
+                  <Button
+                    size="large"
+                    fullWidth
+                    sx={{ bgcolor: "green", my: 2, borderRadius: 0 }}
+                  >
+                    Přispět
+                  </Button>
+                  <Typography variant="body2" color="primary" paragraph>
+                    GREAT je ostravská organizace pořádající galavečery
+                    ringových sportů pro dobročinné účely. Koupí oblečení GREAT
+                    přispíváte na podporu malého Františka, který se narodil v
+                    šestém měsíci těhotenství, trpí dětskou mozkovou obrnou a je
+                    odkázán na invalidní vozík, a pro kterého GREAT organizují
+                    galavečer v Ostravě dne 2.4.2022. Všechny produkty značky
+                    GREAT jsou zárukou kvality a jsou vyráběny v České
+                    Republice.
+                  </Typography>
+                </Box>
+              </Grid>
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
-          <Grid
-            sx={{ display: { overflowX: "scroll", flexWrap: "nowrap" } }}
-            container
-            spacing={4}
-          >
-            {cards.map((card) => (
-              <Grid item key={card} xs={3} sm={4} md={3}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      // 16:9
-                      pt: "56.25%",
-                    }}
-                    image="https://source.unsplash.com/random"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
       </Main>
       <CopyrightFooter />
     </ThemeProvider>

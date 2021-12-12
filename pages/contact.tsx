@@ -60,8 +60,8 @@ export default function Contact() {
         </Typography>
         <iframe
           src="https://frame.mapy.cz/s/gagatuputa"
-          width="340"
-          height="280"
+          width="auto"
+          height="400"
           frameBorder="0"
         ></iframe>
       </Main>

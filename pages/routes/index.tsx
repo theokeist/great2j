@@ -39,7 +39,7 @@ export const mobilePages = [
   { name: "Kontakt", link: "/contact" },
 ];
 
-const settings = [
+const social = [
   {
     name: "Instagram",
     icon: <InstagramIcon color="primary" />,
@@ -101,10 +101,11 @@ export const NavigationMenu = () => {
   const logoImage = () => {
     return (
       <Link href="/">
-        <Image alt="great by 2j" src={logo} layout="fill" priority />
+        <Image alt="GREAT by 2j" src={logo} layout="fill" priority />
       </Link>
     );
   };
+
   return (
     <AppBar position="static" sx={{ bgcolor: "black", py: 2 }}>
       <Container maxWidth="xl">
@@ -150,7 +151,11 @@ export const NavigationMenu = () => {
               }}
             >
               {mobilePages.map((page, index) => (
-                <Link key={index} href={page.link}>
+                <Link
+                  key={index}
+                  href={page.link}
+                  style={{ textDecoration: "none" }}
+                >
                   <MenuItem key={index} onClick={handleCloseNavMenu}>
                     {isActive(page)}
                   </MenuItem>
@@ -165,11 +170,20 @@ export const NavigationMenu = () => {
 
           {pages.map((page, index) => (
             <Box key={index} sx={{ display: { xs: "none", md: "flex" } }}>
-              <Link key={index} href={page?.link}>
+              <Link
+                key={index}
+                href={page?.link}
+                style={{ textDecoration: "none" }}
+              >
                 <Button
                   key={index}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    borderRadius: 0,
+                  }}
                   variant={
                     router?.pathname == page?.link ? "outlined" : undefined
                   }
@@ -203,8 +217,12 @@ export const NavigationMenu = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting, index) => (
-                <Link key={index} href={setting.link}>
+              {social.map((setting, index) => (
+                <Link
+                  key={index}
+                  href={setting.link}
+                  style={{ textDecoration: "none" }}
+                >
                   <MenuItem
                     key={index}
                     onClick={handleCloseNavMenu}

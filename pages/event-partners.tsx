@@ -115,10 +115,22 @@ export default function EventPartners() {
           spacing={2}
           justifyContent="center"
         >
-          <Button variant="contained" color="secondary" size="large" fullWidth>
+          <Button
+            variant="contained"
+            sx={{ borderRadius: 0 }}
+            color="secondary"
+            size="large"
+            fullWidth
+          >
             zobrazit
           </Button>
-          <Button variant="contained" color="secondary" size="large" fullWidth>
+          <Button
+            variant="contained"
+            sx={{ borderRadius: 0 }}
+            color="secondary"
+            size="large"
+            fullWidth
+          >
             více
           </Button>
         </Stack>
