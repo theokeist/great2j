@@ -87,23 +87,83 @@ export default function Album() {
             pb: 6,
           }}
         >
-          <Container maxWidth="lg">
-            <Stack
-              direction={matches ? "row" : "column-reverse"}
-              spacing={8}
-              justifyContent="center"
-            >
-              <Grid item md={6}>
-                <iframe
-                  width="100%"
-                  height="300px"
-                  src="https://www.youtube.com/embed/9RxK4UUM9sU"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                <Typography variant="body1" color="primary" paragraph>
+          <Stack
+            direction={matches ? "row" : "column-reverse"}
+            spacing={8}
+            justifyContent="center"
+          >
+            <Grid item md={6}>
+              <iframe
+                width="100%"
+                height="300px"
+                src="https://www.youtube.com/embed/9RxK4UUM9sU"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              <Typography variant="body1" color="primary" paragraph>
+                GREAT je ostravská organizace pořádající galavečery ringových
+                sportů pro dobročinné účely. Koupí oblečení GREAT přispíváte na
+                podporu malého Františka, který se narodil v šestém měsíci
+                těhotenství, trpí dětskou mozkovou obrnou a je odkázán na
+                invalidní vozík, a pro kterého GREAT organizují galavečer v
+                Ostravě dne 2.4.2022. Všechny produkty značky GREAT jsou zárukou
+                kvality a jsou vyráběny v České Republice.
+              </Typography>
+            </Grid>
+            <Grid item md={6}>
+              <Box
+                sx={{
+                  minHeight: 600,
+                  borderRadius: 0,
+                  px: 5,
+                  py: 7,
+                  backgroundColor: "primary.dark",
+                }}
+              >
+                <Typography
+                  variant="h3"
+                  align="center"
+                  color="primary"
+                  paragraph
+                >
+                  Vybráno
+                </Typography>
+                <Typography
+                  variant="h3"
+                  align="center"
+                  sx={{ fontWeight: 900 }}
+                  color="primary"
+                  paragraph
+                >
+                  38 269,- Kč
+                </Typography>
+                <Typography
+                  variant="h4"
+                  align="center"
+                  color="primary"
+                  paragraph
+                >
+                  z
+                </Typography>
+                <Typography
+                  variant="h3"
+                  align="center"
+                  color="primary"
+                  paragraph
+                >
+                  250 000,- Kč
+                </Typography>
+                <LinearProgressWithLabel color="secondary" value={progress} />
+                <Button
+                  size="large"
+                  fullWidth
+                  sx={{ bgcolor: "green", my: 2, borderRadius: 0 }}
+                >
+                  Přispět
+                </Button>
+                <Typography variant="body2" color="primary" paragraph>
                   GREAT je ostravská organizace pořádající galavečery ringových
                   sportů pro dobročinné účely. Koupí oblečení GREAT přispíváte
                   na podporu malého Františka, který se narodil v šestém měsíci
@@ -112,72 +172,9 @@ export default function Album() {
                   Ostravě dne 2.4.2022. Všechny produkty značky GREAT jsou
                   zárukou kvality a jsou vyráběny v České Republice.
                 </Typography>
-              </Grid>
-              <Grid item md={6}>
-                <Box
-                  sx={{
-                    minHeight: 600,
-                    borderRadius: 0,
-                    px: 5,
-                    py: 7,
-                    backgroundColor: "primary.dark",
-                  }}
-                >
-                  <Typography
-                    variant="h3"
-                    align="center"
-                    color="primary"
-                    paragraph
-                  >
-                    Vybráno
-                  </Typography>
-                  <Typography
-                    variant="h3"
-                    align="center"
-                    sx={{ fontWeight: 900 }}
-                    color="primary"
-                    paragraph
-                  >
-                    38 269,- Kč
-                  </Typography>
-                  <Typography
-                    variant="h4"
-                    align="center"
-                    color="primary"
-                    paragraph
-                  >
-                    z
-                  </Typography>
-                  <Typography
-                    variant="h3"
-                    align="center"
-                    color="primary"
-                    paragraph
-                  >
-                    250 000,- Kč
-                  </Typography>
-                  <LinearProgressWithLabel color="secondary" value={progress} />
-                  <Button
-                    size="large"
-                    fullWidth
-                    sx={{ bgcolor: "green", my: 2, borderRadius: 0 }}
-                  >
-                    Přispět
-                  </Button>
-                  <Typography variant="body2" color="primary" paragraph>
-                    GREAT je ostravská organizace pořádající galavečery
-                    ringových sportů pro dobročinné účely. Koupí oblečení GREAT
-                    přispíváte na podporu malého Františka, který se narodil v
-                    šestém měsíci těhotenství, trpí dětskou mozkovou obrnou a je
-                    odkázán na invalidní vozík, a pro kterého GREAT organizují
-                    galavečer v Ostravě dne 2.4.2022. Všechny produkty značky
-                    GREAT jsou zárukou kvality a jsou vyráběny v České
-                    Republice.
-                  </Typography>
-                </Box>
-              </Grid>
-            </Stack>
-          </Container>
+              </Box>
+            </Grid>
+          </Stack>
         </Box>
       </Main>
       <CopyrightFooter />
