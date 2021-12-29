@@ -25,7 +25,7 @@ export const pages = [
   { name: "Zápasníci", link: "/fighters" },
   { name: "O nás", link: "/about" },
   { name: "Sponzoři & Spolupráce", link: "/event-partners" },
-  { name: "E-shop", link: "/eshop" },
+  { name: "E-shop", redirect: "https://bit.ly/GreatShopCZ" },
   { name: "Kontakt", link: "/contact" },
 ];
 
@@ -35,7 +35,7 @@ export const mobilePages = [
   { name: "Zápasníci", link: "/fighters" },
   { name: "O nás", link: "/about" },
   { name: "Sponzoři & Spolupráce", link: "/event-partners" },
-  { name: "E-shop", link: "/eshop" },
+  { name: "E-shop", redirect: "https://bit.ly/GreatShopCZ" },
   { name: "Kontakt", link: "/contact" },
 ];
 
@@ -153,7 +153,7 @@ export const NavigationMenu = () => {
               {mobilePages.map((page, index) => (
                 <Link
                   key={index}
-                  href={page.link}
+                  href={page?.link ? page.link : page.redirect}
                   style={{ textDecoration: "none" }}
                 >
                   <MenuItem key={index} onClick={handleCloseNavMenu}>
@@ -170,9 +170,9 @@ export const NavigationMenu = () => {
 
           {pages.map((page, index) => (
             <Box key={index} sx={{ display: { xs: "none", md: "flex" } }}>
-              <Link
+              {page && (<Link
                 key={index}
-                href={page?.link}
+                href={page?.link ? page.link : page.redirect}
                 style={{ textDecoration: "none" }}
               >
                 <Button
@@ -190,7 +190,7 @@ export const NavigationMenu = () => {
                 >
                   {page?.name}
                 </Button>
-              </Link>
+              </Link>)}
             </Box>
           ))}
           <Box sx={{ flexGrow: 0, display: { md: "none" } }}>
