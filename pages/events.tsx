@@ -6,9 +6,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import header from "../public/event3.webp";
+import frantisek from "../public/events/frantisek.jpg";
 import Main from "./components/main";
 import Banner from "./components/banner";
 import EvnetTimeline from "./components/timeline";
+import Image from "next/image";
 
 const themes = createTheme({
   palette: {
@@ -36,28 +38,26 @@ export default function Events() {
 
       <NavigationMenu />
       <Main align="center" title="GREAT FIGHT NIGHT" subtitle="pro Františka">
-        <hr></hr>
-        <Typography variant="h5" align="center" color="primary">
-          Datum konání
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="primary"
-          paragraph
-        >
-          26.2.2022
-        </Typography>
-        <Typography variant="h5" align="center" color="primary" paragraph>
-          Průběh události
-        </Typography>
-        <EvnetTimeline />
         <Stack
           sx={{ pt: 4 }}
           direction={matches ? "row" : "column"}
-          spacing={2}
+          spacing={4}
         >
-          <Typography variant="body1" color="primary" paragraph>
+          <Typography
+            variant="body1"
+            color="primary"
+            align="justify"
+            sx={{
+              width: {
+                xs: "100%", // theme.breakpoints.up('xs')
+                md: 800, // theme.breakpoints.up('md')
+              },
+              mr: {
+                md: 5
+              }
+            }}
+            paragraph
+          >
             Rozhodli jsme se zorganizovat galavečer ringových sportů za účelem
             propagace a změny nastolených trendů, díky kterým se dnes dostává
             pozornosti hlavně MMA. Abychom ukázali, že jsme nepřišli vydělávat
@@ -85,12 +85,49 @@ export default function Events() {
             pro rodinu vybrat, bude vysoká - 250.000,- Kč. Budeme rádi, když nám
             v tomto pomůžete svou účastí a skvělým výkonem na galavečeru! :)
           </Typography>
+          <Image
+            alt="great by 2j"
+            src={frantisek}
+            layout="fixed"
+            height="400"
+            width="300"
+            placeholder="blur"
+            priority
+          />
+        </Stack>
+        <hr></hr>
+
+        <Stack
+          sx={{ pt: 4 }}
+          direction={matches ? "row" : "column"}
+          spacing={2}
+        >
+          <div>
+            <Typography variant="h5" align="center" color="primary">
+              Datum konání
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              align="center"
+              color="primary"
+              paragraph
+            >
+              26.2.2022
+            </Typography>
+            <Typography variant="h5" align="center" color="primary" paragraph>
+              Průběh události
+            </Typography>
+            <EvnetTimeline />
+          </div>
+          <div>
+
           <iframe
             src="https://frame.mapy.cz/s/movodutovo"
             width="auto"
-            height="400"
+            height="700"
             frameBorder="0"
-          ></iframe>
+            ></iframe>
+            </div>
         </Stack>
       </Main>
       <CopyrightFooter />
