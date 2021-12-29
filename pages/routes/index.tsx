@@ -53,7 +53,7 @@ const social = [
   {
     name: "YouTube",
     icon: <YouTubeIcon color="primary" />,
-    link: "https://www.instagram.com/great_2j/?hl=cs",
+    link: "https://www.youtube.com/channel/UCPGv4E2KiH8degq2RigLUoA",
   },
 ];
 
