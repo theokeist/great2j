@@ -46,11 +46,6 @@ const social = [
     link: "https://www.instagram.com/great_2j/?hl=cs",
   },
   {
-    name: "Facebook",
-    icon: <FacebookIcon color="primary" />,
-    link: "https://www.instagram.com/great_2j/?hl=cs",
-  },
-  {
     name: "YouTube",
     icon: <YouTubeIcon color="primary" />,
     link: "https://www.youtube.com/channel/UCPGv4E2KiH8degq2RigLUoA",
@@ -101,7 +96,7 @@ export const NavigationMenu = () => {
   const logoImage = () => {
     return (
       <Link href="/">
-        <Image alt="GREAT by 2j" src={logo} layout="fill" priority />
+        <Image alt="GREAT" src={logo} layout="fill" priority />
       </Link>
     );
   };
@@ -170,27 +165,29 @@ export const NavigationMenu = () => {
 
           {pages.map((page, index) => (
             <Box key={index} sx={{ display: { xs: "none", md: "flex" } }}>
-              {page && (<Link
-                key={index}
-                href={page?.link ? page.link : page.redirect}
-                style={{ textDecoration: "none" }}
-              >
-                <Button
+              {page && (
+                <Link
                   key={index}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    color: "white",
-                    display: "block",
-                    borderRadius: 0,
-                  }}
-                  variant={
-                    router?.pathname == page?.link ? "outlined" : undefined
-                  }
+                  href={page?.link ? page.link : page.redirect}
+                  style={{ textDecoration: "none" }}
                 >
-                  {page?.name}
-                </Button>
-              </Link>)}
+                  <Button
+                    key={index}
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      display: "block",
+                      borderRadius: 0,
+                    }}
+                    variant={
+                      router?.pathname == page?.link ? "outlined" : undefined
+                    }
+                  >
+                    {page?.name}
+                  </Button>
+                </Link>
+              )}
             </Box>
           ))}
           <Box sx={{ flexGrow: 0, display: { md: "none" } }}>

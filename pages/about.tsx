@@ -31,7 +31,7 @@ export default function About() {
       <Banner header={header} objectPosition="0% 0%" />
 
       <NavigationMenu />
-      <Main title="GREAT by 2j" subtitle="Jiří Ondruš & Jakub Bernold">
+      <Main title="GREAT by" subtitle="Jiří Ondruš & Jakub Bernold">
         <Typography variant="body1" color="primary" align="justify" paragraph>
           (povinné pouze pro juniorské kategorie), bandáže (možnost mít klasické
           tejpy schválené rozhodčím po domluvě se soupeřem), rukavice a holeně.

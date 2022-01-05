@@ -14,7 +14,7 @@ export default function Main({
   gutterBottom = false,
 }: any) {
   return (
-    <Container sx={{ pb: 18, pt: 8 }}>
+    <Container sx={{ pb: 18, pt: 6 }}>
       <Typography
         component="h1"
         variant="h3"
@@ -22,7 +22,8 @@ export default function Main({
         gutterBottom={gutterBottom}
         textAlign={align}
         sx={{
-          fontWeight: 900,
+          fontWeight: 700,
+          fontSize: 42,
         }}
       >
         {title}
@@ -34,8 +35,8 @@ export default function Main({
           color="primary"
           textAlign={align}
           sx={{
-            fontWeight: 500,
-            fontSize: 36,
+            fontWeight: 200,
+            fontSize: 30,
           }}
           gutterBottom
         >

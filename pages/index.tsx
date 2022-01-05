@@ -96,13 +96,18 @@ export default function Album() {
               <iframe
                 width="100%"
                 height="300px"
-                src="https://www.youtube.com/embed/9RxK4UUM9sU"
+                src="https://www.youtube.com/embed/1tiBBGb_5_g?controls=0"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-              <Typography variant="body1" color="primary" paragraph>
+              <Typography
+                variant="body1"
+                color="primary"
+                align="justify"
+                paragraph
+              >
                 GREAT je ostravská organizace pořádající galavečery ringových
                 sportů pro dobročinné účely. Koupí oblečení GREAT přispíváte na
                 podporu malého Františka, který se narodil v šestém měsíci
@@ -156,14 +161,29 @@ export default function Album() {
                   250 000,- Kč
                 </Typography>
                 <LinearProgressWithLabel color="secondary" value={progress} />
-                <Button
-                  size="large"
-                  fullWidth
-                  sx={{ bgcolor: "green", my: 2, borderRadius: 0 }}
+                <Link
+                  href={"https://ib.fio.cz/ib/transparent?a=2302072455"}
+                  style={{ textDecoration: "none" }}
                 >
-                  Přispět
-                </Button>
-                <Typography variant="body2" color="primary" paragraph>
+                  <Button
+                    size="large"
+                    fullWidth
+                    sx={{
+                      bgcolor: "green",
+                      my: 6,
+                      borderRadius: 0,
+                      fontWeight: 400,
+                    }}
+                  >
+                    transparentní účet
+                  </Button>
+                </Link>
+                <Typography
+                  variant="body2"
+                  color="primary"
+                  align="justify"
+                  paragraph
+                >
                   GREAT je ostravská organizace pořádající galavečery ringových
                   sportů pro dobročinné účely. Koupí oblečení GREAT přispíváte
                   na podporu malého Františka, který se narodil v šestém měsíci

@@ -23,7 +23,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            pátek 25.2.2022
+            pátek 22.4.2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -44,7 +44,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            sobota 26.2. 9-13 hod
+            sobota 23.4. 9-13 hod
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -65,7 +65,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            sobota 26.2. 13-16 hod
+            sobota 23.4. 13-16 hod
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -86,7 +86,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            sobota 26.2. 17-22 hod
+            sobota 23.4. 17-22 hod
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -107,7 +107,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            sobota 26.2. od 23 hod
+            sobota 23.4. od 23 hod
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
