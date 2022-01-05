@@ -43,7 +43,7 @@ const fotky = [
   },
 ];
 
-const theme = createTheme({
+const themes = createTheme({
   palette: {
     background: {
       default: "#252525",
@@ -61,16 +61,25 @@ const theme = createTheme({
     },
   },
 });
+
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 export default function EventPartners() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themes}>
       <CssBaseline />
       <Banner header={header} objectPosition="0 25%" />
 
       <NavigationMenu />
-      <Main title="Partneři" gutterBottom>
-        <Typography variant="body1" color="primary" paragraph></Typography>
-        <Grid container spacing={4}>
+      <Main align="center" title="Partneři" gutterBottom>
+        <Grid
+          container
+          spacing={4}
+          sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}
+        >
           {fotky?.map((foto, index) => {
             return (
               <Grid key={index} item xs={6} md={3}>
@@ -88,7 +97,7 @@ export default function EventPartners() {
             );
           })}
         </Grid>
-        <Stack
+        {/* <Stack
           sx={{
             py: 30,
             px: 5,
@@ -118,7 +127,7 @@ export default function EventPartners() {
           >
             více
           </Button>
-        </Stack>
+        </Stack> */}
       </Main>
       <CopyrightFooter />
     </ThemeProvider>

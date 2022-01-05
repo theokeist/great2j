@@ -102,7 +102,7 @@ export const NavigationMenu = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "black", py: 2 }}>
+    <AppBar position="static" sx={{ bgcolor: "black", py: 1.5 }}>
       <Container maxWidth="xl">
         <Box
           sx={{

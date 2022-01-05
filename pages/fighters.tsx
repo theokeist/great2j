@@ -1,13 +1,14 @@
 import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useTheme, createTheme, ThemeProvider } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import Main from "./components/main";
 import Fighter from "./components/fighter";
 import Banner from "./components/banner";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import header from "../public/fighters.webp";
 
@@ -316,14 +317,21 @@ const themes = createTheme({
 });
 
 export default function Fighters() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
       <Banner header={header} />
 
       <NavigationMenu />
-      <Main title="ZÁPASNÍCI" align="center" gutterBottom>
-        <Grid container spacing={2}>
+      <Main title="ZÁPASNÍCI" align="center" background="black" gutterBottom>
+        <Grid
+          container
+          spacing={2}
+          sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}
+        >
           {fotky?.map((foto, index) => {
             return (
               <Grid key={index} item xs={12} md={6}>

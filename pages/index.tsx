@@ -81,11 +81,11 @@ export default function Album() {
       <NavigationMenu />
       <Main>
         <Box
-          sx={{
-            bgcolor: "primary",
-            pt: 2,
-            pb: 6,
-          }}
+          sx={
+            matches
+              ? { bgcolor: "primary", pt: 8, pb: 6, px: 36 }
+              : { bgcolor: "primary", pt: 2, pb: 6, px: 2 }
+          }
         >
           <Stack
             direction={matches ? "row" : "column"}
@@ -95,7 +95,7 @@ export default function Album() {
             <Grid item md={6}>
               <iframe
                 width="100%"
-                height="300px"
+                height={matches ? "340px" : "256px"}
                 src="https://www.youtube.com/embed/1tiBBGb_5_g?controls=0"
                 title="YouTube video player"
                 frameBorder="0"
@@ -142,7 +142,7 @@ export default function Album() {
                   color="primary"
                   paragraph
                 >
-                  38 269,- Kč
+                  40 712,- Kč
                 </Typography>
                 <Typography
                   variant="h4"
@@ -160,7 +160,7 @@ export default function Album() {
                 >
                   250 000,- Kč
                 </Typography>
-                <LinearProgressWithLabel color="secondary" value={progress} />
+                {/*<LinearProgressWithLabel color="secondary" value={progress} />*/}
                 <Link
                   href={"https://ib.fio.cz/ib/transparent?a=2302072455"}
                   style={{ textDecoration: "none" }}
