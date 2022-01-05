@@ -88,7 +88,7 @@ export default function Album() {
           }}
         >
           <Stack
-            direction={matches ? "row" : "column-reverse"}
+            direction={matches ? "row" : "column"}
             spacing={8}
             justifyContent="center"
           >

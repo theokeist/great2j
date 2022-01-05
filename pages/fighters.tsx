@@ -189,17 +189,6 @@ const fotky = [
     },
   },
   {
-    path: "/fighters/marekBiela",
-    name: "Marek Biela",
-    facebook: "",
-    instagram: "",
-    fighter: {
-      vaha: "86kg",
-      kategorie: "Box",
-      rest: "6-2",
-    },
-  },
-  {
     path: "/fighters/",
     name: "Jiří Mravec",
     facebook: "",
@@ -333,23 +322,7 @@ export default function Fighters() {
       <Banner header={header} />
 
       <NavigationMenu />
-      <Main title="Zápasníci" gutterBottom>
-        <Typography variant="body1" color="primary" paragraph>
-          Something short and leading about the collection below—its contents,
-          the creator, etc. Make it short and sweet, but not too short so folks
-          don&apos;t simply skip over it entirely. Something short and leading
-          about the collection below—its contents, the creator, etc. Make it
-          short and sweet, but not too short so folks don&apos;t simply skip
-          over it entirely. Something short and leading about the collection
-          below—its contents, the creator, etc. Make it short and sweet, but not
-          too short so folks don&apos;t simply skip over it entirely. Something
-          short and leading about the collection below—its contents, the
-          creator, etc. Make it short and sweet, but not too short so folks
-          don&apos;t simply skip over it entirely. Something short and leading
-          about the collection below—its contents, the creator, etc. Make it
-          short and sweet, but not too short so folks don&apos;t simply skip
-          over it entirely.
-        </Typography>
+      <Main title="ZÁPASNÍCI" align="center" gutterBottom>
         <Grid container spacing={2}>
           {fotky?.map((foto, index) => {
             return (

@@ -68,23 +68,8 @@ export default function EventPartners() {
       <Banner header={header} objectPosition="0 25%" />
 
       <NavigationMenu />
-      <Main title="Sponzoři a partneři" gutterBottom>
-        <Typography variant="body1" color="primary" paragraph>
-          Something short and leading about the collection below—its contents,
-          the creator, etc. Make it short and sweet, but not too short so folks
-          don&apos;t simply skip over it entirely. Something short and leading
-          about the collection below—its contents, the creator, etc. Make it
-          short and sweet, but not too short so folks don&apos;t simply skip
-          over it entirely. Something short and leading about the collection
-          below—its contents, the creator, etc. Make it short and sweet, but not
-          too short so folks don&apos;t simply skip over it entirely. Something
-          short and leading about the collection below—its contents, the
-          creator, etc. Make it short and sweet, but not too short so folks
-          don&apos;t simply skip over it entirely. Something short and leading
-          about the collection below—its contents, the creator, etc. Make it
-          short and sweet, but not too short so folks don&apos;t simply skip
-          over it entirely.
-        </Typography>
+      <Main title="Partneři" gutterBottom>
+        <Typography variant="body1" color="primary" paragraph></Typography>
         <Grid container spacing={4}>
           {fotky?.map((foto, index) => {
             return (

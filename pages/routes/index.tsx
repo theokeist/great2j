@@ -24,7 +24,7 @@ export const pages = [
   { name: "Eventy", link: "/events" },
   { name: "Zápasníci", link: "/fighters" },
   { name: "O nás", link: "/about" },
-  { name: "Sponzoři & Spolupráce", link: "/event-partners" },
+  { name: "Partneři", link: "/event-partners" },
   { name: "E-shop", redirect: "https://bit.ly/GreatShopCZ" },
   { name: "Kontakt", link: "/contact" },
 ];
@@ -34,7 +34,7 @@ export const mobilePages = [
   { name: "Eventy", link: "/events" },
   { name: "Zápasníci", link: "/fighters" },
   { name: "O nás", link: "/about" },
-  { name: "Sponzoři & Spolupráce", link: "/event-partners" },
+  { name: "Partneři", link: "/event-partners" },
   { name: "E-shop", redirect: "https://bit.ly/GreatShopCZ" },
   { name: "Kontakt", link: "/contact" },
 ];

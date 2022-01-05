@@ -58,12 +58,6 @@ export default function Contact() {
         <Typography variant="h4" color="primary" fontWeight="900" gutterBottom>
           Mapa
         </Typography>
-        <iframe
-          src="https://frame.mapy.cz/s/gagatuputa"
-          width="auto"
-          height="400"
-          frameBorder="0"
-        ></iframe>
       </Main>
       <CopyrightFooter />
     </ThemeProvider>

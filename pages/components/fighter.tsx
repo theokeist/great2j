@@ -35,17 +35,12 @@ export default function Fighter({
       onMouseOver={() => setHover((old) => !old)}
       onMouseOut={() => setHover(false)}
     >
-      <Avatar alt={avatarAlt} sx={{ width: 156, height: 156 }}>
-        <Image
-          alt={avatarAlt}
-          src={
-            !hover && avatar ? avatar + "/normal.jpg" : avatar + "/hover.jpg"
-          }
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center 5%"
-          priority
-        />
+      <Avatar
+        alt={avatarAlt}
+        sx={{ width: 156, height: 156 }}
+        src={!hover && avatar ? avatar + "/normal.jpg" : avatar + "/hover.jpg"}
+      >
+        ac
       </Avatar>
       <Stack
         direction={matches ? "column" : "row"}
