@@ -24,7 +24,7 @@ export default function Main({
         <Grid
           sx={
             matches
-              ? { backgroundColor: background, pt: 14, pb: 10 }
+              ? { backgroundColor: background, pt: 6, pb: 6 }
               : { backgroundColor: background, pt: 5, pb: 5 }
           }
         >

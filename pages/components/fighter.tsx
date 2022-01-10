@@ -9,7 +9,7 @@ import Avatar from "@mui/material/Avatar";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-
+import LanguageIcon from "@mui/icons-material/Language";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
@@ -20,6 +20,7 @@ export default function Fighter({
   fighter,
   instagramLink,
   facebookLink,
+  websiteLink,
 }: any) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
@@ -52,21 +53,30 @@ export default function Fighter({
         }}
         src={!hover && avatar ? avatar + "/normal.jpg" : avatar + "/hover.jpg"}
       >
-        {avatarAlt}
+        {avatarAlt.split(" ")?.[0][0]}
+        {avatarAlt.split(" ")?.[1][0]}
       </Avatar>
       <Stack
         direction={matches ? "column" : "row"}
         spacing={2.6}
         justifyContent="space-between"
       >
-        {!instagramLink && (
+        {instagramLink && (
           <Link href={instagramLink}>
             <InstagramIcon color="primary" sx={{ fontSize: 29 }} />
           </Link>
         )}
-        {!facebookLink && (
+        {facebookLink && (
           <Link href={facebookLink}>
             <FacebookIcon
+              color="primary"
+              sx={matches ? { fontSize: 29, mt: -0.5 } : { fontSize: 30 }}
+            />
+          </Link>
+        )}
+        {websiteLink && (
+          <Link href={websiteLink}>
+            <LanguageIcon
               color="primary"
               sx={matches ? { fontSize: 29, mt: -0.5 } : { fontSize: 30 }}
             />

@@ -48,39 +48,36 @@ export default function Events() {
           <Grid container spacing={7}>
             <Grid item xs={12} md={9}>
               <Typography
-                variant="body1"
+                sx={{ fontWeight: 300 }}
+                variant="h6"
                 color="primary"
                 align="justify"
                 paragraph
               >
-                Rozhodli jsme se zorganizovat galavečer ringových sportů za
-                účelem propagace a změny nastolených trendů, díky kterým se dnes
-                dostává pozornosti hlavně MMA. Abychom ukázali, že jsme nepřišli
-                vydělávat peníze, ale dělat to pro sport a pro potřebné,
-                rozhodli jsme se, že akce bude organizována pro dobrou věc. Na
-                internetu jsme našli článek o malém Františkovi, který se
-                narodil o 13 týdnů dříve a své první měsíce života strávil na
-                jednotce intenzivní a resuscitační péče a neonatologie mimo jiné
-                také s krvácením do mozku. Po propuštění z nemocnice se začal
-                velmi opožďovat a byla mu diagnostikována dětská mozková obrna.
-                Taktéž se potýká s velkými problémy s motorikou a vadou řeči.
-                František a jeho maminka, která je na něj od narození sama, musí
-                každý den dojíždět na rehabilitace a absolvovat různé pobyty v
-                lázeňských zařízeních. Bohužel spoustu nákladů nehradí
-                pojišťovna, například samotné rehabilitace vyjdou měsíčně na
-                20.000,- Kč. Tím to naneštěstí nekončí. František nedokáže
-                samostatně chodit a s pomocí udělá pár krůčků. Po většinu života
-                je odkázán na invalidní vozík a na péči své maminky a blízkých.
-                Z důvodu zkrácení Achillových šlach potřebuje mít neustále na
-                nohou ortézy, jejichž výroba je velmi finančně nákladná. V České
-                republice nejsou žádné, které by Fandovi pomáhaly, a tak má nyní
-                již druhé od firmy z Vídně, kam také musí jednou měsíčně
-                dojíždět. Výroba ortéz vyšla na 180 a 120 tisíc Kč. O tom, že to
-                má rodina extrémně finančně a psychicky náročné, nemusíme vést
-                debaty. Z toho důvodu jsme se rozhodli, že naše cílová částka,
-                kterou se pokusíme pro rodinu vybrat, bude vysoká - 250.000,-
-                Kč. Budeme rádi, když nám v tomto pomůžete svou účastí a skvělým
-                výkonem na galavečeru! :)
+                Historicky první GREAT FIGHT NIGHT se uskuteční v sobotu
+                23.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem této
+                akce je vybrat 250 tisíc Kč pro malého Františka a jeho maminku.
+                (zde bych vložil odkaz na článek o nich) Hala s kapacitou více
+                než 1 800 lidí zažije opravdu neopakovatelnou podívanou. V ringu
+                totiž uvidíme skvělé souboje, několik mistrů ČR a mimojiné také
+                vyhecované nelítostné bitvy, jaké jistě nabídnou např. zápasy
+                Strakoš vs. Obracaj, Pekárek vs. Kubíček nebo Gámez vs.
+                Hartmann. Velký svátek z této akce dělá také účast ostravské
+                bojovnice a velkého supertalentu Elizabeth Bezděkové. Přehlídku
+                krásných technik a souboj plný přestřelek jako vždy slibuje
+                zápas Jiřího Juřičky. Svůj možná poslední zápas v boxu zažije
+                Martin Prázdný, který se do královského sportu vrátil kvůli
+                zranění kolene, avšak po tomto galavečeru nejspíše opět zamíří
+                do MMA. V hlavním zápase večera pak bude nejen Ostrava, ale celé
+                Česko a Slovensko na nohou - do ringu se totiž po třech letech
+                vrací Marek Vaneček, pro kterého to možná bude, a možná také
+                nebude, úplné loučení s kariérou, během které potkal jména jako
+                Strnisko, Clemente Russo, Tlkanec apod., tedy nejen českou, ale
+                i světovou elitu. Tváří v tvář se mu postaví David Klíč - kat
+                jeho rivala z dob největší slávy, Jiřího Havel, kterého Klíč na
+                posledním Mistrovství České Republiky nelítostně knokautoval!
+                Přijďte si užít nezapomenutelný večer plný skvělého boxu a K-1 a
+                pomoci tím malému Františkovi!
               </Typography>
             </Grid>
             <Grid item xs={12} md={3}>

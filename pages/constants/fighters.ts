@@ -1,0 +1,461 @@
+export const fightersFotky = [
+  {
+    path: "/fighters/marekVanecek",
+    name: "Marek Vaněček",
+    facebook: "https://www.facebook.com/Marek.vanecekk",
+    instagram: "https://instagram.com/marekvanecek",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "Box",
+      rest: "70-30",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "David Klíč",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "Box",
+      rest: "",
+    },
+  },
+  {
+    path: "/fighters/martinPrazdny",
+    name: "Martin Prázdný",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "82kg",
+      kategorie: "Box",
+      rest: "50-30",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Rostislav Kročil",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "82kg",
+      kategorie: "",
+      rest: "",
+    },
+  },
+  {
+    path: "/fighters/wernerHartmann",
+    name: "Werner Hartmann",
+    facebook: "https://www.facebook.com/werner.hartmann.86",
+    instagram: "https://instagram.com/wehacko",
+    website: "https://wernerhartmann.cz",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "12-7-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Denis Gámez",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "65-25",
+    },
+  },
+  {
+    path: "/fighters/lizBezdekova",
+    name: "Elizabeth Bezděková",
+    facebook: "https://www.facebook.com/elizabethbezdekova3",
+    instagram: "https://instagram.com/elizabethbezdek",
+    fighter: {
+      vaha: "54kg",
+      kategorie: "Muay Thai",
+      rest: "",
+    },
+  },
+  {
+    path: "/fighters/jiriJuricka",
+    name: "Jiří Juřička",
+    facebook:
+      "https://www.facebook.com/people/Ji%C5%99%C3%AD-Ju%C5%99i%C4%8Dka/100004740256410/",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "K1",
+      rest: "K1 2-1, MMA 3-2, Box 1-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Dominik Gloser",
+    facebook: "https://www.facebook.com/dominik.gloser.10",
+    instagram: "",
+    fighter: {
+      vaha: "75kg",
+      kategorie: "Box",
+      rest: "122-20",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Hubert Kaczmarek",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "75kg",
+      kategorie: "Box",
+      rest: "60-30",
+    },
+  },
+  {
+    path: "/fighters/honzaStrakos",
+    name: "Jan Strakoš",
+    facebook: "https://www.facebook.com/honzicek.strakos",
+    instagram: "https://instagram.com/honza__strakos",
+    fighter: {
+      vaha: "76kg",
+      kategorie: "K1",
+      rest: "3-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Daniel Obracaj",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "76kg",
+      kategorie: "",
+      rest: "MMA 4-4, Box 5-5, K1 0-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Natálie Poledníková",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "66kg",
+      kategorie: "",
+      rest: "Box 33-17",
+    },
+  },
+  {
+    path: "/fighters/kristianPeczka",
+    name: "Kristián Péczka",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "16-19",
+    },
+  },
+  {
+    path: "/fighters/patrikStefan",
+    name: "Patrik Štefan",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "67kg",
+      kategorie: "Box",
+      rest: "19-6",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Tomáš Novotný",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "4-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Kim Amoussa",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "67kg",
+      kategorie: "Box",
+      rest: "5-0-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Josef Pekárek",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "100-50",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Jaroslav Kubíček",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "92kg",
+      kategorie: "Box",
+      rest: "Olympijský Box 30-20, Profi Box 1-2",
+    },
+  },
+  {
+    path: "/fighters/marekBiela",
+    name: "Marek Biela",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "82kg",
+      kategorie: "Box",
+      rest: "6-2",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Jakub Holec",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "82kg",
+      kategorie: "Box",
+      rest: "6-2",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Jiří Mravec",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "MMA",
+      rest: "0-1",
+    },
+  },
+
+  {
+    path: "/fighters/",
+    name: "Michal Vavřík",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "86kg",
+      kategorie: "Box",
+      rest: "1-1",
+    },
+  },
+  {
+    path: "/fighters/petrValicek",
+    name: "Petr Valíček",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "63,5kg",
+      kategorie: "Box",
+      rest: "3-5",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Petr Navrátil",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "60kg",
+      kategorie: "Box",
+      rest: "7-8",
+    },
+  },
+  {
+    path: "/fighters/robertPrazdny",
+    name: "Robert Prázdný",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "69kg",
+      kategorie: "",
+      rest: "K1 0-1, MMA 0-2",
+    },
+  },
+  {
+    path: "/fighters/davidStec",
+    name: "David Štec",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "71kg",
+      kategorie: "Box",
+      rest: "12-6",
+    },
+  },
+
+  {
+    path: "/fighters/",
+    name: "Daniel Bernold",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "69kg",
+      kategorie: "K1",
+      rest: "1-0",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Max Plachetka",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "46kg",
+      kategorie: "Box",
+      rest: "26-7-7",
+    },
+  },
+  {
+    path: "/fighters/vojtaBachorik",
+    name: "Vojtěch Bachořík",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "66kg",
+      kategorie: "K1",
+      rest: "1-2",
+    },
+  },
+
+  {
+    path: "/fighters/",
+    name: "Jakub Matuška",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "66kg",
+      kategorie: "K1",
+      rest: "0-1",
+    },
+  },
+  {
+    path: "/fighters/denisDerkac",
+    name: "Denis Derkáč",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "82kg",
+      kategorie: "Box",
+      rest: "0-0",
+    },
+  },
+
+  {
+    path: "/fighters/",
+    name: "Pavel Šigut",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "75kg",
+      kategorie: "Box",
+      rest: "0-0",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Franko Lálik",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "72kg",
+      kategorie: "Box",
+      rest: "2-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Marek Kellner",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "71kg",
+      kategorie: "K1",
+      rest: "1-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Liliana Kmentová",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "57kg",
+      kategorie: "Box",
+      rest: "1-1-1",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Mirek Nykl",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "81kg",
+      kategorie: "Box",
+      rest: "0-0",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Dorian Kropog",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "46kg",
+      kategorie: "Box",
+      rest: "",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Gabriel Kosyčan",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "75kg",
+      kategorie: "Box",
+      rest: "0-0",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "David Gábor",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "",
+      kategorie: "Box",
+      rest: "",
+    },
+  },
+  {
+    path: "/fighters/",
+    name: "Petr Martínek",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      vaha: "",
+      kategorie: "Box",
+      rest: "",
+    },
+  },
+];
+
+export default fightersFotky;
