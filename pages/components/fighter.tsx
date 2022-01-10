@@ -53,8 +53,8 @@ export default function Fighter({
         }}
         src={!hover && avatar ? avatar + "/normal.jpg" : avatar + "/hover.jpg"}
       >
-        {avatarAlt.split(" ")?.[0][0]}
-        {avatarAlt.split(" ")?.[1][0]}
+        {avatarAlt?.split(" ")?.[0][0]}
+        {avatarAlt?.split(" ")?.[1][0]}
       </Avatar>
       <Stack
         direction={matches ? "column" : "row"}
