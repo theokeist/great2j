@@ -43,7 +43,7 @@ export default function Fighters() {
           spacing={2}
           sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}
         >
-          {fightersFotky?.map((foto, index) => {
+          {fightersFotky.fightersFotky?.map((foto, index) => {
             return (
               <Grid key={index} item xs={12} md={6}>
                 <Fighter
