@@ -11,7 +11,7 @@ import Banner from "./components/banner";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import header from "../public/fighters.webp";
-import { fightersFotky } from "./constants/fighters";
+import * as fightersFotky from "./constants/fighters";
 
 const themes = createTheme({
   palette: {
