@@ -457,5 +457,3 @@ export const fightersFotky = [
     },
   },
 ];
-
-export default fightersFotky;
