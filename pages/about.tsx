@@ -33,15 +33,17 @@ export default function About() {
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
-      <Banner header={header} objectPosition="0% 0%" />
-
       <NavigationMenu />
-      <Main
+      <Banner
         align="center"
         title="GREAT by"
         subtitle="Jiří Ondruš & Jakub Bernold"
-        background="green"
-      >
+        header={"./header2.jpg"}
+        objectPosition="30% 0%"
+        marginLeft={-15}
+      />
+
+      <Main>
         <Grid sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}>
           <Typography
             sx={{ fontWeight: 300, mb: 5 }}

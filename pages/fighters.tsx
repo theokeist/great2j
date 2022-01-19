@@ -493,10 +493,15 @@ export default function Fighters() {
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
-      <Banner header={header} />
-
       <NavigationMenu />
-      <Main title="ZÁPASNÍCI" align="center" background="blue" gutterBottom>
+      <Banner
+        title="ZÁPASNÍCI"
+        align="center"
+        gutterBottom
+        header={"./fighters.webp"}
+      />
+
+      <Main>
         <Grid
           container
           spacing={2}

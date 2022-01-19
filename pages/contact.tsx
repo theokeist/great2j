@@ -32,10 +32,15 @@ export default function Contact() {
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
-      <Banner header={header} objectPosition="0 5%" />
-
       <NavigationMenu />
-      <Main align="center" title="Kontakt" background="black" gutterBottom>
+      <Banner
+        align="center"
+        title="Kontakt"
+        header={"./about.webp"}
+        objectPosition="0 5%"
+      />
+
+      <Main>
         <Grid sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}>
           <Typography variant="h6" color="primary" gutterBottom>
             <strong>Telefon:</strong> +420 777 888 333

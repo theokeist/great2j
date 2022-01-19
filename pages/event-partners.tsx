@@ -71,10 +71,16 @@ export default function EventPartners() {
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
-      <Banner header={header} objectPosition="0 25%" />
 
       <NavigationMenu />
-      <Main align="center" title="Partneři" gutterBottom>
+      <Banner
+        align="center"
+        title="Partneři"
+        gutterBottom
+        header={"./event_partner.webp"}
+        objectPosition="0 25%"
+      />
+      <Main>
         <Grid
           container
           spacing={4}
@@ -97,7 +103,7 @@ export default function EventPartners() {
             );
           })}
         </Grid>
-        {/* <Stack
+        <Stack
           sx={{
             py: 30,
             px: 5,
@@ -127,7 +133,7 @@ export default function EventPartners() {
           >
             více
           </Button>
-        </Stack> */}
+        </Stack>
       </Main>
       <CopyrightFooter />
     </ThemeProvider>

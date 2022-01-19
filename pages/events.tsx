@@ -35,15 +35,16 @@ export default function Events() {
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
-      <Banner header={header} objectPosition="0 30%" />
-
       <NavigationMenu />
-      <Main
+      <Banner
         align="center"
         title="GREAT FIGHT NIGHT"
         subtitle="pro Františka"
-        background="red"
-      >
+        header={"./event3.webp"}
+        objectPosition="0 30%"
+      />
+
+      <Main>
         <Grid container sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}>
           <Grid container spacing={7}>
             <Grid item xs={12} md={9}>
