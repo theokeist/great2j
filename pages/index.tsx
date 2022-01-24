@@ -12,6 +12,9 @@ import Link from "@mui/material/Link";
 import { createTheme, useTheme, ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+import cheerio from "cheerio";
+import axios from "axios";
+
 import header from "../public/header.jpg";
 
 import NavigationMenu from "./routes";
@@ -57,22 +60,36 @@ const themes = createTheme({
   },
 });
 
-export default function Album() {
+export async function getStaticProps() {
+  const { data } = await axios.get(
+    "https://ib.fio.cz/ib/transparent?a=2302072455"
+  );
+  const $ = cheerio.load(data);
+  const title = $(".pohybySum > table > tbody > tr > td:nth-child(2)").text();
+  return {
+    props: { title },
+    revalidate: 1000, // rerun after 10 seconds
+  };
+}
+
+export default function Album(props: any) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const FINAL_PRICE = 2.5;
+  const CURRENT = props?.title?.split(",")?.[0];
+  const FINAL = Math.floor(parseInt(CURRENT) / FINAL_PRICE);
+  const [progress, setProgress] = React.useState(FINAL);
 
-  const [progress, setProgress] = React.useState(10);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress >= 100 ? 10 : prevProgress + 10
-      );
-    }, 1400);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  // React.useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setProgress((prevProgress) =>
+  //       prevProgress >= 100 ? 10 : prevProgress + 10
+  //     );
+  //   }, 1400);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
 
   return (
     <ThemeProvider theme={themes}>
@@ -141,7 +158,7 @@ export default function Album() {
                   color="primary"
                   paragraph
                 >
-                  40 712,- Kč
+                  {props?.title}
                 </Typography>
                 <Typography
                   variant="h4"
@@ -157,9 +174,9 @@ export default function Album() {
                   color="primary"
                   paragraph
                 >
-                  250 000,- Kč
+                  250 000,- CZK
                 </Typography>
-                {/*<LinearProgressWithLabel color="secondary" value={progress} />*/}
+                <LinearProgressWithLabel color="secondary" value={progress} />
                 <Link
                   href={"https://ib.fio.cz/ib/transparent?a=2302072455"}
                   style={{ textDecoration: "none" }}
