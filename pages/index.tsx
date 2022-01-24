@@ -78,7 +78,6 @@ export default function Album() {
     <ThemeProvider theme={themes}>
       <CssBaseline />
       <NavigationMenu />
-      <Banner header={header} />
       <Main>
         <Box
           sx={
