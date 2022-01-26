@@ -547,7 +547,7 @@ export default function Fighter({
               ? { width: 156, height: 156 }
               : matches
               ? { width: 176, height: 176 }
-              : { width: 120, height: 120 }
+              : { width: 100, height: 100 }
           }
           imgProps={{
             style: { objectPosition: "50% 10%" },
