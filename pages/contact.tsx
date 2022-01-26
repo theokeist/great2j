@@ -9,7 +9,10 @@ import CopyrightFooter from "./components";
 import header from "../public/about.webp";
 import Main from "./components/main";
 import Banner from "./components/banner";
-
+import InstagramIcon from "@mui/icons-material/Instagram";
+import EmailIcon from "@mui/icons-material/Email";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+import CallIcon from "@mui/icons-material/Call";
 const themes = createTheme({
   palette: {
     background: {
@@ -28,7 +31,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Contact() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
+  const matchesLg = useMediaQuery(theme.breakpoints.up("xl"));
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
@@ -41,37 +45,59 @@ export default function Contact() {
       />
 
       <Main>
-        <Grid sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}>
-          <Typography variant="h6" color="primary" gutterBottom>
-            <strong>Telefon:</strong> +420 777 888 333
+        <Grid
+          sx={
+            matchesLg
+              ? { px: 36, py: 7 }
+              : matches
+              ? { px: 6, py: 5 }
+              : { px: 2, py: 5 }
+          }
+        >
+          <Typography
+            variant="h5"
+            color="primary"
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            <CallIcon color="primary" sx={{ mr: 1 }} />
+            739 495 153
           </Typography>
-          <Typography variant="h6" color="primary" gutterBottom>
-            <strong>Email:</strong> info@great2j.cz
-          </Typography>
-          <Typography variant="h6" color="primary" gutterBottom>
-            <strong>Spolupráce:</strong> spoluprace@great2j.cz
-          </Typography>
-          <Typography variant="h6" color="primary" gutterBottom>
-            <strong>Instagram:</strong> great_2j
+          <Typography
+            variant="h5"
+            color="primary"
+            sx={{ display: "flex", alignItems: "center", mb: 2 }}
+          >
+            <EmailIcon color="primary" sx={{ mr: 1 }} />
+            info@great2j.cz
           </Typography>
           <hr></hr>
-          <Typography variant="subtitle1" color="primary" gutterBottom>
-            <strong>Organizátor akce:</strong> Jiří Ondruš
+          <Typography
+            variant="h6"
+            color="primary"
+            sx={{ display: "flex", alignItems: "center", mt: 2 }}
+          >
+            <InstagramIcon color="primary" sx={{ mr: 1 }} />
+            <a
+              style={{ color: "red" }}
+              href="https://www.instagram.com/great_2j/?hl=cs"
+            >
+              @great_2j
+            </a>
           </Typography>
-          <Typography variant="subtitle1" color="primary" gutterBottom>
-            <strong>IČ:</strong> 05956731
+          <Typography
+            variant="h6"
+            color="primary"
+            sx={{ display: "flex", alignItems: "center", mb: 2 }}
+          >
+            <ContactMailIcon color="primary" sx={{ mr: 1 }} />
+            spoluprace@great2j.cz
           </Typography>
-          <Typography variant="subtitle1" color="primary" gutterBottom>
+          <hr></hr>
+          <Typography variant="body2" color="primary" sx={{ mt: 5 }}>
             <strong>Název organizace:</strong> GREAT by 2j
           </Typography>
-
-          <Typography
-            variant="h4"
-            color="primary"
-            fontWeight="900"
-            gutterBottom
-          >
-            Mapa
+          <Typography variant="body2" color="primary">
+            <strong>IČ:</strong> 05956731
           </Typography>
         </Grid>
       </Main>

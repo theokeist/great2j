@@ -514,25 +514,25 @@ export default function Fighter({
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const matchesLg = useMediaQuery(theme.breakpoints.up("lg"));
-  const [hover, setHover] = React.useState(false);
+  //const [hover, setHover] = React.useState(false);
 
   return (
     <Stack
       sx={{ py: 3 }}
       direction={matches ? "row" : "row"}
-      spacing={4}
+      spacing={6}
       justifyContent="center"
       alignItems={matches ? "flex-start" : "center"}
-      onMouseOver={() => {
-        if (avatar !== "/fighters/") {
-          setHover((old) => !old);
-        }
-      }}
-      onMouseOut={() => {
-        if (avatar !== "/fighters/") {
-          setHover((old) => !old);
-        }
-      }}
+      // onMouseOver={() => {
+      //   if (avatar !== "/fighters/") {
+      //     setHover((old) => !old);
+      //   }
+      // }}
+      // onMouseOut={() => {
+      //   if (avatar !== "/fighters/") {
+      //     setHover((old) => !old);
+      //   }
+      // }}
     >
       <Stack
         direction={matches ? "column" : "column"}
@@ -547,13 +547,14 @@ export default function Fighter({
               ? { width: 156, height: 156 }
               : matches
               ? { width: 176, height: 176 }
-              : { width: 100, height: 100 }
+              : { width: 120, height: 120 }
           }
           imgProps={{
             style: { objectPosition: "50% 10%" },
           }}
           src={
-            !hover && avatar ? avatar + "/normal.webp" : avatar + "/hover.webp"
+            avatar +
+            ["/normal.webp", "/hover.webp"]?.[Math.floor(Math.random() * 2)]
           }
         >
           {avatarAlt?.split(" ")?.[0][0]}
@@ -590,20 +591,19 @@ export default function Fighter({
         </Stack>
       </Stack>
 
-      <Grid container>
+      <Grid item container>
         <Grid item>
           <Typography
             variant="h1"
             color="primary"
-            sx={{ fontWeight: 400, fontSize: 22, letterSpacing: 2 }}
-            paragraph
+            sx={{ fontWeight: 600, fontSize: 22, letterSpacing: 2.5 }}
           >
             {avatarAlt}
           </Typography>
           <Typography
             variant="h6"
             color="primary"
-            sx={{ fontWeight: 300, fontSize: 22, letterSpacing: 2 }}
+            sx={{ fontWeight: 300, fontSize: 18, letterSpacing: 1.5 }}
             paragraph
           >
             za {fighter?.gym}
@@ -613,10 +613,10 @@ export default function Fighter({
             color="primary"
             sx={{ fontWeight: 200, fontSize: 22, wordSpacing: 2 }}
           >
-            <Typography variant="body2">
-              <li>{fighter?.vaha}</li>
-              <li>{fighter?.kategorie}</li>
-              <li>{fighter?.rest}</li>
+            <Typography variant="body1">
+              {fighter?.vaha && <li>{fighter?.vaha}</li>}
+              {fighter?.kategorie && <li>{fighter?.kategorie}</li>}
+              {fighter?.rest && <li>{fighter?.rest}</li>}
             </Typography>
           </Typography>
         </Grid>

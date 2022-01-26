@@ -21,7 +21,8 @@ import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import Banner from "./components/banner";
 import Main from "./components/main";
-
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import LinearProgress, {
   LinearProgressProps,
 } from "@mui/material/LinearProgress";
@@ -30,12 +31,12 @@ function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number }
 ) {
   return (
-    <Box sx={{ display: "flex", alignItems: "center" }}>
-      <Box sx={{ width: "100%", mr: 1 }}>
+    <Box sx={{ display: "flex", alignItems: "center", mt: 2.5, mb: 3.5 }}>
+      <Box sx={{ width: "100%", mr: 2 }}>
         <LinearProgress variant="determinate" {...props} />
       </Box>
       <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" color="secondary">{`${Math.round(
+        <Typography variant="h6" color="secondary">{`${Math.round(
           props.value
         )}%`}</Typography>
       </Box>
@@ -53,6 +54,7 @@ const themes = createTheme({
       main: "#fff",
       dark: "#000",
       light: "#ff0000",
+      reverse: "#fff",
     },
     secondary: {
       main: "#ff0000",
@@ -60,26 +62,29 @@ const themes = createTheme({
   },
 });
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data } = await axios.get(
     "https://ib.fio.cz/ib/transparent?a=2302072455"
   );
   const $ = cheerio.load(data);
   const title = $(".pohybySum > table > tbody > tr > td:nth-child(2)").text();
+  const trimTitle = title.trim();
+  const arrayTitle = trimTitle.split(",");
+
   return {
-    props: { title },
-    revalidate: 1000, // rerun after 10 seconds
+    props: { title: arrayTitle },
   };
 }
 
-export default function Album(props: any) {
+export default function IndexPage(props: any) {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
+  const matchesLg = useMediaQuery(theme.breakpoints.up("xl"));
   const FINAL_PRICE = 2.5;
-  const CURRENT = props?.title?.split(",")?.[0];
+  const CURRENT = props?.title;
   const FINAL = Math.floor(parseInt(CURRENT) / FINAL_PRICE);
   const [progress, setProgress] = React.useState(FINAL);
-
+  const [showForm, setHover] = React.useState(false);
   // React.useEffect(() => {
   //   const timer = setInterval(() => {
   //     setProgress((prevProgress) =>
@@ -98,8 +103,10 @@ export default function Album(props: any) {
       <Main>
         <Box
           sx={
-            matches
-              ? { bgcolor: "primary", pt: 8, pb: 6, px: 36 }
+            matchesLg
+              ? { bgcolor: "primary", pt: 8, pb: 6, px: 39 }
+              : matches
+              ? { bgcolor: "primary", pt: 2, pb: 6, px: 2 }
               : { bgcolor: "primary", pt: 2, pb: 6, px: 2 }
           }
         >
@@ -135,63 +142,143 @@ export default function Album(props: any) {
             </Grid>
             <Grid item md={6}>
               <Box
-                sx={{
-                  minHeight: 600,
-                  borderRadius: 0,
-                  px: 5,
-                  py: 7,
-                  backgroundColor: "primary.dark",
-                }}
+                sx={
+                  matchesLg
+                    ? {
+                        minHeight: 600,
+                        borderRadius: 0,
+                        px: 6,
+                        py: 5,
+                        backgroundColor: "primary.dark",
+                      }
+                    : matches
+                    ? {
+                        minHeight: 600,
+                        borderRadius: 0,
+                        px: 3.5,
+                        py: 2.5,
+                        backgroundColor: "primary.dark",
+                      }
+                    : {
+                        minHeight: 600,
+                        borderRadius: 0,
+                        px: 4.5,
+                        py: 2.75,
+                        backgroundColor: "primary.dark",
+                      }
+                }
               >
+                <LinearProgressWithLabel color="secondary" value={progress} />
+
                 <Typography
-                  variant="h3"
+                  variant="h5"
                   align="center"
                   color="primary"
                   paragraph
                 >
-                  Vybráno
+                  celkem vybráno
                 </Typography>
                 <Typography
-                  variant="h3"
+                  variant="h2"
                   align="center"
                   sx={{ fontWeight: 900 }}
                   color="primary"
                   paragraph
                 >
-                  {props?.title}
+                  {props?.title?.[0]} Kč
                 </Typography>
                 <Typography
-                  variant="h4"
+                  variant="h5"
                   align="center"
                   color="primary"
                   paragraph
                 >
                   z
                 </Typography>
-                <Typography
-                  variant="h3"
-                  align="center"
-                  color="primary"
-                  paragraph
-                >
-                  250 000,- CZK
+                <Typography variant="h3" align="center" color="primary">
+                  250 000 Kč
                 </Typography>
-                <LinearProgressWithLabel color="secondary" value={progress} />
                 <Link
                   href={"https://ib.fio.cz/ib/transparent?a=2302072455"}
                   style={{ textDecoration: "none" }}
                 >
                   <Button
                     size="large"
+                    variant="outlined"
                     fullWidth
-                    sx={{
-                      bgcolor: "green",
-                      my: 6,
-                      borderRadius: 0,
-                      fontWeight: 400,
+                    startIcon={
+                      !showForm ? (
+                        <FavoriteBorderIcon
+                          style={{
+                            fontSize: 30,
+                            marginRight: 10,
+                          }}
+                        />
+                      ) : (
+                        <FavoriteIcon
+                          style={{
+                            fontSize: 30,
+                            marginRight: 10,
+                          }}
+                        />
+                      )
+                    }
+                    onMouseEnter={() => {
+                      setHover(true);
                     }}
+                    onMouseLeave={() => {
+                      setHover(false);
+                    }}
+                    sx={
+                      matchesLg
+                        ? {
+                            bgcolor: "reverse",
+                            ":hover": {
+                              bgcolor: "white",
+                            },
+                            color: "red",
+                            mt: 5,
+                            mb: 6,
+                            py: 2.5,
+                            borderRadius: 0,
+                            fontWeight: 900,
+                            typography: {
+                              letterSpacing: 4,
+                            },
+                          }
+                        : matches
+                        ? {
+                            bgcolor: "reverse",
+                            ":hover": {
+                              bgcolor: "white",
+                            },
+                            color: "red",
+                            mt: 5,
+                            mb: 5,
+                            py: 2,
+                            px: 0,
+                            borderRadius: 0,
+                            fontWeight: 900,
+                            typography: {
+                              letterSpacing: 4,
+                            },
+                          }
+                        : {
+                            bgcolor: "reverse",
+                            ":hover": {
+                              bgcolor: "white",
+                            },
+                            color: "red",
+                            mt: 5,
+                            mb: 6,
+                            py: 2.5,
+                            borderRadius: 0,
+                            fontWeight: 900,
+                            typography: {},
+                          }
+                    }
                   >
-                    transparentní účet
+                    pomoz Františkovi
                   </Button>
                 </Link>
                 <Typography

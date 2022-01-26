@@ -67,7 +67,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function EventPartners() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
+  const matchesLg = useMediaQuery(theme.breakpoints.up("xl"));
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
@@ -76,7 +77,6 @@ export default function EventPartners() {
       <Banner
         align="center"
         title="Partneři"
-        gutterBottom
         header={"./event_partner.webp"}
         objectPosition="0 25%"
       />
@@ -84,11 +84,17 @@ export default function EventPartners() {
         <Grid
           container
           spacing={4}
-          sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}
+          sx={
+            matchesLg
+              ? { px: 36, py: 7 }
+              : matches
+              ? { px: 3, py: 5 }
+              : { px: 5, py: 5 }
+          }
         >
           {fotky?.map((foto, index) => {
             return (
-              <Grid key={index} item xs={6} md={3}>
+              <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
                 <Link href={foto.link}>
                   <Image
                     alt={foto.name}
@@ -103,7 +109,7 @@ export default function EventPartners() {
             );
           })}
         </Grid>
-        <Stack
+        {/* <Stack
           sx={{
             py: 30,
             px: 5,
@@ -133,7 +139,7 @@ export default function EventPartners() {
           >
             více
           </Button>
-        </Stack>
+        </Stack> */}
       </Main>
       <CopyrightFooter />
     </ThemeProvider>

@@ -50,35 +50,56 @@ export default function Events() {
             <Grid item xs={12} md={9}>
               <Typography
                 sx={{ fontWeight: 300 }}
-                variant="h6"
+                variant="h5"
                 color="primary"
                 align="justify"
                 paragraph
               >
                 Historicky první GREAT FIGHT NIGHT se uskuteční v sobotu
                 23.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem této
-                akce je vybrat 250 tisíc Kč pro malého Františka a jeho maminku.
-                (zde bych vložil odkaz na článek o nich) Hala s kapacitou více
-                než 1 800 lidí zažije opravdu neopakovatelnou podívanou. V ringu
-                totiž uvidíme skvělé souboje, několik mistrů ČR a mimojiné také
-                vyhecované nelítostné bitvy, jaké jistě nabídnou např. zápasy
-                Strakoš vs. Obracaj, Pekárek vs. Kubíček nebo Gámez vs.
-                Hartmann. Velký svátek z této akce dělá také účast ostravské
-                bojovnice a velkého supertalentu Elizabeth Bezděkové. Přehlídku
-                krásných technik a souboj plný přestřelek jako vždy slibuje
-                zápas Jiřího Juřičky. Svůj možná poslední zápas v boxu zažije
-                Martin Prázdný, který se do královského sportu vrátil kvůli
-                zranění kolene, avšak po tomto galavečeru nejspíše opět zamíří
-                do MMA. V hlavním zápase večera pak bude nejen Ostrava, ale celé
-                Česko a Slovensko na nohou - do ringu se totiž po třech letech
-                vrací Marek Vaneček, pro kterého to možná bude, a možná také
-                nebude, úplné loučení s kariérou, během které potkal jména jako
-                Strnisko, Clemente Russo, Tlkanec apod., tedy nejen českou, ale
-                i světovou elitu. Tváří v tvář se mu postaví David Klíč - kat
-                jeho rivala z dob největší slávy, Jiřího Havel, kterého Klíč na
-                posledním Mistrovství České Republiky nelítostně knokautoval!
-                Přijďte si užít nezapomenutelný večer plný skvělého boxu a K-1 a
-                pomoci tím malému Františkovi!
+                akce je vybrat 250 tisíc Kč pro malého{" "}
+                <a
+                  style={{ color: "red" }}
+                  href="https://www.dobryandel.cz/2020/predcasne-narozeni-ovlivnilo-sestiletemu-frantiskovi-cely-zivot/"
+                >
+                  Františka a jeho maminku
+                </a>
+              </Typography>
+              <Typography
+                sx={{ fontWeight: 300 }}
+                variant="body1"
+                color="primary"
+                align="justify"
+                paragraph
+              >
+                Hala s kapacitou více než 1 800 lidí zažije opravdu
+                neopakovatelnou podívanou. V ringu totiž uvidíme skvělé souboje,
+                několik mistrů České Republiky a mimojiné také
+                vyhecované/vyhrocené nelítostné bitvy, jaké jistě nabídnou
+                například zápasy{" "}
+                <strong>
+                  Strakoš vs. Obracaj, Pekárek vs. Kubíček nebo Gámez vs.
+                  Hartmann.
+                </strong>{" "}
+                <br />
+                <br />
+                Velký svátek z této akce dělá také účast ostravské bojovnice a
+                velkého supertalentu <strong>Elizabeth Bezděkové</strong>.
+                Přehlídku krásných technik a souboj plný přestřelek jako vždy
+                slibuje zápas <strong>Jiřího Juřičky</strong>. Svůj možná
+                poslední zápas v boxu zažije <strong>Martin Prázdný</strong>,
+                který se do královského sportu vrátil kvůli zranění kolene,
+                avšak po tomto galavečeru nejspíše opět zamíří do MMA. V hlavním
+                zápase večera pak bude nejen Ostrava, ale celé Česko a Slovensko
+                na nohou - do ringu se totiž po třech letech vrací{" "}
+                <strong>Marek Vaneček</strong>, pro kterého to možná bude, a
+                možná také nebude, úplné loučení s kariérou, během které potkal
+                jména jako Strnisko, Clemente Russo, Tlkanec apod., tedy nejen
+                českou, ale i světovou elitu. Tváří v tvář se mu postaví David
+                Klíč - kat jeho rivala z dob největší slávy, Jiřího Havel,
+                kterého Klíč na posledním Mistrovství České Republiky nelítostně
+                knokautoval! Přijďte si užít nezapomenutelný večer plný skvělého
+                boxu a K-1 a pomoci tím malému Františkovi!
               </Typography>
             </Grid>
             <Grid item xs={12} md={3}>
@@ -94,7 +115,7 @@ export default function Events() {
             </Grid>
           </Grid>
 
-          <Grid container spacing={2}>
+          <Grid container spacing={2} sx={{ mt: 6 }}>
             <Grid item xs={12} md={6}>
               <Typography variant="h5" align="center" color="primary" paragraph>
                 Průběh události
@@ -110,8 +131,6 @@ export default function Events() {
               ></iframe>
             </Grid>
           </Grid>
-
-          <hr style={{ margin: "5rem 0px" }}></hr>
         </Grid>
       </Main>
       <CopyrightFooter />
