@@ -31,7 +31,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Events() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
+  const matchesLg = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <ThemeProvider theme={themes}>
       <CssBaseline />
@@ -41,30 +42,55 @@ export default function Events() {
         title="GREAT FIGHT NIGHT"
         subtitle="pro Františka"
         header={"./event3.webp"}
-        objectPosition="0 30%"
+        objectPosition="0 31%"
       />
 
       <Main>
-        <Grid container sx={matches ? { px: 36, py: 7 } : { px: 3, py: 6 }}>
-          <Grid container spacing={0}>
-            <Grid item xs={12} md={7}>
+        <Grid
+          container
+          sx={
+            matchesLg
+              ? { px: 30, mt: 7 }
+              : matches
+              ? { px: 6, mt: 7 }
+              : { px: 1.5, mt: 4 }
+          }
+        >
+          <Grid container spacing={6}>
+            <Grid item xs={12} md={6} lg={4}>
               <Typography
                 sx={{ fontWeight: 300 }}
-                variant="h5"
+                variant="body1"
                 color="primary"
                 align="justify"
                 paragraph
               >
-                Historicky první GREAT FIGHT NIGHT se uskuteční v sobotu
-                23.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem této
-                akce je vybrat 250 tisíc Kč pro malého{" "}
+                Historicky první GREAT FIGHT NIGHT se uskuteční v pátek
+                22.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem této
+                akce je vybrat 250 000 Kč pro malého{" "}
                 <a
-                  style={{ color: "red", textDecoration: "none" }}
+                  style={{
+                    color: "red",
+                    textDecoration: "none",
+                    fontWeight: 500,
+                  }}
                   href="https://www.dobryandel.cz/2020/predcasne-narozeni-ovlivnilo-sestiletemu-frantiskovi-cely-zivot/"
                 >
                   Františka a jeho maminku
                 </a>
+                {", "}
+                kteří oba bojují každý den a proto si zaslouží aby se tentokrát
+                bojovalo pro ně.
               </Typography>
+              <Image
+                alt="great by 2j"
+                src={frantisek}
+                layout="responsive"
+                placeholder="blur"
+                priority
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
               <Typography
                 sx={{ fontWeight: 300 }}
                 variant="body1"
@@ -81,8 +107,14 @@ export default function Events() {
                   Strakoš vs. Obracaj, Pekárek vs. Kubíček nebo Gámez vs.
                   Hartmann.
                 </strong>{" "}
-                <br />
-                <br />
+              </Typography>
+              <Typography
+                sx={{ fontWeight: 300 }}
+                variant="body1"
+                color="primary"
+                align="justify"
+                paragraph
+              >
                 Velký svátek z této akce dělá také účast ostravské bojovnice a
                 velkého supertalentu <strong>Elizabeth Bezděkové</strong>.
                 Přehlídku krásných technik a souboj plný přestřelek jako vždy
@@ -102,34 +134,18 @@ export default function Events() {
                 boxu a K-1 a pomoci tím malému Františkovi!
               </Typography>
             </Grid>
-            <Grid item xs={12} md={5}>
-              <Image
-                alt="great by 2j"
-                src={frantisek}
-                layout="fixed"
-                height="400"
-                width="330"
-                placeholder="blur"
-                priority
-              />
-            </Grid>
-          </Grid>
-
-          <Grid container sx={{ mt: 6 }}>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h5" align="center" color="primary">
-                Průběh události
-              </Typography>
+            <Grid item xs={12} md={6} lg={4} sx={{ padding: { xs: 0 } }}>
               <EvnetTimeline />
             </Grid>
-            <Grid item xs={12} md={6}>
-              <iframe
-                src="https://frame.mapy.cz/s/medebatofa"
-                width="100%"
-                height="600"
-                frameBorder="0"
-              ></iframe>
-            </Grid>
+          </Grid>
+          <hr style={{ width: "60%", margin: "100px auto" }}></hr>
+          <Grid item xs={12} md={12}>
+            <iframe
+              src="https://frame.mapy.cz/s/medebatofa"
+              width="100%"
+              height="500"
+              frameBorder="0"
+            ></iframe>
           </Grid>
         </Grid>
       </Main>

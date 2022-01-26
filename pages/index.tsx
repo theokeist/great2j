@@ -5,21 +5,15 @@ import {
   Box,
   Stack,
   Typography,
-  Container,
   CssBaseline,
 } from "@mui/material";
 import Link from "@mui/material/Link";
 import { createTheme, useTheme, ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 import cheerio from "cheerio";
 import axios from "axios";
-
-import header from "../public/header.jpg";
-
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
-import Banner from "./components/banner";
 import Main from "./components/main";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -31,9 +25,7 @@ function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number }
 ) {
   return (
-    <Box
-      sx={{ display: "flex", alignItems: "center", mx: 1, mt: 2.5, mb: 3.5 }}
-    >
+    <Box sx={{ display: "flex", alignItems: "center", mx: 1, my: 3.5 }}>
       <Box sx={{ width: "100%", mr: 2 }}>
         <LinearProgress variant="determinate" {...props} />
       </Box>
@@ -86,6 +78,7 @@ export default function IndexPage(props: any) {
   const FINAL = Math.floor(parseInt(CURRENT) / FINAL_PRICE);
   const [progress, setProgress] = React.useState(FINAL);
   const [showForm, setHover] = React.useState(false);
+
   // React.useEffect(() => {
   //   const timer = setInterval(() => {
   //     setProgress((prevProgress) =>
@@ -107,13 +100,13 @@ export default function IndexPage(props: any) {
             matchesLg
               ? { bgcolor: "primary", pt: 8, pb: 6, px: 39 }
               : matches
-              ? { bgcolor: "primary", pt: 2, pb: 6, px: 2 }
-              : { bgcolor: "primary", pt: 2, pb: 6, px: 2 }
+              ? { bgcolor: "primary", pt: 1, pb: 6, px: 1 }
+              : { bgcolor: "primary", pt: 1, pb: 6, px: 1 }
           }
         >
           <Stack
             direction={matches ? "row" : "column"}
-            spacing={8}
+            spacing={5}
             justifyContent="center"
           >
             <Grid item md={6}>
@@ -149,7 +142,7 @@ export default function IndexPage(props: any) {
                     ? {
                         minHeight: 600,
                         borderRadius: 0,
-                        px: 6,
+                        px: 5,
                         py: 5,
                         backgroundColor: "primary.dark",
                       }
@@ -164,24 +157,14 @@ export default function IndexPage(props: any) {
                     : {
                         minHeight: 600,
                         borderRadius: 0,
-                        px: 3,
-                        py: 2,
+                        px: 2.5,
+                        py: 3.5,
                         backgroundColor: "primary.dark",
                       }
                 }
               >
-                <LinearProgressWithLabel color="secondary" value={progress} />
-
                 <Typography
-                  variant="h5"
-                  align="center"
-                  color="primary"
-                  paragraph
-                >
-                  celkem vybráno
-                </Typography>
-                <Typography
-                  variant="h2"
+                  variant={matches ? "h2" : "h3"}
                   align="center"
                   sx={{ fontWeight: 900 }}
                   color="primary"
@@ -189,17 +172,17 @@ export default function IndexPage(props: any) {
                 >
                   {props?.title?.[0]} Kč
                 </Typography>
+
                 <Typography
-                  variant="h5"
+                  variant={matches ? "h4" : "h5"}
                   align="center"
                   color="primary"
-                  paragraph
+                  sx={{ fontWeight: 300 }}
                 >
-                  z
+                  vybráno z 250 000 Kč
                 </Typography>
-                <Typography variant="h3" align="center" color="primary">
-                  250 000 Kč
-                </Typography>
+                <LinearProgressWithLabel color="secondary" value={progress} />
+
                 <Link
                   href={"https://ib.fio.cz/ib/transparent?a=2302072455"}
                   style={{ textDecoration: "none" }}
@@ -239,7 +222,7 @@ export default function IndexPage(props: any) {
                               bgcolor: "white",
                             },
                             color: "red",
-                            mt: 5,
+                            mt: 1.5,
                             mb: 6,
                             py: 2.5,
                             borderRadius: 0,
@@ -271,8 +254,8 @@ export default function IndexPage(props: any) {
                               bgcolor: "white",
                             },
                             color: "red",
-                            mt: 5,
-                            mb: 6,
+                            mt: 0,
+                            mb: 3,
                             py: 2.5,
                             borderRadius: 0,
                             fontWeight: 900,

@@ -53,13 +53,13 @@ export default function About() {
               ? { px: 36, py: 7 }
               : matches
               ? { px: 6, py: 5 }
-              : { px: 3, py: 6 }
+              : { px: 2, pt: 6 }
           }
         >
           <Grid item md={6} lg={4}>
             <Typography
               sx={{ fontWeight: 300, mb: 5 }}
-              variant="h6"
+              variant="body1"
               color="primary"
               align="justify"
               paragraph
@@ -83,7 +83,7 @@ export default function About() {
           <Grid item md={6} lg={4}>
             <Typography
               sx={{ fontWeight: 300, mb: 5 }}
-              variant="h6"
+              variant="body1"
               color="primary"
               align="justify"
             >
@@ -104,7 +104,7 @@ export default function About() {
           <Grid item md={6} lg={4}>
             <Typography
               sx={{ fontWeight: 300 }}
-              variant="h6"
+              variant="body1"
               color="primary"
               align="justify"
             >

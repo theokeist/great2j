@@ -179,6 +179,8 @@ export const NavigationMenu = () => {
                       color: "white",
                       display: "block",
                       borderRadius: 0,
+                      letterSpacing: 2,
+                      fontWeight: 400,
                     }}
                     variant={
                       router?.pathname == page?.link ? "outlined" : undefined

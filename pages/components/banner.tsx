@@ -29,6 +29,7 @@ export default function Banner({
           filter: `blur(0px)`,
           backgroundImage: `url("${header}")`,
           backgroundRepeat: "no-repeat",
+          backgroundPosition: objectPosition,
           backgroundSize: "cover",
           objectPosition: objectPosition,
           margin: 0,
@@ -154,7 +155,7 @@ export default function Banner({
                       letterSpacing: 4,
                       fontSize: 20,
                       backgroundColor: "rgba(255,0,0,0.75)",
-                      padding: "14px 25px",
+                      padding: "14px 15px",
                       transform: "skewX(-10deg)",
                       width: "fit-content",
                     }
@@ -184,11 +185,11 @@ export default function Banner({
                       }
                     : {
                         fontWeight: 300,
-                        fontSize: 18,
+                        fontSize: 16,
                         letterSpacing: 2,
                         marginBottom: 0,
                         backgroundColor: "rgba(255,0,0,0.75)",
-                        padding: "10px 25px",
+                        padding: "10px 15px",
                         transform: "skewX(-10deg)",
                         marginTop: 0.5,
                         width: "fit-content",
