@@ -57,7 +57,7 @@ export default function Fighters() {
         >
           {fightersFotky?.map((foto, index) => {
             return (
-              <Grid key={index} item sm={12} md={6}>
+              <Grid key={index} item sm={12} md={6} lg={4}>
                 <Fighter
                   key={index}
                   avatar={foto?.path}

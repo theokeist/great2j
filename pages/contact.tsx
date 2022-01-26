@@ -50,8 +50,8 @@ export default function Contact() {
             matchesLg
               ? { px: 36, py: 7 }
               : matches
-              ? { px: 6, py: 5 }
-              : { px: 2, py: 5 }
+              ? { px: 6, py: 6 }
+              : { px: 2, py: 6 }
           }
         >
           <Typography
@@ -78,10 +78,10 @@ export default function Contact() {
           >
             <InstagramIcon color="primary" sx={{ mr: 1 }} />
             <a
-              style={{ color: "red" }}
+              style={{ color: "red", textDecoration: "none" }}
               href="https://www.instagram.com/great_2j/?hl=cs"
             >
-              @great_2j
+              great_2j
             </a>
           </Typography>
           <Typography

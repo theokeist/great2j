@@ -520,9 +520,9 @@ export default function Fighter({
     <Stack
       sx={{ py: 3 }}
       direction={matches ? "row" : "row"}
-      spacing={6}
+      spacing={3.5}
       justifyContent="center"
-      alignItems={matches ? "flex-start" : "center"}
+      alignItems={"flex-start"}
       // onMouseOver={() => {
       //   if (avatar !== "/fighters/") {
       //     setHover((old) => !old);

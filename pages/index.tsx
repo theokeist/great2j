@@ -31,7 +31,9 @@ function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number }
 ) {
   return (
-    <Box sx={{ display: "flex", alignItems: "center", mt: 2.5, mb: 3.5 }}>
+    <Box
+      sx={{ display: "flex", alignItems: "center", mx: 1, mt: 2.5, mb: 3.5 }}
+    >
       <Box sx={{ width: "100%", mr: 2 }}>
         <LinearProgress variant="determinate" {...props} />
       </Box>
@@ -125,18 +127,19 @@ export default function IndexPage(props: any) {
                 allowFullScreen
               ></iframe>
               <Typography
-                variant="body1"
+                variant="h6"
                 color="primary"
                 align="justify"
                 paragraph
+                sx={{ mt: { xs: 1, md: 4 }, fontSize: { xs: 16 } }}
               >
                 GREAT je ostravská organizace pořádající galavečery ringových
                 sportů pro dobročinné účely. Koupí oblečení GREAT přispíváte na
                 podporu malého Františka, který se narodil v šestém měsíci
                 těhotenství, trpí dětskou mozkovou obrnou a je odkázán na
                 invalidní vozík, a pro kterého GREAT organizují galavečer v
-                Ostravě dne 2.4.2022. Všechny produkty značky GREAT jsou zárukou
-                kvality a jsou vyráběny v České Republice.
+                Ostravě dne 23.4.2022. Všechny produkty značky GREAT jsou
+                zárukou kvality a jsou vyráběny v České Republice.
               </Typography>
             </Grid>
             <Grid item md={6}>
@@ -161,8 +164,8 @@ export default function IndexPage(props: any) {
                     : {
                         minHeight: 600,
                         borderRadius: 0,
-                        px: 4.5,
-                        py: 2.75,
+                        px: 3,
+                        py: 2,
                         backgroundColor: "primary.dark",
                       }
                 }

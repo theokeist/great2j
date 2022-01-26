@@ -45,9 +45,9 @@ export default function Events() {
       />
 
       <Main>
-        <Grid container sx={matches ? { px: 36, py: 7 } : { px: 3, py: 2 }}>
-          <Grid container spacing={7}>
-            <Grid item xs={12} md={9}>
+        <Grid container sx={matches ? { px: 36, py: 7 } : { px: 3, py: 6 }}>
+          <Grid container spacing={0}>
+            <Grid item xs={12} md={7}>
               <Typography
                 sx={{ fontWeight: 300 }}
                 variant="h5"
@@ -59,7 +59,7 @@ export default function Events() {
                 23.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem této
                 akce je vybrat 250 tisíc Kč pro malého{" "}
                 <a
-                  style={{ color: "red" }}
+                  style={{ color: "red", textDecoration: "none" }}
                   href="https://www.dobryandel.cz/2020/predcasne-narozeni-ovlivnilo-sestiletemu-frantiskovi-cely-zivot/"
                 >
                   Františka a jeho maminku
@@ -102,7 +102,7 @@ export default function Events() {
                 boxu a K-1 a pomoci tím malému Františkovi!
               </Typography>
             </Grid>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={5}>
               <Image
                 alt="great by 2j"
                 src={frantisek}
@@ -115,9 +115,9 @@ export default function Events() {
             </Grid>
           </Grid>
 
-          <Grid container spacing={2} sx={{ mt: 6 }}>
+          <Grid container sx={{ mt: 6 }}>
             <Grid item xs={12} md={6}>
-              <Typography variant="h5" align="center" color="primary" paragraph>
+              <Typography variant="h5" align="center" color="primary">
                 Průběh události
               </Typography>
               <EvnetTimeline />
@@ -126,7 +126,7 @@ export default function Events() {
               <iframe
                 src="https://frame.mapy.cz/s/medebatofa"
                 width="100%"
-                height="700"
+                height="600"
                 frameBorder="0"
               ></iframe>
             </Grid>

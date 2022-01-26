@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 export default function EventTimeline() {
   return (
     <React.Fragment>
-      <Timeline position="right">
+      <Timeline position="left" sx={{ padding: 0 }}>
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}

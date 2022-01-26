@@ -53,7 +53,7 @@ export default function About() {
               ? { px: 36, py: 7 }
               : matches
               ? { px: 6, py: 5 }
-              : { px: 3, py: 5 }
+              : { px: 3, py: 6 }
           }
         >
           <Grid item md={6} lg={4}>
