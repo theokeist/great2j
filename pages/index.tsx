@@ -54,7 +54,6 @@ const themes = createTheme({
       main: "#fff",
       dark: "#000",
       light: "#ff0000",
-      reverse: "#fff",
     },
     secondary: {
       main: "#ff0000",
@@ -232,7 +231,7 @@ export default function IndexPage(props: any) {
                     sx={
                       matchesLg
                         ? {
-                            bgcolor: "reverse",
+                            bgcolor: "black",
                             ":hover": {
                               bgcolor: "white",
                             },
@@ -248,7 +247,7 @@ export default function IndexPage(props: any) {
                           }
                         : matches
                         ? {
-                            bgcolor: "reverse",
+                            bgcolor: "black",
                             ":hover": {
                               bgcolor: "white",
                             },
@@ -264,7 +263,7 @@ export default function IndexPage(props: any) {
                             },
                           }
                         : {
-                            bgcolor: "reverse",
+                            bgcolor: "black",
                             ":hover": {
                               bgcolor: "white",
                             },
