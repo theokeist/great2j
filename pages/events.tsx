@@ -76,6 +76,7 @@ export default function Events() {
                   }}
                   href="https://www.dobryandel.cz/2020/predcasne-narozeni-ovlivnilo-sestiletemu-frantiskovi-cely-zivot/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Františka a jeho maminku
                 </a>

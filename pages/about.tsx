@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
-import header from "../public/onas3.jpg";
 import Main from "./components/main";
 import Banner from "./components/banner";
 
@@ -97,6 +96,7 @@ export default function About() {
               vybavení ve spolupráci s našimi partnery Skrč To a BackFist Brand.
               První kousky GREAT oblečení můžete pořídit na eshopu{" "}
               <a
+                rel="noopener noreferrer"
                 href="https://bit.ly/GreatShopCZ"
                 target="_blank"
                 style={{ color: "red" }}

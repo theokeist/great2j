@@ -286,6 +286,7 @@ export default function IndexPage(props: any) {
                       color: "red",
                     }}
                     href="https://bit.ly/GreatShopCZ"
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     zde.
