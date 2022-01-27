@@ -16,7 +16,7 @@ export default function EventTimeline() {
   return (
     <React.Fragment>
       <Timeline
-        position="right"
+        position="left"
         sx={{ mt: 0, mb: 0, py: 4, px: 2, bgcolor: "black" }}
       >
         <Typography
@@ -35,7 +35,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            čtvrtek 21.4. dopoledne
+            čtvrtek 22.4. dopoledne
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -44,12 +44,12 @@ export default function EventTimeline() {
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent sx={{ py: "40px", px: 1 }}>
+          <TimelineContent sx={{ py: "30px", px: 1 }}>
             <Typography
               variant="h6"
               color="primary"
               component="span"
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 15 }}
             >
               oficiální vážení
             </Typography>
@@ -62,7 +62,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            čtvrtek 21.4. odpoledne
+            čtvrtek 22.4. odpoledne
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -76,7 +76,7 @@ export default function EventTimeline() {
               variant="h6"
               color="primary"
               component="span"
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 15 }}
             >
               veřejné vážení, místo bude upřesněno
             </Typography>
@@ -88,7 +88,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            pátek 22.4. 9-13 hod
+            pátek 23.4. 9-13 hod
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -102,7 +102,7 @@ export default function EventTimeline() {
               variant="h6"
               color="primary"
               component="span"
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 15 }}
             >
               “předturnaj” mládeže a “méně zkušených” zápasníků
             </Typography>
@@ -114,7 +114,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            pátek 22.4. 13-16 hod
+            pátek 23.4. 13-16 hod
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -128,7 +128,7 @@ export default function EventTimeline() {
               variant="h6"
               color="primary"
               component="span"
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 15 }}
             >
               doprovodný program
             </Typography>
@@ -140,7 +140,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            pátek 22.4. 17-22 hod
+            pátek 23.4. 17-22 hod
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -154,7 +154,7 @@ export default function EventTimeline() {
               variant="h6"
               color="primary"
               component="span"
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 15 }}
             >
               hlavní turnaj
             </Typography>
@@ -166,7 +166,7 @@ export default function EventTimeline() {
             variant="body2"
             color="primary"
           >
-            pátek 22.4. 23 hod
+            pátek 23.4. 23 hod
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -180,7 +180,7 @@ export default function EventTimeline() {
               variant="h6"
               color="primary"
               component="span"
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 15 }}
             >
               začátek Afterparty (místo bude upřesněno)
             </Typography>

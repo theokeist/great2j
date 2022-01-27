@@ -96,7 +96,11 @@ export default function About() {
               GREAT mimojiné také buduje vlastní značku oblečení a tréninkového
               vybavení ve spolupráci s našimi partnery Skrč To a BackFist Brand.
               První kousky GREAT oblečení můžete pořídit na eshopu{" "}
-              <a href="https://bit.ly/GreatShopCZ" style={{ color: "red" }}>
+              <a
+                href="https://bit.ly/GreatShopCZ"
+                target="_blank"
+                style={{ color: "red" }}
+              >
                 JEMASPORT.CZ
               </a>
             </Typography>

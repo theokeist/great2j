@@ -98,22 +98,22 @@ export default function IndexPage(props: any) {
         <Box
           sx={
             matchesLg
-              ? { bgcolor: "primary", pt: 8, pb: 6, px: 39 }
+              ? { bgcolor: "primary", pt: 8, pb: 6, px: 30 }
               : matches
-              ? { bgcolor: "primary", pt: 1, pb: 6, px: 1 }
-              : { bgcolor: "primary", pt: 1, pb: 6, px: 1 }
+              ? { bgcolor: "primary", pt: 4, pb: 6, px: 2 }
+              : { bgcolor: "primary", pt: 4, pb: 6, px: 2 }
           }
         >
           <Stack
             direction={matches ? "row" : "column"}
-            spacing={5}
+            spacing={6}
             justifyContent="center"
           >
-            <Grid item md={6}>
+            <Grid item md={5}>
               <iframe
                 width="100%"
                 height={matches ? "340px" : "256px"}
-                src="https://www.youtube.com/embed/1tiBBGb_5_g?controls=0"
+                src="https://www.youtube.com/embed/n0kqXc8dYYM"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -127,15 +127,10 @@ export default function IndexPage(props: any) {
                 sx={{ mt: { xs: 1, md: 4 }, fontSize: { xs: 16 } }}
               >
                 GREAT je ostravská organizace pořádající galavečery ringových
-                sportů pro dobročinné účely. Koupí oblečení GREAT přispíváte na
-                podporu malého Františka, který se narodil v šestém měsíci
-                těhotenství, trpí dětskou mozkovou obrnou a je odkázán na
-                invalidní vozík, a pro kterého GREAT organizují galavečer v
-                Ostravě dne 23.4.2022. Všechny produkty značky GREAT jsou
-                zárukou kvality a jsou vyráběny v České Republice.
+                sportů pro dobročinné účely.
               </Typography>
             </Grid>
-            <Grid item md={6}>
+            <Grid item md={5}>
               <Box
                 sx={
                   matchesLg
@@ -259,11 +254,11 @@ export default function IndexPage(props: any) {
                             py: 2.5,
                             borderRadius: 0,
                             fontWeight: 900,
-                            typography: {},
+                            typography: { letterSpacing: 2 },
                           }
                     }
                   >
-                    pomoz Františkovi
+                    transparentní účet
                   </Button>
                 </Link>
                 <Typography
@@ -272,13 +267,29 @@ export default function IndexPage(props: any) {
                   align="justify"
                   paragraph
                 >
-                  GREAT je ostravská organizace pořádající galavečery ringových
-                  sportů pro dobročinné účely. Koupí oblečení GREAT přispíváte
-                  na podporu malého Františka, který se narodil v šestém měsíci
-                  těhotenství, trpí dětskou mozkovou obrnou a je odkázán na
-                  invalidní vozík, a pro kterého GREAT organizují galavečer v
-                  Ostravě dne 2.4.2022. Všechny produkty značky GREAT jsou
-                  zárukou kvality a jsou vyráběny v České Republice.
+                  Veškeré peníze poslouží na podporu malého Františka, který se
+                  narodil v šestém měsíci těhotenství, trpí dětskou mozkovou
+                  obrnou a je odkázán na invalidní vozík, a pro kterého GREAT
+                  organizuje galavečer v Ostravě dne 23.4.2022. Pojďme ho
+                  společně podpořit v jeho cestě životem tam, kde už to jiní
+                  mají za sebou.
+                  <br />
+                  <br />
+                  Podpořit ho můžete rovněž koupí oblečení značky GREAT, všechny
+                  produkty značky GREAT jsou zárukou kvality a jsou vyráběny v
+                  České Republice.
+                  <br />
+                  <br />
+                  Prohlédnout produkty{" "}
+                  <a
+                    style={{
+                      color: "red",
+                    }}
+                    href="https://bit.ly/GreatShopCZ"
+                    target="_blank"
+                  >
+                    zde.
+                  </a>
                 </Typography>
               </Box>
             </Grid>

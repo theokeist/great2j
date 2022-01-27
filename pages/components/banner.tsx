@@ -125,7 +125,7 @@ export default function Banner({
           direction="column"
           justifyContent="center"
           alignItems="center"
-          sx={{ mt: 6 }}
+          sx={{ mt: -4 }}
         >
           <Grid
             direction="column"
