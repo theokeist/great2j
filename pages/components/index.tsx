@@ -6,9 +6,8 @@ import Grid from "@mui/material/Grid";
 
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 import InstagramIcon from "@mui/icons-material/Instagram";
-import ShareIcon from "@mui/icons-material/Share";
-import FacebookIcon from "@mui/icons-material/Facebook";
 
 const theme = createTheme({
   palette: {
@@ -29,7 +28,14 @@ export default function CopyrightFooter() {
     <ThemeProvider theme={theme}>
       <Box sx={{ bgcolor: "primary.main", p: 3 }} component="footer">
         <Typography variant="body2" color="text.secondary" align="center">
-          {"Copyright © Great by 2j, designed by "}
+          {"Copyright © "}{" "}
+          <Link
+            color="inherit"
+            href="https://www.instagram.com/great_2j/?hl=cs"
+          >
+            Great by 2j
+          </Link>
+          {", designed by "}
           <Link
             color="inherit"
             href="https://www.instagram.com/martin0rszulik/?hl=cs"

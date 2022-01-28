@@ -101,7 +101,7 @@ export default function IndexPage(props: any) {
               ? { bgcolor: "primary", pt: 8, pb: 6, px: 30 }
               : matches
               ? { bgcolor: "primary", pt: 4, pb: 6, px: 2 }
-              : { bgcolor: "primary", pt: 4, pb: 6, px: 2 }
+              : { bgcolor: "primary", pt: 4, pb: 6, px: 1.5 }
           }
         >
           <Stack
@@ -124,7 +124,10 @@ export default function IndexPage(props: any) {
                 color="primary"
                 align="justify"
                 paragraph
-                sx={{ mt: { xs: 1, md: 4 }, fontSize: { xs: 16 } }}
+                sx={{
+                  mt: { xs: 1, md: 4 },
+                  fontSize: { md: 24, xs: 16 },
+                }}
               >
                 GREAT je ostravská organizace pořádající galavečery ringových
                 sportů pro dobročinné účely.
@@ -191,14 +194,14 @@ export default function IndexPage(props: any) {
                         <FavoriteBorderIcon
                           style={{
                             fontSize: 30,
-                            marginRight: 10,
+                            marginRight: 5,
                           }}
                         />
                       ) : (
                         <FavoriteIcon
                           style={{
                             fontSize: 30,
-                            marginRight: 10,
+                            marginRight: 5,
                           }}
                         />
                       )
@@ -221,7 +224,7 @@ export default function IndexPage(props: any) {
                             mb: 6,
                             py: 2.5,
                             borderRadius: 0,
-                            fontWeight: 900,
+                            fontWeight: 700,
                             typography: {
                               letterSpacing: 4,
                             },
@@ -238,9 +241,9 @@ export default function IndexPage(props: any) {
                             py: 2,
                             px: 0,
                             borderRadius: 0,
-                            fontWeight: 900,
+                            fontWeight: 700,
                             typography: {
-                              letterSpacing: 4,
+                              letterSpacing: 3,
                             },
                           }
                         : {
@@ -253,8 +256,10 @@ export default function IndexPage(props: any) {
                             mb: 3,
                             py: 2.5,
                             borderRadius: 0,
-                            fontWeight: 900,
-                            typography: { letterSpacing: 2 },
+                            fontWeight: 700,
+                            typography: {
+                              letterSpacing: 0,
+                            },
                           }
                     }
                   >
@@ -262,7 +267,7 @@ export default function IndexPage(props: any) {
                   </Button>
                 </Link>
                 <Typography
-                  variant="body2"
+                  variant="body1"
                   color="primary"
                   align="justify"
                   paragraph

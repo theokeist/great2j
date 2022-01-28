@@ -65,7 +65,7 @@ export default function About() {
             >
               GREAT by 2j je značka založená Jakubem Bernoldem a Jiřím Ondrušem,
               fungující od roku 2020. Zabývá se myšlenkou pozvednutí a propagací
-              ringových sportů, zápasníků, pomocí lidem, kteří to opravdu
+              ringových sportů, zápasníků, pomoci lidem, kteří to opravdu
               potřebují, ale také dopomoci úplně každému, kdo chce se sebou něco
               dělat, tvořit a být tou nejlepší verzí sebe samotného. Za touto
               myšlenkou se skrývá hned několik oblastí, ve kterých GREAT působí.
