@@ -28,7 +28,7 @@ export const fightersFotky = [
     },
   },
   {
-    path: "/fighters/",
+    path: "/fighters/davidKlic",
     name: "David Klíč",
     facebook: "https://www.facebook.com/Marek.vanecekk",
     instagram: "https://instagram.com/marekvanecek",
@@ -198,7 +198,7 @@ export const fightersFotky = [
     },
   },
   {
-    path: "/fighters/",
+    path: "/fighters/tomasNovotny",
     name: "Tomáš Novotný",
     facebook: "https://www.facebook.com/tomas.novotny.7",
     instagram: "https://instagram.com/beast98tn",
@@ -478,7 +478,7 @@ export const fightersFotky = [
     },
   },
   {
-    path: "/fighters/",
+    path: "/fighters/davidGabor",
     name: "David Gábor",
     facebook: "",
     instagram: "",
@@ -490,12 +490,38 @@ export const fightersFotky = [
     },
   },
   {
-    path: "/fighters/",
+    path: "/fighters/petrMartinek",
     name: "Petr Martínek",
     facebook: "",
     instagram: "",
     fighter: {
       gym: "Spider Olomouc",
+      vaha: "",
+      kategorie: "Box",
+      rest: "",
+    },
+  },
+
+  {
+    path: "/fighters/",
+    name: "Patrik Halm",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      gym: "Jetsaam Gym Brno",
+      vaha: "",
+      kategorie: "Box",
+      rest: "",
+    },
+  },
+
+  {
+    path: "/fighters/emilStuka",
+    name: "Emil Šťuka",
+    facebook: "",
+    instagram: "",
+    fighter: {
+      gym: "Hi-Tech Boxing Olomouc",
       vaha: "",
       kategorie: "Box",
       rest: "",

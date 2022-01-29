@@ -1,9 +1,6 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Image from "next/image";
@@ -11,14 +8,16 @@ import Image from "next/image";
 import NavigationMenu from "./routes";
 import CopyrightFooter from "./components";
 import Main from "./components/main";
-import header from "../public/event_partner.webp";
 import Banner from "./components/banner";
 
 import boxing from "../public/partners/boxingostrava.jpg";
 import jemasport from "../public/partners/jemasport.png";
 import moodnite from "../public/partners/moodnite.jpg";
 import skrcto from "../public/partners/skrcto.jpg";
-import sss from "../public/partners/sss.jpg";
+
+import filip_zidek from "../public/partners/filip_zidek.jpg";
+import fighting_arena from "../public/partners/fighting_arena.png";
+import dva_mluvci from "../public/partners/dva_mluvci.jpg";
 
 const fotky = [
   {
@@ -30,6 +29,22 @@ const fotky = [
     path: jemasport,
     name: "JEMASPORT",
     link: "https://www.jemasport.cz/",
+  },
+  {
+    path: fighting_arena,
+    name: "JEMASPORT",
+    link: "https://www.fightingarena.cz/",
+  },
+
+  {
+    path: dva_mluvci,
+    name: "JEMASPORT",
+    link: "https://www.dvamluvci.cz/",
+  },
+  {
+    path: filip_zidek,
+    name: "JEMASPORT",
+    link: "https://www.facebook.com/filipzidekphotography/",
   },
   {
     path: moodnite,
@@ -94,7 +109,7 @@ export default function EventPartners() {
         >
           {fotky?.map((foto, index) => {
             return (
-              <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
+              <Grid key={index} item xs={6} sm={6} md={4} lg={2}>
                 <Link href={foto.link}>
                   <Image
                     alt={foto.name}

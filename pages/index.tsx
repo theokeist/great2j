@@ -109,7 +109,7 @@ export default function IndexPage(props: any) {
             spacing={6}
             justifyContent="center"
           >
-            <Grid item md={5}>
+            <Grid item xs={12} md={6} lg={5}>
               <iframe
                 width="100%"
                 height={matches ? "340px" : "256px"}
@@ -130,10 +130,13 @@ export default function IndexPage(props: any) {
                 }}
               >
                 GREAT je ostravská organizace pořádající galavečery ringových
-                sportů pro dobročinné účely.
+                sportů, konkrétně boxu, K-1 a Muay Thai. Hlavní myšlenkou
+                organizace je pozvednutí a propagace těchto sportů, bojovníků a
+                především pomoc potřebným. Proto jsou všechny galavečery
+                věnovány dětem a rodinám s postižením.
               </Typography>
             </Grid>
-            <Grid item md={5}>
+            <Grid item xs={12} md={6} lg={5}>
               <Box
                 sx={
                   matchesLg
