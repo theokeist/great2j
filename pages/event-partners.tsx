@@ -5,7 +5,7 @@ import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Image from "next/image";
 
-import NavigationMenu from "./routes";
+import NavigationMenu from "./components/navigation";
 import CopyrightFooter from "./components";
 import Main from "./components/main";
 import Banner from "./components/banner";
@@ -124,37 +124,6 @@ export default function EventPartners() {
             );
           })}
         </Grid>
-        {/* <Stack
-          sx={{
-            py: 30,
-            px: 5,
-            mt: 14,
-            backgroundImage: `url(${sss?.src})`,
-            backgroundSize: "cover",
-          }}
-          direction="row"
-          spacing={2}
-          justifyContent="center"
-        >
-          <Button
-            variant="contained"
-            sx={{ borderRadius: 0 }}
-            color="secondary"
-            size="large"
-            fullWidth
-          >
-            zobrazit
-          </Button>
-          <Button
-            variant="contained"
-            sx={{ borderRadius: 0 }}
-            color="secondary"
-            size="large"
-            fullWidth
-          >
-            více
-          </Button>
-        </Stack> */}
       </Main>
       <CopyrightFooter />
     </ThemeProvider>

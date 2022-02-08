@@ -1,16 +1,15 @@
 import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import NavigationMenu from "./routes";
-import CopyrightFooter from "./components";
-import header from "../public/event3.webp";
-import frantisek from "../public/events/frantisek.jpg";
 import Main from "./components/main";
-import Banner from "./components/banner";
+import NavigationMenu from "./components/navigation";
 import EvnetTimeline from "./components/timeline";
+import Banner from "./components/banner";
+import CopyrightFooter from "./components";
+
+import frantisek from "../public/events/frantisek.jpg";
 import Image from "next/image";
 
 const themes = createTheme({

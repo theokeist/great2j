@@ -12,7 +12,7 @@ import { createTheme, useTheme, ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import cheerio from "cheerio";
 import axios from "axios";
-import NavigationMenu from "./routes";
+import NavigationMenu from "./components/navigation";
 import CopyrightFooter from "./components";
 import Main from "./components/main";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";

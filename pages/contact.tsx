@@ -4,7 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import NavigationMenu from "./routes";
+import NavigationMenu from "./components/navigation";
 import CopyrightFooter from "./components";
 import header from "../public/about.webp";
 import Main from "./components/main";
@@ -60,7 +60,7 @@ export default function Contact() {
             sx={{ display: "flex", alignItems: "center" }}
           >
             <CallIcon color="primary" sx={{ mr: 1 }} />
-            739 495 153
+            739 338 772
           </Typography>
           <Typography
             variant="h5"
