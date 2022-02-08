@@ -126,8 +126,8 @@ export default function Fighter({
               {fighter?.kategorie && <li>{fighter?.kategorie}</li>}
 
               {fighter?.skore &&
-                fighter?.skore?.split(",").map((skore: any) => {
-                  return <li>{skore}</li>;
+                fighter?.skore?.split(",").map((skore: any, index: any) => {
+                  return <li key={index}>{skore}</li>;
                 })}
             </Typography>
           </Typography>
