@@ -13,7 +13,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import header from "../public/fighters.webp";
 
-import supabase from "./settings";
+import supabase from "./api";
 
 const themes = createTheme({
   palette: {
