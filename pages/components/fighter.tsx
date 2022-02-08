@@ -75,12 +75,12 @@ export default function Fighter({
           alignItems="baseline"
           alignSelf="center"
         >
-          {instagramLink && (
+          {instagramLink && instagramLink !== "NULL" && (
             <Link href={instagramLink}>
               <InstagramIcon color="primary" sx={{ fontSize: 24 }} />
             </Link>
           )}
-          {facebookLink && (
+          {facebookLink && facebookLink !== "NULL" && (
             <Link href={facebookLink}>
               <FacebookIcon
                 color="primary"
@@ -88,7 +88,7 @@ export default function Fighter({
               />
             </Link>
           )}
-          {websiteLink && (
+          {websiteLink && websiteLink !== "NULL" && (
             <Link href={websiteLink}>
               <LanguageIcon
                 color="primary"
