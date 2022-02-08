@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import NavigationMenu from "./components/navigation";
 import CopyrightFooter from "./components";
 import Main from "./components/main";
-import { fightersFotky } from "./api/fighters";
+//import { fightersFotky } from "./api/fighters";
 import Fighter from "./components/fighter";
 import Banner from "./components/banner";
 import useMediaQuery from "@mui/material/useMediaQuery";
