@@ -81,8 +81,8 @@ export default function Events() {
                         align="justify"
                         paragraph
                       >
-                        Historicky první GREAT FIGHT NIGHT se uskuteční v sobotu
-                        23.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem
+                        Historicky první GREAT FIGHT NIGHT se uskuteční v pátek
+                        22.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem
                         této akce je vybrat 250 000 Kč pro malého{" "}
                         <a
                           style={{
