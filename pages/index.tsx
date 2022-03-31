@@ -278,7 +278,7 @@ export default function IndexPage(props: any) {
                   Veškeré peníze poslouží na podporu malého Františka, který se
                   narodil v šestém měsíci těhotenství, trpí dětskou mozkovou
                   obrnou a je odkázán na invalidní vozík, a pro kterého GREAT
-                  organizuje galavečer v Ostravě dne 23.4.2022. Pojďme ho
+                  organizuje galavečer v Ostravě dne 22.4.2022. Pojďme ho
                   společně podpořit v jeho cestě životem tam, kde už to jiní
                   mají za sebou.
                   <br />
