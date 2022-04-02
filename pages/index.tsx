@@ -55,6 +55,23 @@ const themes = createTheme({
   },
 });
 
+const themesA = createTheme({
+  palette: {
+    background: {
+      default: "#fff",
+      paper: "#000",
+    },
+    primary: {
+      main: "#aaa",
+      dark: "#00f",
+      light: "#ff0000",
+    },
+    secondary: {
+      main: "#ff0000",
+    },
+  },
+});
+
 export async function getServerSideProps() {
   const { data } = await axios.get(
     "https://ib.fio.cz/ib/transparent?a=2302072455"
@@ -91,7 +108,7 @@ export default function IndexPage(props: any) {
   // }, []);
 
   return (
-    <ThemeProvider theme={themes}>
+    <>
       <CssBaseline />
       <NavigationMenu />
       <Main>
@@ -306,6 +323,6 @@ export default function IndexPage(props: any) {
         </Box>
       </Main>
       <CopyrightFooter />
-    </ThemeProvider>
+    </>
   );
 }
