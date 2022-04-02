@@ -12,13 +12,19 @@ import NightlifeIcon from "@mui/icons-material/Nightlife";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import Typography from "@mui/material/Typography";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
 export default function EventTimeline() {
+  const [showForm, setHover] = React.useState(false);
   return (
-    <React.Fragment>
-      <Timeline
-        position="left"
-        sx={{ mt: 0, mb: 0, py: 4, px: 2, bgcolor: "black" }}
-      >
+    <Paper
+      elevation={24}
+      sx={{ borderRadius: 4, py: 4, px: 4, bgcolor: "primary" }}
+    >
+      <Timeline position="left" sx={{ mt: 0, mb: 0 }}>
         <Typography
           variant="h5"
           align="center"
@@ -187,6 +193,51 @@ export default function EventTimeline() {
           </TimelineContent>
         </TimelineItem>
       </Timeline>
-    </React.Fragment>
+
+      {/* <Button
+        size="large"
+        variant="outlined"
+        fullWidth
+        startIcon={
+          !showForm ? (
+            <FavoriteBorderIcon
+              style={{
+                fontSize: 30,
+                marginRight: 5,
+              }}
+            />
+          ) : (
+            <FavoriteIcon
+              style={{
+                fontSize: 30,
+                marginRight: 5,
+              }}
+            />
+          )
+        }
+        onMouseEnter={() => {
+          setHover(true);
+        }}
+        onMouseLeave={() => {
+          setHover(false);
+        }}
+        sx={{
+          bgcolor: "black",
+          ":hover": {
+            bgcolor: "primary",
+          },
+          color: "red",
+          mt: 1.5,
+          py: 2.5,
+          borderRadius: 3,
+          fontWeight: 700,
+          typography: {
+            letterSpacing: 4,
+          },
+        }}
+      >
+        transparentní účet
+      </Button> */}
+    </Paper>
   );
 }

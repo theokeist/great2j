@@ -1,18 +1,40 @@
 import "../styles/globals.css";
+import * as React from "react";
 import type { AppProps } from "next/app";
 import { createTheme, useTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { useMediaQuery } from "@mui/material";
+import CustomThemeProvider, {
+  CustomThemeContext,
+} from "./components/theme/greatThemeProvider";
 
-const themesA = createTheme({
+const themeLight = createTheme({
   palette: {
     background: {
-      default: "#ddeeff",
+      default: "#fff",
+      paper: "#ebedec",
+    },
+    primary: {
+      main: "#1e1e1e",
+      dark: "#000",
+      light: "#fff",
+    },
+    secondary: {
+      main: "#ff0000",
+    },
+  },
+});
+
+const themeDark = createTheme({
+  palette: {
+    background: {
+      default: "#252525",
       paper: "#000",
     },
     primary: {
-      main: "#000",
-      dark: "#fff",
-      light: "#ff0000",
+      main: "#fff",
+      dark: "#000",
+      light: "#fff",
     },
     secondary: {
       main: "#ff0000",
@@ -21,11 +43,12 @@ const themesA = createTheme({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { currentTheme } = React.useContext(CustomThemeContext);
   return (
-    <ThemeProvider theme={themesA}>
+    <CustomThemeProvider theme={currentTheme}>
       <CssBaseline />
       <Component {...pageProps} />
-    </ThemeProvider>
+    </CustomThemeProvider>
   );
 }
 

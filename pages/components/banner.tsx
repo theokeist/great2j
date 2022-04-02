@@ -23,8 +23,7 @@ export default function Banner({
         container
         justifyContent="center"
         alignItems="center"
-        style={{
-          maxWidth: "100%",
+        sx={{
           height: matches ? "38.8vw" : "48.66vw",
           filter: `blur(0px)`,
           backgroundImage: `url("${header}")`,
@@ -33,6 +32,9 @@ export default function Banner({
           backgroundSize: "cover",
           objectPosition: objectPosition,
           margin: 0,
+          marginTop: { sm: 0, xs: 0 },
+          marginLeft: "auto",
+          width: { xl: "calc(100% - 15vw)", sm: "100%" },
         }}
       >
         {/* <Image
@@ -55,7 +57,7 @@ export default function Banner({
             <Typography
               component="h1"
               variant="h3"
-              color="primary"
+              color="primary.light"
               gutterBottom={gutterBottom}
               textAlign={align}
               sx={
@@ -85,7 +87,7 @@ export default function Banner({
               <Typography
                 component="h1"
                 variant="subtitle1"
-                color="primary"
+                color="primary.light"
                 textAlign={align}
                 sx={
                   matches
@@ -135,7 +137,7 @@ export default function Banner({
             <Typography
               component="h1"
               variant="h3"
-              color="primary"
+              color="primary.light"
               gutterBottom={gutterBottom}
               textAlign={align}
               sx={
@@ -167,7 +169,7 @@ export default function Banner({
               <Typography
                 component="h1"
                 variant="subtitle1"
-                color="primary"
+                color="primary.light"
                 textAlign={align}
                 sx={
                   matches

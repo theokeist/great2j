@@ -10,7 +10,10 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import Image from "next/image";
+
 import logo from "../../public/logo.jpg";
+import logoLight from "../../public/logo-light.jpg";
+
 import Button from "@mui/material/Button";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ShareIcon from "@mui/icons-material/Share";
@@ -19,6 +22,12 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import { useRouter } from "next/router";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
+
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Switch from "@mui/material/Switch";
+import { CustomThemeContext } from "./theme/greatThemeProvider";
+import { Divider } from "@mui/material";
 
 export const pages = [
   { name: "Eventy", link: "/events" },
@@ -77,16 +86,37 @@ export const NavigationMenu = () => {
     setAnchorElNav(null);
   };
 
+  const [checked, setChecked] = React.useState(true);
+
+  const { currentTheme, setTheme } = React.useContext(CustomThemeContext);
+  const isNormal = Boolean(currentTheme === "themeDark");
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (isNormal) {
+      //@ts-ignore
+      setTheme("themeLight");
+      setChecked(false);
+    } else {
+      //@ts-ignore
+      setTheme("themeDark");
+      setChecked(true);
+    }
+  };
+
   const isActive = (page: any) => {
     if (router?.pathname == page?.link) {
       return (
-        <Typography textAlign="center" color="primary" sx={{ fontWeight: 900 }}>
+        <Typography
+          textAlign="center"
+          color="primary"
+          sx={{ fontSize: 20, fontWeight: 900 }}
+        >
           {page?.name}
         </Typography>
       );
     } else {
       return (
-        <Typography textAlign="center" color="primary">
+        <Typography textAlign="center" color="primary" sx={{ fontSize: 20 }}>
           {page?.name}
         </Typography>
       );
@@ -96,19 +126,38 @@ export const NavigationMenu = () => {
   const logoImage = () => {
     return (
       <Link href="/">
-        <Image alt="GREAT" src={logo} layout="fill" priority />
+        <Image
+          alt="GREAT"
+          src={isNormal ? logo : logoLight}
+          layout="fill"
+          priority
+          objectFit="cover"
+        />
       </Link>
     );
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "background.paper", py: 1.5 }}>
-      <Container maxWidth="xl">
+    <AppBar
+      sx={{
+        position: { xl: "fixed", xs: "static" },
+        left: { xl: 0, sm: "none" },
+        flexDirection: { xl: "column", sm: "row" },
+        flexWrap: "wrap",
+        width: { xl: "16vw", lg: "100%", sm: "100%" },
+        height: { xl: "100vh", lg: "100%", sm: "100%" },
+        bgcolor: "background.paper",
+        py: 1.5,
+      }}
+    >
+      <Container maxWidth="xl" sx={{ height: "100%" }}>
         <Box
           sx={{
             display: "flex",
+            height: { xl: "100vh", lg: "100%", sm: "100%" },
             justifyContent: "space-evenly",
             alignItems: "center",
+            flexDirection: { xl: "column", sm: "row" },
           }}
         >
           <IconButton
@@ -156,6 +205,27 @@ export const NavigationMenu = () => {
                   </MenuItem>
                 </Link>
               ))}
+              <hr style={{ width: "100%" }} />
+              <MenuItem>
+                <FormGroup sx={{ py: 1 }}>
+                  <FormControlLabel
+                    control={
+                      <Switch
+                        size="small"
+                        checked={checked}
+                        color="secondary"
+                        onChange={handleChange}
+                      />
+                    }
+                    label={checked ? "tmavý motiv" : "světlý motiv"}
+                    sx={
+                      checked
+                        ? { color: "primary.light" }
+                        : { color: "primary.dark" }
+                    }
+                  />
+                </FormGroup>
+              </MenuItem>
             </Menu>
           </Box>
 
@@ -164,27 +234,35 @@ export const NavigationMenu = () => {
           </IconButton>
 
           {pages.map((page, index) => (
-            <Box key={index} sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box
+              key={index}
+              sx={{ width: "100%", display: { xs: "none", md: "flex" } }}
+            >
               {page && (
                 <Link
                   key={index}
                   href={page?.link ? page.link : page.redirect}
-                  style={{ textDecoration: "none" }}
+                  style={{ textDecoration: "none", width: "100%" }}
                 >
                   <Button
                     key={index}
                     onClick={handleCloseNavMenu}
                     sx={{
                       my: 2,
-                      color: "white",
+                      py: 2,
+                      px: 3,
+                      color: "primary",
                       display: "block",
                       borderRadius: 0,
-                      letterSpacing: 2,
-                      fontWeight: 400,
+                      letterSpacing: 3,
+                      fontWeight: 800,
+                      fontSize: 18,
+                      lineHeight: "initial",
                     }}
                     variant={
                       router?.pathname == page?.link ? "outlined" : undefined
                     }
+                    fullWidth
                   >
                     {page?.name}
                   </Button>
@@ -234,6 +312,22 @@ export const NavigationMenu = () => {
               ))}
             </Menu>
           </Box>
+          <FormGroup sx={{ padding: 2, display: { xs: "none", xl: "block" } }}>
+            <hr style={{ width: "100%", backgroundColor: "red" }} />
+            <FormControlLabel
+              sx={
+                checked ? { color: "primary.light" } : { color: "primary.dark" }
+              }
+              control={
+                <Switch
+                  color="secondary"
+                  checked={checked}
+                  onChange={handleChange}
+                />
+              }
+              label={checked ? "tmavý motiv" : "světlý motiv"}
+            />
+          </FormGroup>
         </Box>
       </Container>
     </AppBar>

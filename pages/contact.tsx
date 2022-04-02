@@ -34,8 +34,7 @@ export default function Contact() {
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const matchesLg = useMediaQuery(theme.breakpoints.up("xl"));
   return (
-    <ThemeProvider theme={themes}>
-      <CssBaseline />
+    <>
       <NavigationMenu />
       <Banner
         align="center"
@@ -48,7 +47,12 @@ export default function Contact() {
         <Grid
           sx={
             matchesLg
-              ? { px: 36, py: 7 }
+              ? {
+                  width: { xl: "calc(100% - 15vw)", sm: "100%" },
+                  marginLeft: "auto",
+                  px: 36,
+                  py: 7,
+                }
               : matches
               ? { px: 6, py: 6 }
               : { px: 2, py: 6 }
@@ -102,6 +106,6 @@ export default function Contact() {
         </Grid>
       </Main>
       <CopyrightFooter />
-    </ThemeProvider>
+    </>
   );
 }

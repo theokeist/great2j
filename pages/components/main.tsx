@@ -19,7 +19,7 @@ export default function Main({
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
-    <Grid sx={{ p: 0, pb: 18 }}>
+    <Grid sx={{ backgroundColor: background, p: 0, pb: 18 }}>
       {title && (
         <Grid
           sx={

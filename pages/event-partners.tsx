@@ -85,9 +85,7 @@ export default function EventPartners() {
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const matchesLg = useMediaQuery(theme.breakpoints.up("xl"));
   return (
-    <ThemeProvider theme={themes}>
-      <CssBaseline />
-
+    <>
       <NavigationMenu />
       <Banner
         align="center"
@@ -101,7 +99,12 @@ export default function EventPartners() {
           spacing={4}
           sx={
             matchesLg
-              ? { px: 36, py: 7 }
+              ? {
+                  width: { xl: "calc(100% - 15vw)", sm: "100%" },
+                  marginLeft: "auto",
+                  px: 10,
+                  py: 7,
+                }
               : matches
               ? { px: 3, py: 5 }
               : { px: 5, py: 5 }
@@ -126,6 +129,6 @@ export default function EventPartners() {
         </Grid>
       </Main>
       <CopyrightFooter />
-    </ThemeProvider>
+    </>
   );
 }

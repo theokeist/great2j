@@ -33,8 +33,7 @@ export default function Events() {
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const matchesLg = useMediaQuery(theme.breakpoints.up("lg"));
   return (
-    <ThemeProvider theme={themes}>
-      <CssBaseline />
+    <>
       <NavigationMenu />
       <Banner
         align="center"
@@ -49,13 +48,18 @@ export default function Events() {
           container
           sx={
             matchesLg
-              ? { px: 30, mt: 7 }
+              ? {
+                  width: { xl: "calc(100% - 15vw)", sm: "100%" },
+                  marginLeft: "auto",
+                  px: 10,
+                  mt: 7,
+                }
               : matches
               ? { px: 6, mt: 7 }
-              : { px: 2, mt: 4 }
+              : { px: 2, mt: 2 }
           }
         >
-          <Grid container spacing={4}>
+          <Grid container spacing={8}>
             <Grid item xs={12} md={6} lg={7}>
               <Grid container spacing={4}>
                 {matches ? (
@@ -72,7 +76,7 @@ export default function Events() {
                     <Grid item xs={12} md={12} lg={8}>
                       <Typography
                         sx={{
-                          fontWeight: 300,
+                          fontWeight: 400,
                           fontSize: { md: 25, sx: 22 },
                           letterSpacing: { xs: 1, md: 2 },
                         }}
@@ -107,7 +111,7 @@ export default function Events() {
                     <Grid item xs={12} md={12} lg={8}>
                       <Typography
                         sx={{
-                          fontWeight: 300,
+                          fontWeight: 400,
                           fontSize: { md: 25, sx: 22 },
                           letterSpacing: { xs: 1, md: 2 },
                         }}
@@ -149,7 +153,7 @@ export default function Events() {
                 )}
               </Grid>
               <Typography
-                sx={{ fontWeight: 300 }}
+                sx={{ fontWeight: 400 }}
                 variant="body1"
                 color="primary"
                 align="justify"
@@ -166,7 +170,7 @@ export default function Events() {
                 </strong>{" "}
               </Typography>
               <Typography
-                sx={{ fontWeight: 300, mt: 4 }}
+                sx={{ fontWeight: 400, mt: 4 }}
                 variant="body1"
                 color="primary"
                 align="justify"
@@ -195,18 +199,19 @@ export default function Events() {
               <EvnetTimeline />
             </Grid>
           </Grid>
-          <hr style={{ width: "60%", margin: "100px auto" }}></hr>
+          <hr style={{ width: "60%", margin: "70px auto" }}></hr>
           <Grid item xs={12} md={12}>
             <iframe
               src="https://frame.mapy.cz/s/medebatofa"
               width="100%"
               height="500"
               frameBorder="0"
+              style={{ borderRadius: "15px" }}
             ></iframe>
           </Grid>
         </Grid>
       </Main>
       <CopyrightFooter />
-    </ThemeProvider>
+    </>
   );
 }

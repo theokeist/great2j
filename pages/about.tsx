@@ -25,14 +25,14 @@ const themes = createTheme({
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Paper } from "@mui/material";
 
 export default function About() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const matchesLg = useMediaQuery(theme.breakpoints.up("xl"));
   return (
-    <ThemeProvider theme={themes}>
-      <CssBaseline />
+    <>
       <NavigationMenu />
       <Banner
         align="center"
@@ -43,13 +43,18 @@ export default function About() {
         marginLeft={-15}
       />
 
-      <Main>
+      <Main background="primary">
         <Grid
           container
           spacing={6}
           sx={
             matchesLg
-              ? { px: 36, py: 7 }
+              ? {
+                  width: { xl: "calc(100% - 15vw)", sm: "100%" },
+                  marginLeft: "auto",
+                  px: 10,
+                  py: 7,
+                }
               : matches
               ? { px: 6, py: 5 }
               : { px: 2, pt: 6 }
@@ -121,6 +126,6 @@ export default function About() {
         </Grid>
       </Main>
       <CopyrightFooter />
-    </ThemeProvider>
+    </>
   );
 }

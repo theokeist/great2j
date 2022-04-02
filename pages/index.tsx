@@ -6,6 +6,7 @@ import {
   Stack,
   Typography,
   CssBaseline,
+  Paper,
 } from "@mui/material";
 import Link from "@mui/material/Link";
 import { createTheme, useTheme, ThemeProvider } from "@mui/material/styles";
@@ -37,40 +38,6 @@ function LinearProgressWithLabel(
     </Box>
   );
 }
-
-const themes = createTheme({
-  palette: {
-    background: {
-      default: "#252525",
-      paper: "#242424",
-    },
-    primary: {
-      main: "#fff",
-      dark: "#000",
-      light: "#ff0000",
-    },
-    secondary: {
-      main: "#ff0000",
-    },
-  },
-});
-
-const themesA = createTheme({
-  palette: {
-    background: {
-      default: "#fff",
-      paper: "#000",
-    },
-    primary: {
-      main: "#aaa",
-      dark: "#00f",
-      light: "#ff0000",
-    },
-    secondary: {
-      main: "#ff0000",
-    },
-  },
-});
 
 export async function getServerSideProps() {
   const { data } = await axios.get(
@@ -109,16 +76,22 @@ export default function IndexPage(props: any) {
 
   return (
     <>
-      <CssBaseline />
       <NavigationMenu />
       <Main>
         <Box
           sx={
             matchesLg
-              ? { bgcolor: "primary", pt: 8, pb: 6, px: 30 }
+              ? {
+                  width: "calc(100% - 15vw)",
+                  marginLeft: "auto",
+                  bgcolor: "primary",
+                  pt: 14,
+                  pb: 6,
+                  px: 8,
+                }
               : matches
-              ? { bgcolor: "primary", pt: 4, pb: 6, px: 2 }
-              : { bgcolor: "primary", pt: 4, pb: 6, px: 1.5 }
+              ? { bgcolor: "primary", pt: 10, pb: 6, px: 2 }
+              : { bgcolor: "primary", pt: 3, pb: 6, px: 1.5 }
           }
         >
           <Stack
@@ -127,57 +100,102 @@ export default function IndexPage(props: any) {
             justifyContent="center"
           >
             <Grid item xs={12} md={6} lg={5}>
-              <iframe
-                width="100%"
-                height={matches ? "340px" : "256px"}
-                src="https://www.youtube.com/embed/B1YJXXFwgpA"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              <Typography
-                variant="h6"
-                color="primary"
-                align="justify"
-                paragraph
-                sx={{
-                  mt: { xs: 1, md: 4 },
-                  fontSize: { md: 24, xs: 16 },
-                }}
-              >
-                GREAT je ostravská organizace pořádající galavečery ringových
-                sportů, konkrétně boxu, K-1 a Muay Thai. Hlavní myšlenkou
-                organizace je pozvednutí a propagace těchto sportů, bojovníků a
-                především pomoc potřebným. Proto jsou všechny galavečery
-                věnovány dětem a rodinám s postižením.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={6} lg={5}>
-              <Box
+              <Paper
+                elevation={24}
                 sx={
                   matchesLg
                     ? {
-                        minHeight: 600,
-                        borderRadius: 0,
+                        minHeight: 710,
+                        borderRadius: 4,
+                        backgroundColor: "primary",
+                      }
+                    : matches
+                    ? {
+                        borderRadius: 4,
+                        backgroundColor: "primary",
+                      }
+                    : {
+                        borderRadius: 4,
+                        backgroundColor: "primary",
+                      }
+                }
+              >
+                <iframe
+                  width="100%"
+                  height={matches ? "340px" : "256px"}
+                  src="https://www.youtube.com/embed/B1YJXXFwgpA"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ borderRadius: "15px" }}
+                ></iframe>
+                <Typography
+                  variant="h6"
+                  color="primary"
+                  align="justify"
+                  paragraph
+                  sx={
+                    matchesLg
+                      ? {
+                          borderRadius: 4,
+                          px: 5,
+                          py: 5,
+                          backgroundColor: "primary",
+                          fontSize: { md: 24, xs: 16 },
+                        }
+                      : matches
+                      ? {
+                          borderRadius: 4,
+                          px: 3.5,
+                          py: 2.5,
+                          backgroundColor: "primary",
+                          fontSize: { md: 24, xs: 16 },
+                        }
+                      : {
+                          borderRadius: 4,
+                          px: 2.5,
+                          py: 3.5,
+                          backgroundColor: "primary",
+                          fontSize: { md: 24, xs: 16 },
+                        }
+                  }
+                >
+                  GREAT je ostravská organizace pořádající galavečery ringových
+                  sportů, konkrétně boxu, K-1 a Muay Thai. Hlavní myšlenkou
+                  organizace je pozvednutí a propagace těchto sportů, bojovníků
+                  a především pomoc potřebným. Proto jsou všechny galavečery
+                  věnovány dětem a rodinám s postižením.
+                </Typography>
+              </Paper>
+            </Grid>
+
+            <Grid item xs={12} md={6} lg={5}>
+              <Paper
+                elevation={24}
+                sx={
+                  matchesLg
+                    ? {
+                        minHeight: 710,
+                        borderRadius: 3,
                         px: 5,
                         py: 5,
-                        backgroundColor: "primary.dark",
+                        backgroundColor: "primary",
                       }
                     : matches
                     ? {
                         minHeight: 600,
-                        borderRadius: 0,
+                        borderRadius: 3,
                         px: 3.5,
                         py: 2.5,
-                        backgroundColor: "primary.dark",
+                        backgroundColor: "primary",
                       }
                     : {
                         minHeight: 600,
-                        borderRadius: 0,
+                        borderRadius: 3,
                         px: 2.5,
                         py: 3.5,
-                        backgroundColor: "primary.dark",
+                        backgroundColor: "primary",
                       }
                 }
               >
@@ -237,13 +255,13 @@ export default function IndexPage(props: any) {
                         ? {
                             bgcolor: "black",
                             ":hover": {
-                              bgcolor: "white",
+                              bgcolor: "primary.light",
                             },
                             color: "red",
                             mt: 1.5,
                             mb: 6,
                             py: 2.5,
-                            borderRadius: 0,
+                            borderRadius: 3,
                             fontWeight: 700,
                             typography: {
                               letterSpacing: 4,
@@ -253,14 +271,14 @@ export default function IndexPage(props: any) {
                         ? {
                             bgcolor: "black",
                             ":hover": {
-                              bgcolor: "white",
+                              bgcolor: "primary.light",
                             },
                             color: "red",
                             mt: 5,
                             mb: 5,
                             py: 2,
                             px: 0,
-                            borderRadius: 0,
+                            borderRadius: 3,
                             fontWeight: 700,
                             typography: {
                               letterSpacing: 3,
@@ -269,13 +287,13 @@ export default function IndexPage(props: any) {
                         : {
                             bgcolor: "black",
                             ":hover": {
-                              bgcolor: "white",
+                              bgcolor: "primary.light",
                             },
                             color: "red",
                             mt: 0,
                             mb: 3,
                             py: 2.5,
-                            borderRadius: 0,
+                            borderRadius: 3,
                             fontWeight: 700,
                             typography: {
                               letterSpacing: 0,
@@ -317,7 +335,7 @@ export default function IndexPage(props: any) {
                     zde.
                   </a>
                 </Typography>
-              </Box>
+              </Paper>
             </Grid>
           </Stack>
         </Box>

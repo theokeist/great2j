@@ -48,8 +48,7 @@ export default function Fighters() {
   console.log(todos);
 
   return (
-    <ThemeProvider theme={themes}>
-      <CssBaseline />
+    <>
       <NavigationMenu />
       <Banner
         title="ZÁPASNÍCI"
@@ -61,18 +60,23 @@ export default function Fighters() {
       <Main>
         <Grid
           container
-          spacing={2}
+          spacing={4}
           sx={
             matchesLg
-              ? { px: 30, py: 7 }
+              ? {
+                  width: { xl: "calc(100% - 15vw)", sm: "100%" },
+                  marginLeft: "auto",
+                  px: 10,
+                  py: 7,
+                }
               : matches
               ? { px: 6, py: 7 }
-              : { px: 3, py: 2 }
+              : { px: 1, py: 1 }
           }
         >
           {todos?.map((foto: any, index: any) => {
             return (
-              <Grid key={index} item sm={12} md={6} lg={4}>
+              <Grid key={index} item xs={12} sm={12} md={6} lg={4}>
                 <Fighter
                   key={index}
                   avatar={foto?.fotka_url}
@@ -103,6 +107,6 @@ export default function Fighters() {
         </Grid>
       </Main>
       <CopyrightFooter />
-    </ThemeProvider>
+    </>
   );
 }
