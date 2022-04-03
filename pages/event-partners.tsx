@@ -20,9 +20,9 @@ import fighting_arena from "../public/partners/fighting_arena.png";
 import dva_mluvci from "../public/partners/dva_mluvci.jpg";
 
 import nadace_rgb from "../public/partners/nadace_rgb.png";
-import backfist from "../public/partners/backfist.png";
-import bernold from "../public/partners/bernold.png";
-import svihej from "../public/partners/svihej.png";
+import backfist from "../public/partners/backfist.PNG";
+import bernold from "../public/partners/bernold.PNG";
+import svihej from "../public/partners/svihej.PNG";
 import mystery from "../public/partners/mystery.png";
 
 const fotky = [
