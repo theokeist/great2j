@@ -6,7 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { useMediaQuery } from "@mui/material";
 import CustomThemeProvider, {
   CustomThemeContext,
-} from "./api/theme/greatThemeProvider";
+} from "./components/greatThemeProvider";
 
 const themeLight = createTheme({
   palette: {
