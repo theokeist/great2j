@@ -12,10 +12,12 @@ const CustomThemeProvider = (props: any) => {
 
   // Get current theme from localStorage
   React.useEffect(() => {
-    _setThemeName(localStorage.getItem("appTheme") || "themeDark");
+    if (localStorage.getItem("appTheme") === "themeLight") {
+      _setThemeName(localStorage.getItem("appTheme"));
+    }
   }, []);
   // State to hold selected theme
-  const [themeName, _setThemeName] = useState<any>();
+  const [themeName, _setThemeName] = useState<any>("themeDark");
 
   // Retrieve theme object by theme name
   const theme = getTheme(themeName);
