@@ -26,7 +26,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import { CustomThemeContext } from "./theme/greatThemeProvider";
+import { CustomThemeContext } from "../api/theme/greatThemeProvider";
 import { Divider } from "@mui/material";
 
 export const pages = [
