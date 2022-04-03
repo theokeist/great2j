@@ -39,7 +39,7 @@ export default function About() {
         title="GREAT by"
         subtitle="Jiří Ondruš & Jakub Bernold"
         header={"./header2.jpg"}
-        objectPosition="30% 0%"
+        objectPosition="0% 40%"
         marginLeft={-15}
       />
 
