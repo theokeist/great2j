@@ -32,9 +32,9 @@ import { Divider } from "@mui/material";
 export const pages = [
   { name: "Eventy", link: "/events" },
   { name: "Zápasníci", link: "/fighters" },
-  { name: "O nás", link: "/about" },
   { name: "Partneři", link: "/event-partners" },
   { name: "E-shop", redirect: "https://bit.ly/GreatShopCZ" },
+  { name: "O nás", link: "/about" },
   { name: "Kontakt", link: "/contact" },
 ];
 
@@ -42,9 +42,9 @@ export const mobilePages = [
   { name: "Domů", link: "/" },
   { name: "Eventy", link: "/events" },
   { name: "Zápasníci", link: "/fighters" },
-  { name: "O nás", link: "/about" },
   { name: "Partneři", link: "/event-partners" },
   { name: "E-shop", redirect: "https://bit.ly/GreatShopCZ" },
+  { name: "O nás", link: "/about" },
   { name: "Kontakt", link: "/contact" },
 ];
 
@@ -144,7 +144,7 @@ export const NavigationMenu = () => {
         left: { xl: 0, sm: "none" },
         flexDirection: { xl: "column", sm: "row" },
         flexWrap: "wrap",
-        width: { xl: "16vw", lg: "100%", sm: "100%" },
+        width: { xl: "15vw", lg: "100%", sm: "100%" },
         height: { xl: "100vh", lg: "100%", sm: "100%" },
         bgcolor: "background.paper",
         py: 1.5,
@@ -218,11 +218,7 @@ export const NavigationMenu = () => {
                       />
                     }
                     label={checked ? "tmavý motiv" : "světlý motiv"}
-                    sx={
-                      checked
-                        ? { color: "primary.light" }
-                        : { color: "primary.dark" }
-                    }
+                    sx={{ color: "secondary.main" }}
                   />
                 </FormGroup>
               </MenuItem>
@@ -256,7 +252,7 @@ export const NavigationMenu = () => {
                       borderRadius: 0,
                       letterSpacing: 3,
                       fontWeight: 800,
-                      fontSize: 18,
+                      fontSize: 16,
                       lineHeight: "initial",
                     }}
                     variant={
@@ -315,9 +311,7 @@ export const NavigationMenu = () => {
           <FormGroup sx={{ padding: 2, display: { xs: "none", xl: "block" } }}>
             <hr style={{ width: "100%", backgroundColor: "red" }} />
             <FormControlLabel
-              sx={
-                checked ? { color: "primary.light" } : { color: "primary.dark" }
-              }
+              sx={{ color: "secondary.main" }}
               control={
                 <Switch
                   color="secondary"

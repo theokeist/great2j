@@ -46,7 +46,7 @@ export default function Banner({
         objectPosition={objectPosition}
         priority
       /> */}
-        {matches && (
+        {matches && title && (
           <Grid
             container
             direction="column"
@@ -121,7 +121,7 @@ export default function Banner({
           </Grid>
         )}
       </Grid>
-      {!matches && (
+      {!matches && title && (
         <Grid
           container
           direction="column"

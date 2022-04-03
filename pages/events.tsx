@@ -1,32 +1,26 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Main from "./components/main";
 import NavigationMenu from "./components/navigation";
 import EvnetTimeline from "./components/timeline";
 import Banner from "./components/banner";
 import CopyrightFooter from "./components";
 
-import frantisek from "../public/events/frantisek.jpg";
+import event from "../public/events/gfn1.webp";
 import Image from "next/image";
 
-const themes = createTheme({
-  palette: {
-    background: {
-      default: "#252525",
-      paper: "#242424",
-    },
-    primary: {
-      main: "#fff",
-      dark: "#000",
-      light: "#ff0000",
-    },
-  },
-});
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Button, Link, Paper } from "@mui/material";
+
+export const eventPages = [
+  {
+    name: "GREAT FIGHT NIGHT",
+    link: "/great-fight-night",
+    tickets: "https://goout.net/cs/great-fight-night-pro-frantiska/szutfws/",
+  },
+];
 
 export default function Events() {
   const theme = useTheme();
@@ -37,8 +31,8 @@ export default function Events() {
       <NavigationMenu />
       <Banner
         align="center"
-        title="GREAT FIGHT NIGHT"
-        subtitle="pro Františka"
+        title="GREAT FIGHT"
+        subtitle="EVENTY"
         header={"./event3.webp"}
         objectPosition="0 31%"
       />
@@ -51,7 +45,7 @@ export default function Events() {
               ? {
                   width: { xl: "calc(100% - 15vw)", sm: "100%" },
                   marginLeft: "auto",
-                  px: 10,
+                  px: 40,
                   mt: 7,
                 }
               : matches
@@ -59,155 +53,69 @@ export default function Events() {
               : { px: 2, mt: 2 }
           }
         >
-          <Grid container spacing={8}>
-            <Grid item xs={12} md={6} lg={7}>
-              <Grid container spacing={4}>
-                {matches ? (
-                  <>
-                    <Grid item xs={12} md={12} lg={4}>
+          <Grid container spacing={6}>
+            <Grid item xs={12} md={6} lg={12}>
+              {eventPages.map((page, index) => (
+                <Paper
+                  elevation={24}
+                  key={index}
+                  sx={{
+                    borderRadius: 3,
+                    p: 2,
+                    width: "100%",
+                  }}
+                >
+                  <Grid container item spacing={2}>
+                    <Grid item xs={12}>
                       <Image
+                        className="charity-photo"
                         alt="great by 2j"
-                        src={frantisek}
+                        src={event}
                         layout="responsive"
                         placeholder="blur"
+                        objectFit="contain"
                         priority
                       />
                     </Grid>
-                    <Grid item xs={12} md={12} lg={8}>
-                      <Typography
-                        sx={{
-                          fontWeight: 400,
-                          fontSize: { md: 25, sx: 22 },
-                          letterSpacing: { xs: 1, md: 2 },
-                        }}
-                        variant="h6"
-                        color="primary"
-                        align="justify"
-                        paragraph
+                    <Grid item xs={12} md={6}>
+                      <Link
+                        key={index}
+                        href={page.link}
+                        sx={{ textDecoration: "none", width: "100%" }}
                       >
-                        Historicky první GREAT FIGHT NIGHT se uskuteční v pátek
-                        22.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem
-                        této akce je vybrat 250 000 Kč pro malého{" "}
-                        <a
-                          style={{
-                            color: "red",
-                            textDecoration: "none",
-                            fontWeight: 500,
-                          }}
-                          href="https://www.dobryandel.cz/2020/predcasne-narozeni-ovlivnilo-sestiletemu-frantiskovi-cely-zivot/"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Button
+                          size="large"
+                          variant="outlined"
+                          color="primary"
+                          fullWidth
+                          sx={{ py: 2 }}
                         >
-                          Františka a jeho maminku
-                        </a>
-                        {", "}
-                        kteří oba bojují každý den a proto si zaslouží aby se
-                        tentokrát bojovalo pro ně.
-                      </Typography>
+                          informace o eventu
+                        </Button>
+                      </Link>
                     </Grid>
-                  </>
-                ) : (
-                  <>
-                    <Grid item xs={12} md={12} lg={8}>
-                      <Typography
-                        sx={{
-                          fontWeight: 400,
-                          fontSize: { md: 25, sx: 22 },
-                          letterSpacing: { xs: 1, md: 2 },
-                        }}
-                        variant="h6"
-                        color="primary"
-                        align="justify"
-                        paragraph
+                    <Grid item xs={12} md={6}>
+                      <Link
+                        key={index}
+                        href={page.tickets}
+                        sx={{ textDecoration: "none", width: "100%" }}
                       >
-                        Historicky první GREAT FIGHT NIGHT se uskuteční v sobotu
-                        23.4.2022 v Atletické hale v Ostravě-Vítkovicích. Cílem
-                        této akce je vybrat 250 000 Kč pro malého{" "}
-                        <a
-                          style={{
-                            color: "red",
-                            textDecoration: "none",
-                            fontWeight: 500,
-                          }}
-                          href="https://www.dobryandel.cz/2020/predcasne-narozeni-ovlivnilo-sestiletemu-frantiskovi-cely-zivot/"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Button
+                          size="large"
+                          variant="contained"
+                          color="secondary"
+                          disableElevation
+                          fullWidth
+                          sx={{ py: 2 }}
                         >
-                          Františka a jeho maminku
-                        </a>
-                        {", "}
-                        kteří oba bojují každý den a proto si zaslouží aby se
-                        tentokrát bojovalo pro ně.
-                      </Typography>
+                          lístky
+                        </Button>
+                      </Link>
                     </Grid>
-                    <Grid item xs={12} md={12} lg={4} sx={{ mb: 4 }}>
-                      <Image
-                        alt="great by 2j"
-                        src={frantisek}
-                        layout="responsive"
-                        placeholder="blur"
-                        priority
-                      />
-                    </Grid>
-                  </>
-                )}
-              </Grid>
-              <Typography
-                sx={{ fontWeight: 400 }}
-                variant="body1"
-                color="primary"
-                align="justify"
-                paragraph
-              >
-                Hala s kapacitou více než 1 800 lidí zažije opravdu
-                neopakovatelnou podívanou. V ringu totiž uvidíme skvělé souboje,
-                několik mistrů České Republiky a mimojiné také
-                vyhecované/vyhrocené nelítostné bitvy, jaké jistě nabídnou
-                například zápasy{" "}
-                <strong>
-                  Strakoš vs. Obracaj, Pekárek vs. Kubíček nebo Gámez vs.
-                  Hartmann.
-                </strong>{" "}
-              </Typography>
-              <Typography
-                sx={{ fontWeight: 400, mt: 4 }}
-                variant="body1"
-                color="primary"
-                align="justify"
-                paragraph
-              >
-                Velký svátek z této akce dělá také účast ostravské bojovnice a
-                velkého supertalentu <strong>Elizabeth Bezděkové</strong>.
-                Přehlídku krásných technik a souboj plný přestřelek jako vždy
-                slibuje zápas <strong>Jiřího Juřičky</strong>. Svůj možná
-                poslední zápas v boxu zažije <strong>Martin Prázdný</strong>,
-                který se do královského sportu vrátil kvůli zranění kolene,
-                avšak po tomto galavečeru nejspíše opět zamíří do MMA. V hlavním
-                zápase večera pak bude nejen Ostrava, ale celé Česko a Slovensko
-                na nohou - do ringu se totiž po třech letech vrací{" "}
-                <strong>Marek Vaneček</strong>, pro kterého to možná bude, a
-                možná také nebude, úplné loučení s kariérou, během které potkal
-                jména jako Strnisko, Clemente Russo, Tlkanec apod., tedy nejen
-                českou, ale i světovou elitu. Tváří v tvář se mu postaví David
-                Klíč - kat jeho rivala z dob největší slávy, Jiřího Havel,
-                kterého Klíč na posledním Mistrovství České Republiky nelítostně
-                knokautoval! Přijďte si užít nezapomenutelný večer plný skvělého
-                boxu a K-1 a pomoci tím malému Františkovi!
-              </Typography>
+                  </Grid>
+                </Paper>
+              ))}
             </Grid>
-            <Grid item xs={12} md={6} lg={5} sx={{ padding: { xs: 0 } }}>
-              <EvnetTimeline />
-            </Grid>
-          </Grid>
-          <hr style={{ width: "60%", margin: "70px auto" }}></hr>
-          <Grid item xs={12} md={12}>
-            <iframe
-              src="https://frame.mapy.cz/s/medebatofa"
-              width="100%"
-              height="500"
-              frameBorder="0"
-              style={{ borderRadius: "15px" }}
-            ></iframe>
           </Grid>
         </Grid>
       </Main>

@@ -22,7 +22,7 @@ export default function EventTimeline() {
   return (
     <Paper
       elevation={24}
-      sx={{ borderRadius: 4, py: 4, px: 4, bgcolor: "primary" }}
+      sx={{ borderRadius: 3, py: 4, px: 4, bgcolor: "primary" }}
     >
       <Timeline position="left" sx={{ mt: 0, mb: 0 }}>
         <Typography

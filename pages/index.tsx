@@ -26,7 +26,7 @@ function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number }
 ) {
   return (
-    <Box sx={{ display: "flex", alignItems: "center", mx: 1, my: 3.5 }}>
+    <Box sx={{ display: "flex", alignItems: "center", my: 3.5 }}>
       <Box sx={{ width: "100%", mr: 2 }}>
         <LinearProgress variant="determinate" {...props} />
       </Box>
@@ -87,7 +87,7 @@ export default function IndexPage(props: any) {
                   bgcolor: "primary",
                   pt: 14,
                   pb: 6,
-                  px: 8,
+                  px: 4,
                 }
               : matches
               ? { bgcolor: "primary", pt: 10, pb: 6, px: 2 }
@@ -100,77 +100,52 @@ export default function IndexPage(props: any) {
             justifyContent="center"
           >
             <Grid item xs={12} md={6} lg={5}>
-              <Paper
-                elevation={24}
+              <iframe
+                width="100%"
+                height={matches ? "340px" : "256px"}
+                src="https://www.youtube.com/embed/B1YJXXFwgpA"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ borderRadius: "10px" }}
+              ></iframe>
+              <Typography
+                variant="h6"
+                color="primary"
+                align="justify"
+                paragraph
                 sx={
                   matchesLg
                     ? {
-                        minHeight: 710,
-                        borderRadius: 4,
+                        py: 5,
                         backgroundColor: "primary",
+                        fontSize: { md: 24, xs: 16 },
                       }
                     : matches
                     ? {
-                        borderRadius: 4,
+                        px: 2,
+                        py: 2.5,
                         backgroundColor: "primary",
+                        fontSize: { md: 24, xs: 16 },
                       }
                     : {
-                        borderRadius: 4,
+                        px: 1,
+                        py: 3.5,
                         backgroundColor: "primary",
+                        fontSize: { md: 24, xs: 16 },
                       }
                 }
               >
-                <iframe
-                  width="100%"
-                  height={matches ? "340px" : "256px"}
-                  src="https://www.youtube.com/embed/B1YJXXFwgpA"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ borderRadius: "15px" }}
-                ></iframe>
-                <Typography
-                  variant="h6"
-                  color="primary"
-                  align="justify"
-                  paragraph
-                  sx={
-                    matchesLg
-                      ? {
-                          borderRadius: 4,
-                          px: 5,
-                          py: 5,
-                          backgroundColor: "primary",
-                          fontSize: { md: 24, xs: 16 },
-                        }
-                      : matches
-                      ? {
-                          borderRadius: 4,
-                          px: 3.5,
-                          py: 2.5,
-                          backgroundColor: "primary",
-                          fontSize: { md: 24, xs: 16 },
-                        }
-                      : {
-                          borderRadius: 4,
-                          px: 2.5,
-                          py: 3.5,
-                          backgroundColor: "primary",
-                          fontSize: { md: 24, xs: 16 },
-                        }
-                  }
-                >
-                  GREAT je ostravská organizace pořádající galavečery ringových
-                  sportů, konkrétně boxu, K-1 a Muay Thai. Hlavní myšlenkou
-                  organizace je pozvednutí a propagace těchto sportů, bojovníků
-                  a především pomoc potřebným. Proto jsou všechny galavečery
-                  věnovány dětem a rodinám s postižením.
-                </Typography>
-              </Paper>
+                GREAT je ostravská organizace pořádající galavečery ringových
+                sportů, konkrétně boxu, K-1 a Muay Thai. Hlavní myšlenkou
+                organizace je pozvednutí a propagace těchto sportů, bojovníků a
+                především pomoc potřebným. Proto jsou všechny galavečery
+                věnovány dětem a rodinám s postižením.
+              </Typography>
             </Grid>
 
-            <Grid item xs={12} md={6} lg={5}>
+            <Grid item xs={12} md={6} lg={4}>
               <Paper
                 elevation={24}
                 sx={
