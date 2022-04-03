@@ -49,6 +49,7 @@ export default function Banner({
         {matches && title && (
           <Grid
             container
+            direction="column"
             justifyContent="center"
             alignItems="flex-start"
             sx={{ width: "initial" }}
