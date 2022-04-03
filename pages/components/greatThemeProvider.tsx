@@ -15,7 +15,7 @@ const CustomThemeProvider = (props: any) => {
     _setThemeName(localStorage.getItem("appTheme") || "themeDark");
   }, []);
   // State to hold selected theme
-  const [themeName, _setThemeName] = useState("themeDark");
+  const [themeName, _setThemeName] = useState<any>();
 
   // Retrieve theme object by theme name
   const theme = getTheme(themeName);
