@@ -45,7 +45,7 @@ export default function Events() {
               ? {
                   width: { xl: "calc(100% - 15vw)", sm: "100%" },
                   marginLeft: "auto",
-                  px: 40,
+                  px: 30,
                   mt: 7,
                 }
               : matches

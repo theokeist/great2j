@@ -19,6 +19,12 @@ import filip_zidek from "../public/partners/filip_zidek.jpg";
 import fighting_arena from "../public/partners/fighting_arena.png";
 import dva_mluvci from "../public/partners/dva_mluvci.jpg";
 
+import nadace_rgb from "../public/partners/nadace_rgb.png";
+import backfist from "../public/partners/backfist.png";
+import bernold from "../public/partners/bernold.png";
+import svihej from "../public/partners/svihej.png";
+import mystery from "../public/partners/mystery.png";
+
 const fotky = [
   {
     path: boxing,
@@ -55,6 +61,31 @@ const fotky = [
     path: skrcto,
     name: "Skrč to!",
     link: "http://www.skrctostudio.cz/",
+  },
+  {
+    path: nadace_rgb,
+    name: "Nadace Multicraft",
+    link: "http://nadacemulticraft.cz/",
+  },
+  {
+    path: backfist,
+    name: "BACKFIST",
+    link: "https://www.backfist.cz/",
+  },
+  {
+    path: bernold,
+    name: "BERNOLD",
+    link: "https://www.bernold.cz/",
+  },
+  {
+    path: svihej,
+    name: "ŠVIHEJ",
+    link: "https://www.svihej.cz/",
+  },
+  {
+    path: mystery,
+    name: "Mystery Lounge",
+    link: "https://www.facebook.com/mysteryloungezabreh/?ref=page_internal",
   },
 ];
 
