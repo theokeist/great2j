@@ -8,6 +8,8 @@ import Banner from "./components/banner";
 import CopyrightFooter from "./components";
 
 import event from "../public/events/gfn1.webp";
+import event2 from "../public/events/gfn2.webp";
+
 import Image from "next/image";
 
 import { useTheme } from "@mui/material/styles";
@@ -70,7 +72,7 @@ export default function Events() {
                       <Image
                         className="charity-photo"
                         alt="great by 2j"
-                        src={event}
+                        src={matchesLg ? event : event2}
                         layout="responsive"
                         placeholder="blur"
                         objectFit="contain"

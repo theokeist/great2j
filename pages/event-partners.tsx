@@ -20,9 +20,9 @@ import fighting_arena from "../public/partners/fighting_arena.png";
 import dva_mluvci from "../public/partners/dva_mluvci.jpg";
 
 import nadace_rgb from "../public/partners/nadace_rgb.png";
-// import backfist from "../public/partners/backfist.png";
-// import bernold from "../public/partners/bernold.png";
-// import svihej from "../public/partners/svihej.png";
+import backfist from "../public/partners/backfist.png";
+import bernold from "../public/partners/bernold.png";
+import svihej from "../public/partners/svihej.png";
 import mystery from "../public/partners/mystery.png";
 
 const fotky = [
@@ -67,46 +67,27 @@ const fotky = [
     name: "Nadace Multicraft",
     link: "http://nadacemulticraft.cz/",
   },
-  // {
-  //   path: backfist,
-  //   name: "BACKFIST",
-  //   link: "https://www.backfist.cz/",
-  // },
-  // {
-  //   path: bernold,
-  //   name: "BERNOLD",
-  //   link: "https://www.bernold.cz/",
-  // },
-  // {
-  //   path: svihej,
-  //   name: "ŠVIHEJ",
-  //   link: "https://www.svihej.cz/",
-  // },
+  {
+    path: backfist,
+    name: "BACKFIST",
+    link: "https://www.backfist.cz/",
+  },
+  {
+    path: bernold,
+    name: "BERNOLD",
+    link: "https://www.bernold.cz/",
+  },
+  {
+    path: svihej,
+    name: "ŠVIHEJ",
+    link: "https://www.svihej.cz/",
+  },
   {
     path: mystery,
     name: "Mystery Lounge",
     link: "https://www.facebook.com/mysteryloungezabreh/?ref=page_internal",
   },
 ];
-
-const themes = createTheme({
-  palette: {
-    background: {
-      default: "#252525",
-      paper: "#242424",
-    },
-    primary: {
-      main: "#fff",
-      dark: "#000",
-      light: "#ff0000",
-    },
-    secondary: {
-      main: "rgba(0,0,0,0.65)",
-      dark: "rgba(0,0,0,0.99)",
-      light: "rgba(0,0,0,0.45)",
-    },
-  },
-});
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -119,7 +100,6 @@ export default function EventPartners() {
     <>
       <NavigationMenu />
       <Banner
-        align="center"
         title="Partneři"
         header={"./event_partner.webp"}
         objectPosition="0 25%"
