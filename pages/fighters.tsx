@@ -45,8 +45,6 @@ export default function Fighters() {
     fetchTodos();
   }, []);
 
-  console.log(todos);
-
   return (
     <>
       <NavigationMenu />
