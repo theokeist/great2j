@@ -17,12 +17,21 @@ import Button from "@mui/material/Button";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
+import TimelineItemCustom from "./timelineItem";
 export default function EventTimeline() {
   const [showForm, setHover] = React.useState(false);
   return (
     <Paper
       elevation={24}
-      sx={{ borderRadius: 3, py: 4, px: 4, bgcolor: "primary" }}
+      sx={{
+        borderRadius: 3,
+        py: 4,
+        px: 2,
+        bgcolor: "primary",
+        display: "flex",
+        alignItems: "center",
+        height: "99%",
+      }}
     >
       <Timeline position="left" sx={{ mt: 0, mb: 0 }}>
         <Typography
@@ -34,164 +43,51 @@ export default function EventTimeline() {
         >
           PRŮBĚH UDÁLOSTI
         </Typography>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            align="right"
-            variant="body2"
-            color="primary"
-          >
-            čtvrtek 21.4. dopoledne
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <ScaleIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "30px", px: 1 }}>
-            <Typography
-              variant="h6"
-              color="primary"
-              component="span"
-              sx={{ fontSize: 15 }}
-            >
-              oficiální vážení
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            align="right"
-            variant="body2"
-            color="primary"
-          >
-            čtvrtek 21.4. odpoledne
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <ScaleIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "20px", px: 1 }}>
-            <Typography
-              variant="h6"
-              color="primary"
-              component="span"
-              sx={{ fontSize: 15 }}
-            >
-              veřejné vážení, místo bude upřesněno
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            variant="body2"
-            color="primary"
-          >
-            pátek 22.4. 9-13 hod
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <FitnessCenterIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "20px", px: 1 }}>
-            <Typography
-              variant="h6"
-              color="primary"
-              component="span"
-              sx={{ fontSize: 15 }}
-            >
-              “předturnaj” mládeže a “méně zkušených” zápasníků
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            variant="body2"
-            color="primary"
-          >
-            pátek 22.4. 13-16 hod
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <EventNoteIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "30px", px: 1 }}>
-            <Typography
-              variant="h6"
-              color="primary"
-              component="span"
-              sx={{ fontSize: 15 }}
-            >
-              doprovodný program
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            variant="body2"
-            color="primary"
-          >
-            pátek 22.4. 17-22 hod
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <EmojiEventsIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "30px", px: 1 }}>
-            <Typography
-              variant="h6"
-              color="primary"
-              component="span"
-              sx={{ fontSize: 15 }}
-            >
-              hlavní turnaj
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            variant="body2"
-            color="primary"
-          >
-            pátek 22.4. 23 hod
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <NightlifeIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "20px", px: 1 }}>
-            <Typography
-              variant="h6"
-              color="primary"
-              component="span"
-              sx={{ fontSize: 15 }}
-            >
-              začátek Afterparty (místo bude upřesněno)
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
+        <TimelineItemCustom
+          eventDescription="OFICIÁLNÍ VÁŽENÍ"
+          eventDate="čtvrtek 21.4."
+          eventTime="od 10:00 hod."
+          icon={ScaleIcon}
+        />
+
+        <TimelineItemCustom
+          eventDescription="VEŘEJNÉ VÁŽENÍ"
+          eventPlace="Forum Nová Karolína"
+          eventDate="čtvrtek 21.4."
+          eventTime="od 17:00 hod."
+          icon={ScaleIcon}
+        />
+
+        <TimelineItemCustom
+          eventDescription="PŘEDTURNAJ"
+          eventPlace="Mládež a méně zkušení zápasníci"
+          eventDate="pátek 22.4."
+          eventTime="od 13-15 hod."
+          icon={FitnessCenterIcon}
+        />
+
+        {/* <TimelineItemCustom
+          eventDescription="doprovodný program"
+          eventDate="pátek 22.4."
+          eventTime="13-16 hod"
+          icon={EventNoteIcon}
+        /> */}
+
+        <TimelineItemCustom
+          eventDescription="HLAVNÍ TURNAJ"
+          eventDate="pátek 22.4."
+          eventTime="od 17-23 hod."
+          icon={EmojiEventsIcon}
+        />
+
+        <TimelineItemCustom
+          eventDescription="AFTERPARTY"
+          eventPlace="Brickhouse DOV"
+          eventDate="pátek 22.4."
+          eventTime="od 21 hod."
+          icon={NightlifeIcon}
+          last
+        />
       </Timeline>
 
       {/* <Button
