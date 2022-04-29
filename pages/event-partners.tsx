@@ -1,5 +1,4 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -16,16 +15,20 @@ import moodnite from "../public/partners/moodnite.jpg";
 import skrcto from "../public/partners/skrcto.jpg";
 
 import filip_zidek from "../public/partners/filip_zidek.jpg";
-import fighting_arena from "../public/partners/fighting_arena.png";
 import dva_mluvci from "../public/partners/dva_mluvci.jpg";
 
 import nadace_rgb from "../public/partners/nadace_rgb.png";
 import backfist from "../public/partners/backfist.png";
 import bernold from "../public/partners/bernold.png";
 import svihej from "../public/partners/svihej.png";
-import mystery from "../public/partners/mystery.png";
+import nedproject from "../public/partners/nedproject.png";
 
 const fotky = [
+  {
+    path: nedproject,
+    name: "NED Ekosystém",
+    link: "https://nedproject.co/",
+  },
   {
     path: boxing,
     name: "BOXING CLUB OSTRAVA",
@@ -37,14 +40,8 @@ const fotky = [
     link: "https://www.jemasport.cz/",
   },
   {
-    path: fighting_arena,
-    name: "JEMASPORT",
-    link: "https://www.fightingarena.cz/",
-  },
-
-  {
     path: dva_mluvci,
-    name: "JEMASPORT",
+    name: "Dva Mluvčí",
     link: "https://www.dvamluvci.cz/",
   },
   {
@@ -81,11 +78,6 @@ const fotky = [
     path: svihej,
     name: "ŠVIHEJ",
     link: "https://www.svihej.cz/",
-  },
-  {
-    path: mystery,
-    name: "Mystery Lounge",
-    link: "https://www.facebook.com/mysteryloungezabreh/?ref=page_internal",
   },
 ];
 
