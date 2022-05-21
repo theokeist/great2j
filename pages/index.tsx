@@ -99,11 +99,11 @@ export default function IndexPage(props: any) {
             spacing={6}
             justifyContent="center"
           >
-            <Grid item xs={12} md={6} lg={5}>
+            <Grid item xs={12} md={8} lg={7}>
               <iframe
                 width="100%"
-                height={matches ? "340px" : "256px"}
-                src="https://www.youtube.com/embed/RlC5TBcTqfg"
+                height={matches ? "440px" : "356px"}
+                src="https://www.youtube.com/embed/uyVV0v6QBWQ"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -145,7 +145,7 @@ export default function IndexPage(props: any) {
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={6} lg={4}>
+            {/* <Grid item xs={12} md={6} lg={4}>
               <Paper
                 elevation={24}
                 sx={
@@ -311,7 +311,7 @@ export default function IndexPage(props: any) {
                   </a>
                 </Typography>
               </Paper>
-            </Grid>
+            </Grid> */}
           </Stack>
         </Box>
       </Main>
