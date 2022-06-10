@@ -101,7 +101,7 @@ export default function Contact() {
             <strong>Název organizace:</strong> GREAT by 2j
           </Typography>
           <Typography variant="body2" color="primary">
-            <strong>IČ:</strong> 05956731
+            <strong>IČ:</strong> 14408694
           </Typography>
         </Grid>
       </Main>

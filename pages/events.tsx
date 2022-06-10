@@ -10,6 +10,9 @@ import CopyrightFooter from "./components";
 import event from "../public/events/gfn1.webp";
 import event2 from "../public/events/gfn2.webp";
 
+import event1 from "../public/events/gfn1.1.webp";
+import event1_2 from "../public/events/gfn2.1.webp";
+
 import Image from "next/image";
 
 import { useTheme } from "@mui/material/styles";
@@ -18,9 +21,18 @@ import { Button, Link, Paper } from "@mui/material";
 
 export const eventPages = [
   {
+    name: "GREAT FIGHT NIGHT 2",
+    link: "#",
+    tickets: "https://goout.net/cs/great-fight-night-pro-marusku/szqmvmt/",
+    event: event,
+    event2: event2,
+  },
+  {
     name: "GREAT FIGHT NIGHT",
     link: "/great-fight-night",
     tickets: "https://goout.net/cs/great-fight-night-pro-frantiska/szutfws/",
+    event: event1,
+    event2: event1_2,
   },
 ];
 
@@ -64,6 +76,7 @@ export default function Events() {
                   sx={{
                     borderRadius: 3,
                     p: 2,
+                    mt: 4,
                     width: "100%",
                   }}
                 >
@@ -72,7 +85,7 @@ export default function Events() {
                       <Image
                         className="charity-photo"
                         alt="great by 2j"
-                        src={matchesLg ? event : event2}
+                        src={matchesLg ? page.event : page.event2}
                         layout="responsive"
                         placeholder="blur"
                         objectFit="contain"
@@ -89,6 +102,7 @@ export default function Events() {
                           size="large"
                           variant="outlined"
                           color="primary"
+                          disabled={!page.link || page.link === "#"}
                           fullWidth
                           sx={{ py: 2 }}
                         >
