@@ -22,7 +22,7 @@ import { Button, Link, Paper } from "@mui/material";
 export const eventPages = [
   {
     name: "GREAT FIGHT NIGHT 2",
-    link: "#",
+    link: "/great-fight-night-2",
     tickets: "https://goout.net/cs/great-fight-night-pro-marusku/szqmvmt/",
     event: event,
     event2: event2,

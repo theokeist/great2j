@@ -19,13 +19,13 @@ export default function CopyrightFooter() {
         <Link color="inherit" href="https://www.instagram.com/great_2j/?hl=cs">
           Great by 2j
         </Link>
-        {", designed by "}
-        <Link
+        {/*", designed by "*/}
+        {/* <Link
           color="inherit"
           href="https://www.instagram.com/martin0rszulik/?hl=cs"
         >
           martin0rszulik
-        </Link>
+        </Link> */}
         {", "}
         {new Date().getFullYear()}
         {"."}

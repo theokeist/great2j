@@ -16,6 +16,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta name="robots" content="all" />
+          <meta name="description" content="Ostrava, Box, BOX, K1" />
           <title>GREAT by 2J</title>
         </Head>
         <body>
