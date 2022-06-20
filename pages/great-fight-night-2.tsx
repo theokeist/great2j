@@ -194,7 +194,7 @@ export default function Events() {
                     Přívoz, Česko
                   </Typography>
                   <iframe
-                    src="https://frame.mapy.cz/s/medebatofa"
+                    src="https://frame.mapy.cz/s/badeluzupu"
                     width="100%"
                     height="500"
                     frameBorder="0"

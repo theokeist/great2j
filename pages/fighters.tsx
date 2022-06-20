@@ -49,7 +49,7 @@ export default function Fighters() {
     <>
       <NavigationMenu />
       <Banner
-        title="Ranking list"
+        title="Ranking"
         align="center"
         gutterBottom
         header={"./fighters.webp"}

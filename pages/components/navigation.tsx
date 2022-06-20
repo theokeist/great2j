@@ -31,7 +31,7 @@ import { Divider } from "@mui/material";
 
 export const pages = [
   { name: "Eventy", link: "/events" },
-  { name: "Ranking list", link: "/fighters" },
+  { name: "Ranking", link: "/fighters" },
   { name: "Partneři", link: "/event-partners" },
   { name: "E-shop", redirect: "https://bit.ly/GreatShopCZ" },
   { name: "O nás", link: "/about" },
@@ -41,7 +41,7 @@ export const pages = [
 export const mobilePages = [
   { name: "Domů", link: "/" },
   { name: "Eventy", link: "/events" },
-  { name: "Ranking list", link: "/fighters" },
+  { name: "Ranking", link: "/fighters" },
   { name: "Partneři", link: "/event-partners" },
   { name: "E-shop", redirect: "https://bit.ly/GreatShopCZ" },
   { name: "O nás", link: "/about" },
