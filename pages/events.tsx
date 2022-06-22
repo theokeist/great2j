@@ -68,7 +68,7 @@ export default function Events() {
         >
           <Grid container spacing={6}>
             {eventPages.map((page, index) => (
-              <Grid item xs={12} md={6} lg={6}>
+              <Grid item xs={12} md={6} lg={6} key={index}>
                 <Paper
                   elevation={24}
                   key={index}
