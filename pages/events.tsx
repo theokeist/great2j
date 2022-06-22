@@ -45,8 +45,7 @@ export default function Events() {
       <NavigationMenu />
       <Banner
         align="center"
-        title="GREAT FIGHT"
-        subtitle="EVENTY"
+        title="EVENTY"
         header={"./event3.webp"}
         objectPosition="0 31%"
       />
@@ -59,7 +58,7 @@ export default function Events() {
               ? {
                   width: { xl: "calc(100% - 15vw)", sm: "100%" },
                   marginLeft: "auto",
-                  px: 30,
+                  px: 20,
                   mt: 7,
                 }
               : matches
@@ -68,8 +67,8 @@ export default function Events() {
           }
         >
           <Grid container spacing={6}>
-            <Grid item xs={12} md={6} lg={12}>
-              {eventPages.map((page, index) => (
+            {eventPages.map((page, index) => (
+              <Grid item xs={12} md={6} lg={6}>
                 <Paper
                   elevation={24}
                   key={index}
@@ -85,7 +84,7 @@ export default function Events() {
                       <Image
                         className="charity-photo"
                         alt="great by 2j"
-                        src={matchesLg ? page.event : page.event2}
+                        src={matchesLg ? page.event2 : page.event2}
                         layout="responsive"
                         placeholder="blur"
                         objectFit="contain"
@@ -106,7 +105,7 @@ export default function Events() {
                           fullWidth
                           sx={{ py: 2 }}
                         >
-                          informace o eventu
+                          informace
                         </Button>
                       </Link>
                     </Grid>
@@ -130,8 +129,8 @@ export default function Events() {
                     </Grid>
                   </Grid>
                 </Paper>
-              ))}
-            </Grid>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
       </Main>

@@ -138,10 +138,10 @@ export default function IndexPage(props: any) {
                 }
               >
                 GREAT je ostravská organizace pořádající galavečery ringových
-                sportů, konkrétně boxu, K-1 a Muay Thai. Hlavní myšlenkou
-                organizace je pozvednutí a propagace těchto sportů, bojovníků a
-                především pomoc potřebným. Proto jsou všechny galavečery
-                věnovány dětem a rodinám s postižením.
+                sportů, konkrétně boxu, K-1. Hlavní myšlenkou organizace je
+                pozvednutí a propagace těchto sportů, bojovníků a především
+                pomoc potřebným. Proto jsou všechny galavečery věnovány dětem a
+                rodinám s postižením.
               </Typography>
             </Grid>
 

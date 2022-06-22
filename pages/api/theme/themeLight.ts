@@ -12,7 +12,7 @@ const themeLight = createTheme({
       light: "#fff",
     },
     secondary: {
-      main: "#ff0000",
+      main: "rgba(255,71,0,0.88)",
     },
   },
 });

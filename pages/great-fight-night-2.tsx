@@ -6,6 +6,7 @@ import NavigationMenu from "./components/navigation";
 import EvnetTimeline2 from "./components/timeline-2";
 import Banner from "./components/banner";
 import CopyrightFooter from "./components";
+import event from "../public/events/gfn1.webp";
 
 import maruska from "../public/events/maruska.jpg";
 import Image from "next/image";
@@ -84,6 +85,31 @@ export default function Events() {
                         ji alespoň částečně ulehčit život.
                       </Typography>
                     </Grid>
+                    <Grid item xs={12} md={12} lg={12}>
+                      <Paper
+                        variant="outlined"
+                        sx={{ borderRadius: 3, p: 0.5 }}
+                      >
+                        <a
+                          style={{
+                            textDecoration: "none",
+                          }}
+                          href="https://goout.net/cs/great-fight-night-pro-marusku/szqmvmt/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image
+                            className="event-photo"
+                            alt="great by 2j"
+                            src={event}
+                            layout="responsive"
+                            placeholder="blur"
+                            objectFit="contain"
+                            priority
+                          />
+                        </a>
+                      </Paper>
+                    </Grid>
                   </>
                 ) : (
                   <>
@@ -120,6 +146,31 @@ export default function Events() {
                         akce je vybrat pro tuto malou bojovnici 200.000 Kč a tím
                         ji alespoň částečně ulehčit život.
                       </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={12}>
+                      <Paper
+                        variant="outlined"
+                        sx={{ borderRadius: 3, p: 0.5 }}
+                      >
+                        <a
+                          style={{
+                            textDecoration: "none",
+                          }}
+                          href="https://goout.net/cs/great-fight-night-pro-marusku/szqmvmt/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image
+                            className="event-photo"
+                            alt="great by 2j"
+                            src={event}
+                            layout="responsive"
+                            placeholder="blur"
+                            objectFit="contain"
+                            priority
+                          />
+                        </a>
+                      </Paper>
                     </Grid>
                   </>
                 )}
