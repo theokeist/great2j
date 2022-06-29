@@ -69,7 +69,7 @@ export default function Events() {
                         vybrat finanční pomoc{" "}
                         <a
                           style={{
-                            color: "red",
+                            color: "rgba(249,91,32,0.88)",
                             textDecoration: "none",
                             fontWeight: 500,
                           }}
@@ -131,7 +131,7 @@ export default function Events() {
                         vybrat finanční pomoc{" "}
                         <a
                           style={{
-                            color: "red",
+                            color: "rgba(249,91,32,0.88)",
                             textDecoration: "none",
                             fontWeight: 500,
                           }}
