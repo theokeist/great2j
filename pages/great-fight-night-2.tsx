@@ -125,10 +125,10 @@ export default function Events() {
                         align="justify"
                         paragraph
                       >
-                        GREAT FIGHT NIGHT 2 !! Je to tady! Již druhý galavečer
-                        plný skvělých boxerských zápasů, pro který je největším
-                        vítězstvím pomáhat! Chlapci z 2j se tentokrat rozhodli
-                        vybrat finanční pomoc{" "}
+                        Druhý galavečer Great Fight Night, který se odehraje již
+                        30. července v ostravské hale Tatran, nabídne celkem 12
+                        boxerských zápasů. Zajímavostí je, že bojovníci nebudou
+                        bojovat pouze za sebe, ale hlavně pro malou{" "}
                         <a
                           style={{
                             color: "rgba(249,91,32,0.88)",
@@ -141,10 +141,8 @@ export default function Events() {
                         >
                           Marušku
                         </a>
-                        {", "}
-                        trpící dětskou mozkovou obrnou. Cílem této dobročinné
-                        akce je vybrat pro tuto malou bojovnici 200.000 Kč a tím
-                        ji alespoň částečně ulehčit život.
+                        {", "}, pro kterou organizace hodlá vybrat 200 tisíc
+                        korun. Jaká jména se v ringu představí?
                       </Typography>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
@@ -182,15 +180,90 @@ export default function Events() {
                 align="justify"
                 paragraph
               >
-                Připravili jsme pro vás vydařený program! V hlavním zápase se
-                můžete těšit na oblíbence z Ostravy Martina Prázdného. Dále se v
-                ringu představí jména, jako Michal Zátorský, Dominik Gloser,
-                Maxim Schejbal, Dominik Brabec a Natálie Poledníková a mnoho
-                dalších! S touto našlapanou fight card se vracíme do Ostravského
-                chrámu boxu, haly Tatran! Nenech si ujít tuto velkou show, která
-                se bude konat již 30.7.2022 !! Pojďme společně uprostřed léta
-                vybojovat lepší a plnohodnotný život pro Marušku a užít si
-                skvělý galavečer boxu!
+                Zlatým hřebem celého večera bude bitva mezi Martinem "Emptyšem"
+                Prázdným a Davidem Popovičem. Přezdívaný "Emptyš", který je
+                miláčkem ostravských fanoušků, chce být prvním šampionem
+                organizace Great by 2j a k tomuto cíli už není daleko. Cesta za
+                titulem ovšem nebude jednoduchá, překazit jeho plány se chystá
+                David Popovič, který je čtyřnásobným českým mistrem. Tento zápas
+                rozhodně slibuje atraktivní a tvrdou bitvu, která otřásne
+                ostravskou halou.
+              </Typography>
+              <Typography
+                sx={{ fontWeight: 400, mt: 4 }}
+                variant="body1"
+                color="primary"
+                align="justify"
+                paragraph
+              >
+                Ještě předtím fanoušky ale čeká zajímavý souboj Dominika
+                “Hasbully” Glosera, který se původně měl utkat s Michalem
+                Zátorským, který se ovšem zranil, a tak Dominika čeká neméně
+                těžká zkouška v podobě polského mistra, reprezentanta a
+                účastníka MS - Mateusze Urbana. V ringu je jako doma – takhle
+                výstižně by se dal charakterizovat Michal Takács, který za svou
+                kariéru nasbíral okolo 300 zápasů. Takács se mezi provazy potkal
+                s těmi nejlepšími, a dokonce dokázal porazit i medailisty z
+                olympiády. Tentokrát se mu postaví mladý a dravý Miloš "Banán"
+                Beránek, který si mezi profesionály vybudoval skvělý rekord
+                šesti vítězství bez jediné porážky. Nyní se ale vrací zpět do
+                olympijského boxu, kde má jasný cíl, dostat se na olympijské
+                hry! K tomu ho může výrazně přiblížit výhra nad Michalem
+                Takácsem, ale jisté je, že nic jednoduchého ho nečeká.
+              </Typography>
+              <Typography
+                sx={{ fontWeight: 400, mt: 4 }}
+                variant="body1"
+                color="primary"
+                align="justify"
+                paragraph
+              >
+                Mimo tří hlavních taháků se ale můžeme těšit i na ostatní skvělé
+                zápasy. Na cestě za dalším ukončením je ostravský bombardér Jan
+                "Tyson" Strakoš, který se utká s neméně tvrdým Samuelem Bílým,
+                který si o Strakoše sebevědomě řekl a je přesvědčen, že ho
+                porazí. Podle mnohých se může jednat o zápas večera, jelikož oba
+                borci doslova milují tvrdé přestřelky.
+              </Typography>
+              <Typography
+                sx={{ fontWeight: 400, mt: 4 }}
+                variant="body1"
+                color="primary"
+                align="justify"
+                paragraph
+              >
+                Celou kartu otevřou Ondřej Balík s Ondřejem Malým, kteří chtějí
+                hned na začátku nastavit vysokou laťku a předvést fantastický
+                zápas. Nesmíme také zapomenout na jednoho z nejlepších boxerů ve
+                váze do 67 kg Kelvina Soquessa, kterého vyzve neporažený Viktor
+                Volcho.
+              </Typography>
+              <Typography
+                sx={{ fontWeight: 400, mt: 4 }}
+                variant="body1"
+                color="primary"
+                align="justify"
+                paragraph
+              >
+                Další perlou bude souboj dvou mistrů svých zemí, a to účastníkem
+                mistrovství Evropy Erikem Suchým a Vadimem Balubou, který
+                nedávno přijel do ČR z Ukrajiny a ihned vybojoval stříbrnou
+                medaili ve čtvrtém kole extraligy. Z pověstného Jetsaam Gymu
+                také do Ostravy přijede i Dominik Brabec, kterého otestuje Maxim
+                Schejbal, jenž nedávno vybojoval skvělé umístění na ME. Vítěz
+                tohoto souboje navíc výrazně zamíchá kartami ve váze do 80 kg.
+              </Typography>
+              <Typography
+                sx={{ fontWeight: 400, mt: 4 }}
+                variant="body1"
+                color="primary"
+                align="justify"
+                paragraph
+              >
+                Karta je tedy téměř kompletní a už teď je jasné, že se mají
+                fanoušci boxu na co těšit. Nejenže si vychutnají spoustu
+                skvělých zápasů, ale koupí lístku zároveň mohou podpořit dobrou
+                věc. Vstupenky jsou k dispozici na Goout.net
               </Typography>
             </Grid>
             <Grid item xs={12} md={6} lg={4}>

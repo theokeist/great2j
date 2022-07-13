@@ -11,8 +11,8 @@ import Banner from "./components/banner";
 
 import boxing from "../public/partners/boxingostrava.jpg";
 import jemasport from "../public/partners/jemasport.png";
-import moodnite from "../public/partners/moodnite.jpg";
 import skrcto from "../public/partners/skrcto.jpg";
+import deprostav from "../public/partners/deprostav.png";
 
 import filip_zidek from "../public/partners/filip_zidek.jpg";
 import dva_mluvci from "../public/partners/dva_mluvci.jpg";
@@ -20,7 +20,6 @@ import dva_mluvci from "../public/partners/dva_mluvci.jpg";
 import nadace_rgb from "../public/partners/nadace_rgb.png";
 import backfist from "../public/partners/backfist.png";
 import bernold from "../public/partners/bernold.png";
-import svihej from "../public/partners/svihej.png";
 import nedproject from "../public/partners/nedproject.png";
 
 const fotky = [
@@ -50,11 +49,6 @@ const fotky = [
     link: "https://www.facebook.com/filipzidekphotography/",
   },
   {
-    path: moodnite,
-    name: "Moodnite",
-    link: "https://www.moodnite.cz/",
-  },
-  {
     path: skrcto,
     name: "Skrč to!",
     link: "http://www.skrctostudio.cz/",
@@ -75,9 +69,9 @@ const fotky = [
     link: "https://www.bernold.cz/",
   },
   {
-    path: svihej,
-    name: "ŠVIHEJ",
-    link: "https://www.svihej.cz/",
+    path: deprostav,
+    name: "Deprostav",
+    link: "https://www.deprostav.cz/",
   },
 ];
 
@@ -115,13 +109,11 @@ export default function EventPartners() {
         >
           {fotky?.map((foto, index) => {
             return (
-              <Grid key={index} item xs={6} sm={6} md={4} lg={2}>
+              <Grid key={index} item xs={6} sm={6} md={4} lg={3}>
                 <Link href={foto.link}>
                   <Image
                     alt={foto.name}
                     src={foto.path}
-                    height={256}
-                    width={256}
                     layout="responsive"
                     priority
                   />

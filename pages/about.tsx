@@ -70,18 +70,17 @@ export default function About() {
             >
               GREAT by 2j je značka založená Jakubem Bernoldem a Jiřím Ondrušem,
               fungující od roku 2020. Zabývá se myšlenkou pozvednutí a propagací
-              ringových sportů, zápasníků, pomoci lidem, kteří to opravdu
-              potřebují, ale také dopomoci úplně každému, kdo chce se sebou něco
-              dělat, tvořit a být tou nejlepší verzí sebe samotného. Za touto
-              myšlenkou se skrývá hned několik oblastí, ve kterých GREAT působí.
+              ringových sportů, zápasníků a zároveň pomoci lidem, kteří to
+              opravdu potřebují. Za touto myšlenkou vznikla organizace GREAT.
               <br />
               <br />
-              Organizováním galavečerů ringových sportů, konkrétně boxu, K-1 a
-              Muay Thai je druhou částí skládanky GREAT. Hlavní myšlenkou
-              organizace je pozvednutí a propagace těchto sportů, bojovníků a
-              především pomoc potřebným. Proto jsou všechny galavečery věnovány
-              dětem a rodinám s postižením. Organizace působí na severu Moravy a
-              Slezska, ovšem její plán je působit po celém Česku a Slovensku.
+              GREAT je organizace spojená výhradně s ringovými sporty, konkrétně
+              s olympijským boxem a K1. Hlavní myšlenkou organizace je
+              pozvednutí a propagace těchto sportů, bojovníků a především pomoc
+              potřebným. Proto jsou všechny galavečery věnovány dětem a rodinám
+              s postižením. Organizace působí zatím na Moravě a ve Slezsku,
+              ovšem její plán je působit po celém Česku, Slovensku a také
+              expandovat do dalších zemí.
             </Typography>
           </Grid>
           <Grid item md={6} lg={4}>
